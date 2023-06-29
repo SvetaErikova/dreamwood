@@ -1,0 +1,197 @@
+.block_banner
+  overflow: hidden
+  position: relative
+  padding: var(--g-80)
+  .block--wrapper
+    height: 100%
+  .block--head
+    position: relative
+    z-index: 2
+  .block--actions
+    position: relative
+    z-index: 2
+  .block--content
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    img, video
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+      z-index: 1
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 2
+      background: linear-gradient(180deg, rgba(31, 31, 31, 0.49) 7.43%, rgba(31, 31, 31, 0.2) 38.42%, rgba(31, 31, 31, 0.59) 100%)
+      background-blend-mode: multiply
+  .block--head
+    max-width: 1160px
+    width: 100%
+    color: var(--c-text-white)
+    z-index: 2
+    margin-bottom: var(--fs-48)
+    .block--head_title,
+    .block--head_caption
+      color: var(--c-text-white)
+  .block--head_subtitle
+    color: inherit
+  .banner
+    display: flex
+    flex: 0 0 100%
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-end
+    padding: var(--headerHeight,138px) var(--g-80) var(--g-80)
+    height: auto
+    overflow: hidden
+    position: relative
+    border-radius: 32px
+    @media(max-width: 768px)
+      padding: var(--headerHeight, 138px) 16px 24px
+      min-width: calc(100vw - 32px - 8px)
+      height: calc(100dvh - var(--headerHeight,138px))
+  .block--actions
+    margin-bottom: 0
+    .button.button-filled.button-accent
+      --filled-bgc-base: var(--color-yellow)
+      --filled-bc-base: var(--color-yellow)
+      --filled-c-base: var(--c-text-dark)
+      --filled-bgc-hover: var(--c-surface-accent-hover)
+      --filled-bc-hover: var(--c-surface-accent-hover)
+      --filled-c-hover: var(--c-text-white)
+  @media(max-width: 768px)
+    .block--actions
+      width: 100%
+      .button:only-child
+        min-width: 100%
+
+.hero_clip_svg
+  width: 0
+  height: 0
+  pointer-events: none
+
+
+.block_banner.block_banner-hero
+  padding: 0
+  height: 125vh
+  margin: 0
+  position: relative
+  .block--wrapper
+    padding: 0
+    max-width: 100%
+  .block--content
+    clip-path: url(#my-clip-path-2)
+  .banner
+    justify-content: flex-start
+    width: 100%
+    height: 125vh
+    padding: var(--headerHeight,138px) var(--g-80) var(--g-160)
+    border-radius: 0
+  .block--head
+    padding-top: 18vh
+    position: relative
+    justify-content: flex-start
+  .block--head_title
+    font-size: var(--fs-88)
+  .block--head_caption
+    font-size: var(--fs-40)
+
+.block_banner.block_banner-index
+  padding: 0
+  height: 125vh
+  margin: 0
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 290px
+    height: 250px
+    bottom: 41.5vh
+    left: calc( var(--g-80) + 11.46vw)
+    background-image: url("../img/svg/drimmi.svg")
+    z-index: 10
+  .block--wrapper
+    padding: 0
+    max-width: 100%
+    position: relative
+  .banner
+    width: 100%
+    height: 125vh
+    padding: var(--headerHeight,138px) var(--g-80) var(--g-160)
+    border-radius: 0
+    position: relative
+  .block--content
+    background-color: #fff
+    clip-path: url(#my-clip-path)
+  .block--content img
+    object-position: center top
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%)
+
+  .block--head
+    height: calc(100vh - var(--headerHeight))
+    position: relative
+    align-items: center
+    padding-top: 20vh
+    width: auto
+  .block--head_title
+    font-size: var(--fs-72)
+    margin-bottom: var(--g-40)
+  .block--actions
+    margin-top: var(--fs-48)
+    margin-left: auto
+
+
+.block_banner-nav
+  .block_nav-page
+    position: absolute
+    margin: auto
+    top: var(--headerHeight, 138px)
+    color: #F9FCFF
+    z-index: 3
+    width: 100%
+    .nav
+      max-width: 1140px
+      display: flex
+      justify-content: flex-end
+      gap: 12px
+      margin-right: auto
+    a
+      transition: var(--transition)
+      padding: 5px 15px
+      border-radius: 20px
+      border: #F9FCFF 1px solid
+    a:hover
+      border-color: var(--color-pink)
+      color: var(--color-pink)
+
+
+//.block_booking
+//  padding: var(--g-80)
+//  display: flex
+//  align-items: center
+//  justify-content: center
+//  .booking
+//    width: 100%
+//    border-radius: 24px
+//    background-color: #fff
+//    height: 300px

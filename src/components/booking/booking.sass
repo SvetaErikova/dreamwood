@@ -1,0 +1,204 @@
+//.booking
+//  padding: 8px
+//  display: flex
+//  border-radius: var(--border-corner)
+//  position: relative
+//  border: solid 1px rgba(255,255,255,0.15)
+//  background-color: var(--c-surface-default)
+//  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 26px 80px rgba(0, 0, 0, 0.2)
+//  gap: 8px
+//  @media(max-width: 992px)
+//    flex-direction: column
+//    align-items: stretch
+//    max-width: calc(100vw - 32px)
+//    margin: var(--g-content) auto
+//  input
+//    border: none
+//    outline: none
+//  input[type="number"]
+//    -webkit-appearance: textarea
+//    -moz-appearance: textfield
+//  input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+//    -webkit-appearance: none
+//    margin: 0
+//  @media(min-width: 992px)
+//    .booking__button
+//      flex: 0 0 fit-content
+//    .booking__room
+//      flex: 1 1 30%
+//    .booking__calendar
+//      flex: 1 1 30%
+//  //&__room
+//    display: flex
+//    position: relative
+//    &.active
+//      & .booking__room-input
+//        display: flex
+//    &-item
+//      gap: 8px
+//      width: 100%
+//      justify-content: flex-start
+//      background: transparent
+//      color: var(--c-text-dark)
+//      padding: 12px 16px
+//      cursor: pointer
+//      display: flex
+//      align-items: center
+//      span
+//        flex-grow: 0
+//        font-size: var(--fs-18)
+//        &:nth-child(even)
+//          flex: 0 0 2em
+//    &-input
+//      position: absolute
+//      top: calc(100% + 8px)
+//      display: none
+//      width: 100%
+//      min-width: 320px
+//      border-radius: var(--border-corner)
+//      z-index: 10
+//      color: var(--c-text-dark)
+//      height: 452px
+//      overflow-y: auto
+//      overflow-x: hidden
+//      max-height: fit-content
+//      box-shadow: 0 16px 32px -16px rgba(18, 18, 18, 0.05)
+//      border: 1px solid #E8E8E8
+//      flex-direction: column
+//      background-color: var(--c-surface-default)
+//      &-title
+//        padding: var(--g-elements)
+//        text-align: left
+//        border-bottom: 1px solid var(--border-color)
+//        font-size: var(--fs-20)
+//        font-weight: 600
+//      &-content
+//        flex-grow: 1
+//        display: flex
+//        flex-direction: column
+//        &-item
+//          padding: var(--g-elements)
+//          border-bottom: 1px solid var(--border-color)
+//          gap: 8px
+//          &:first-of-type
+//            .booking__room-input-content-item-heading-delete
+//              display: none
+//          &-heading
+//            display: flex
+//            justify-content: space-between
+//            align-items: center
+//            margin-bottom: 8px
+//            h3
+//              font-weight: 600
+//              font-size: 16px
+//            &-delete
+//              width: 32px
+//              height: 32px
+//              cursor: pointer
+//              border-radius: var(--border-corner)
+//              display: flex
+//              align-items: center
+//              justify-content: center
+//          &-input
+//            display: flex
+//            flex-wrap: nowrap
+//            gap: 8px 24px
+//            flex-direction: column
+//            align-items: flex-start
+//            &-adults,
+//            &-kids
+//              display: flex
+//              align-items: center
+//              justify-content: center
+//              gap: 16px
+//              span
+//                font-weight: 400
+//            &-quantity
+//              display: flex
+//              align-items: center
+//              input
+//                display: flex
+//                justify-content: center
+//                width: 32px
+//                max-width: fit-content
+//                text-align: center
+//                color: var(--c-text-dark)
+//                font-weight: 400
+//              .js-decrement,
+//              .js-increment
+//                display: flex
+//                align-items: center
+//                justify-content: center
+//                padding: 2px
+//                cursor: pointer
+//                transition: var(--transition)
+//                &:hover,
+//                &:active
+//                  background-color: var(--c-surface-primary-hovered)
+//      &-button
+//        padding: var(--g-elements)
+//        display: flex
+//        align-items: center
+//        cursor: pointer
+//        margin-top: auto
+//        position: sticky
+//        bottom: 0
+//        background-color: var(--c-surface-default)
+//        border-top: 1px solid var(--border-color)
+//        span
+//          position: relative
+//          transition: 0.24s ease-out
+//          &:after
+//            content: ""
+//            position: absolute
+//            right: 0
+//            top: 50%
+//            transform: translateY(-50%)
+//            display: block
+//            width: 16px
+//            height: 16px
+//            background-image: url('../img/icons/ic16-plus.svg')
+//            background-position: center
+//            background-repeat: no-repeat
+//            background-size: contain
+//            transition: 0.24s ease-out
+//        &:hover,
+//        &:focus
+//          & span
+//            color: var(--c-text-accent)
+//  &__calendar
+//    display: flex
+//    gap: 8px
+//    position: relative
+//    &-item
+//      width: 100%
+//      min-height: 100%
+//      cursor: pointer
+//      display: flex
+//      align-items: center
+//      justify-content: flex-start
+//      background-color: var(--c-surface-subdued)
+//      border-radius: var(--border-corner)
+//      font-weight: 400
+//      padding: 12px 16px
+//  .booking__button
+//    .button
+//      width: 100%
+//
+//
+//.banner-hero + .booking
+//  @media(min-width: 1024px)
+//    position: absolute
+//    top: calc(100vh - var(--g-content))
+//    transform: translateY(-100%)
+//    right: calc((100vw - var(--container))/2)
+//    z-index: 12
+//    width: 800px
+//    margin: 0 auto
+//    & > *
+//      z-index: 1
+//  @media(max-width: 1023px)
+//    position: static
+//
+//
+//

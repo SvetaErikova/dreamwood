@@ -1,0 +1,161 @@
+extends ../layouts/hero
+
+block variables
+  - var title = "Главная"
+  - var pageClass = 'page--index'
+  - var activePage = 'index'
+
+block content
+  section.block.block_banner.block_banner-hero.block_banner-index
+    .block--wrapper
+      .banner
+        <svg class="hero_clip_svg">
+        <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox"><path d="M1,0 v0.662 c-0.034,0.057,-0.089,0.133,-0.166,0.193 c-0.123,0.096,-0.232,0.136,-0.256,0.145 c-0.001,0,-0.002,-0.002,-0.001,-0.003 C0.592,0.979,0.65,0.906,0.656,0.855 c0.007,-0.056,-0.004,-0.142,-0.13,-0.197 C0.348,0.582,0.178,0.703,0.058,0.636 c-0.026,-0.014,-0.044,-0.029,-0.058,-0.047 V0 H1"></path></clipPath>
+        </svg>
+
+        .block--content
+          img(src="/assets/img/banner.png")
+        .block--head
+          .block--head_title
+            h1.f-h1
+              include ../img/svg/banner-group.svg
+          .block--actions
+            a(href="/").button.button-filled.button-accent
+              span Купить билет
+
+    //.block_booking
+    //  .booking
+
+  section.block.block_list.content_events.block_list-slider
+    .block--wrapper
+      .block--head
+        .block--head_subtitle
+          p=subtitle
+        .block--head_title
+          h2 АФИША <br>И НОВОСТИ
+        a.button.button-link.button-secondary(href='/')
+          span.icon.icon-visibility
+          span Все новости
+      .block--elements
+        +card--events('5-10 января','Дарим подарки', '/assets/img/card-offer.png')
+        +card--events('5-10 января','дни любви', '/assets/img/card-offer.png')
+        +card--events('5-10 января','масленица пожаловала', '/assets/img/card-offer.png')
+        +card--events('5-10 января','Дарим подарки', '/assets/img/card-offer.png')
+        +card--events('5-10 января','Дарим подарки', '/assets/img/card-offer.png')
+
+  //section.block.block_list.content_events
+  //  .block--wrapper
+  //    +block--head_title_link('','афиша','и новости','','Все новости')
+  //    .block--elements
+  //      +card--events('5-10 января','Дарим подарки', '/assets/img/card-offer.png')
+  //      +card--events('5-10 января','дни любви', '/assets/img/card-offer.png')
+  //      +card--events('5-10 января','масленица пожаловала', '/assets/img/card-offer.png')
+  //      +card--events('5-10 января','Дарим подарки', '/assets/img/card-offer.png')
+  //      +card--events('5-10 января','Дарим подарки', '/assets/img/card-offer.png')
+
+
+  section.block.block_list.content_attractions
+    .block--wrapper
+      +block--head('','аттракционы','и услуги','')
+      include ../components/filters/filters
+      include ../components/content/content_attractions/content_attractions
+
+  section.block.block_html_code.content_tickets
+    .block--wrapper
+      +block--head('','Купить билет', '','')
+      .block--image
+        img(src="/assets/img/svg/tickets-bck.svg" alt="")
+      .block--content
+        .block--title
+          include ../img/svg/tickets-title.svg
+          .block--subtitle Вы можете посмотреть расписание активностей или приобрести билеты онлайн со скидкой и без очереди.
+        .block--actions
+          a(href='/').button.button-filled.button-secondary.button-reversed
+            span  Расписание активностей
+          a(href='/').button.button-filled.button-secondary
+            span  Купить билет
+
+
+
+  section.block.block_list.content_restaurant.block_list-slider
+    .block--wrapper
+      .block--head
+        .block--head_subtitle
+          p=subtitle
+        .block--head_title
+          h2 ЕСЛИ ИССЛЕДОВАТЕЛИ <br> ПРОГОЛОДАЛИСЬ
+        a.button.button-link.button-secondary(href='/')
+          span.icon.icon-restourant
+          span Все рестораны
+      .block--elements
+        +card--restaurant('Форестино','Вкусное путешествие в сказку для всей семьи! Волшебный ресторан европейской кухни в парке «Дримвуд».', '/assets/img/card-offer.png')
+        +card--restaurant('PLAZA CAFE','Ароматная выпечка и креативные молочные коктейли. Подкрепитесь чем-то вкусным после игр или просмотра фильма.', '/assets/img/card-offer.png')
+        +card--restaurant('Форестино','Вкусное путешествие в сказку для всей семьи! Волшебный ресторан европейской кухни в парке «Дримвуд».', '/assets/img/card-offer.png')
+        +card--restaurant('PLAZA CAFE','Ароматная выпечка и креативные молочные коктейли. Подкрепитесь чем-то вкусным после игр или просмотра фильма.', '/assets/img/card-offer.png')
+
+
+
+
+  section.block.block_image_text.mask-bird.content_image-text-action-1
+    .block--wrapper
+      .block--image
+        <svg class="svg">
+        <clipPath id="mask-bird" clipPathUnits="objectBoundingBox"><path d="M0.942,0.296 C0.932,0.312,0.919,0.315,0.91,0.322 C0.902,0.327,0.892,0.333,0.891,0.341 C0.884,0.368,0.872,0.389,0.847,0.405 C0.827,0.419,0.823,0.424,0.848,0.432 C0.905,0.451,0.949,0.481,0.981,0.522 C1,0.565,1,0.609,0.986,0.653 C0.944,0.735,0.882,0.803,0.79,0.85 C0.699,0.895,0.617,0.952,0.525,0.995 C0.519,0.998,0.515,1,0.508,1 C0.501,0.997,0.51,0.99,0.511,0.985 C0.524,0.863,0.535,0.742,0.561,0.623 C0.569,0.583,0.583,0.543,0.59,0.501 C0.566,0.506,0.542,0.514,0.526,0.524 C0.436,0.584,0.349,0.645,0.265,0.711 C0.246,0.725,0.238,0.72,0.222,0.702 C0.165,0.64,0.127,0.572,0.092,0.501 C0.085,0.487,0.082,0.472,0.073,0.459 C0.064,0.448,0.065,0.438,0.084,0.438 C0.186,0.438,0.287,0.424,0.388,0.419 C0.427,0.418,0.461,0.402,0.498,0.394 C0.505,0.393,0.51,0.389,0.516,0.386 C0.527,0.379,0.53,0.371,0.518,0.365 C0.488,0.352,0.458,0.338,0.427,0.325 C0.372,0.303,0.321,0.278,0.272,0.248 C0.219,0.215,0.164,0.184,0.114,0.148 C0.079,0.121,0.053,0.085,0.016,0.058 C0,0.047,0,0.04,0.023,0.036 C0.14,0.018,0.26,0.017,0.379,0.011 C0.429,0.008,0.477,0,0.528,0.002 C0.586,0.004,0.643,0.012,0.694,0.034 C0.743,0.057,0.773,0.094,0.792,0.138 C0.811,0.184,0.8,0.224,0.775,0.266 C0.761,0.289,0.765,0.296,0.796,0.295 C0.843,0.294,0.889,0.305,0.941,0.296 L0.942,0.296 M0.843,0.356 C0.854,0.352,0.861,0.346,0.857,0.337 C0.853,0.328,0.843,0.32,0.831,0.323 C0.819,0.326,0.821,0.337,0.825,0.345 C0.828,0.354,0.834,0.357,0.843,0.356"></path></clipPath>
+        </svg>
+        img(src="/assets/img/holidays-img.png" alt="")
+      +block--head('','праздники','в парке','')
+      .block--content
+        p Сделаем любой праздник незабываемым. Вас ждут: сказочная атмосфера парка, яркие персонажи и интересная программа!
+      .block--actions
+        a(href="/").button.button-filled.button-accent
+          span Подробнее
+        a(href='/').phone-circle
+          span.icon-phone-circle
+          span 8 800 550 06 79
+
+  include ../components/content//content_scheme/content_scheme
+  section.block.block_element.content_gallery
+    .block--wrapper
+      +block--head('','ВОЛШЕБНЫЕ', 'МОМЕНТЫ','')
+      .block--content
+        .gallery.js-gallerySwiper
+          .gallery--item.video
+            figure
+              img(src="/assets/img/card-offer.png" alt="" data-fancybox="/assets/img/card-offer.png")
+          .gallery--item
+            figure
+              img(src="/assets/img/gallery-1.png" alt="" data-fancybox="/assets/img/gallery-2.png")
+          .gallery--item
+            figure
+              img(src="/assets/img/gallery-2.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="/assets/img/gallery-3.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="/assets/img/gallery-4.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="/assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="/assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="/assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="/assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="/assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="/assets/img/card-offer.png" alt="" data-fancybox)
+
+
+
+
+
+
+

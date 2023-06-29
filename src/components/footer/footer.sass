@@ -1,0 +1,100 @@
+.footer
+  background-color: #DFEFF6
+  padding: var(--g-40) var(--g-80)
+  .block--wrapper
+    max-width: calc(1440px - var(--g-80) * 2)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: 'social social''logo nav' 'bottom bottom'
+    gap: var(--g-80) var(--g-40)
+    @media(max-width: 1024px)
+      grid-template-columns: 1fr
+      grid-template-areas: ' top' 'nav'' offer' ' bottom'
+
+.footer_logo
+  grid-area: logo
+  padding: 100px 0
+  border-top: 1px dashed #ABABAB
+
+.footer--bottom
+  grid-area: bottom
+  display: flex
+  gap: 16px
+  .developer
+    margin-left: auto
+    display: flex
+    align-items: baseline
+    gap: var(--g-20)
+
+  @media(max-width: 768px)
+    flex-direction: column
+
+
+.footer-soc
+  grid-area: social
+  display: flex
+  align-items: center
+  justify-content: space-around
+  align-items: center
+  gap:  var(--g-24)
+  &--item
+    display: flex
+    align-items: center
+    gap: var(--g-24)
+    & a
+      position: relative
+    & a:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate( -50%, -50%)
+      background-position: center
+      background-repeat: no-repeat
+      object-fit: cover
+    &-tripadvisor:after
+      width: 44px
+      height: 28px
+      background-image:  url("../img/svg/soc/tripadvisor.svg")
+    &-vk:after
+      width: 39px
+      height: 23px
+      background-image:  url("../img/svg/soc/vk.svg")
+    &-yandex:after
+      width: 33px
+      height: 33px
+      background-image:  url("../img/svg/soc/yandex.svg")
+
+.footer_nav
+
+  font-size: var(--fs-16)
+  font-weight: 500
+  grid-area: nav
+  padding: 0 var(--g-32)
+  display: grid
+  grid-template-columns: 1fr  1fr
+  grid-template-rows: auto 1fr
+  gap: var(--g-48)
+  @media(max-width: 768px)
+    overflow-x: auto
+    gap: 50px
+    border-radius: 32px 0 0 32px
+    position: relative
+  &--item
+    border-top: 1px solid #ABABAB
+    padding: 100px 0 var(--g-52)
+    &:nth-child(2)
+      .footer_nav--item_list
+        column-count: 2
+        column-gap: var(--g-32)
+    .button
+      padding: 10px 0
+      display: block
+      font-size: var(--fs-18)
+
+  .button
+    --outlined-bgc-hover: var(--color-pink)
+    --outlined-bc-hover:  var(--color-pink)
+    grid-row: 2
+  .icon-phone-circle
+    grid-row: 2

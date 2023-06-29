@@ -1,0 +1,72 @@
+.block--head
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin-bottom: var(--g-48)
+  width: 50%
+  position: relative
+  &_subtitle
+    width: fit-content
+    &:empty
+      display: none
+    p
+      margin-bottom: 8px
+      padding: 10px 20px
+      border-radius: 80px
+      font-size: 14px
+      line-height: 1.43
+      letter-spacing: 0.01em
+      text-transform: uppercase
+      font-weight: 700
+      color: var(--c-text-white)
+      background-color: #8DD300
+      &:empty
+        display: none
+
+  &_caption
+    max-width: 980px
+    color: var(--c-text-dark)
+    font-size: var(--fs-28)
+    &:empty
+      display: none
+    p
+      line-height: 1.28
+      opacity: 0.8
+      margin-top: 16px
+      &:empty
+        display: none
+
+  &_title
+    font-size: var(--fs-42)
+    max-width: 1440px
+    color: var(--accent , #15466B)
+    h1, h2
+      font-weight: 700
+      line-height: 1.24
+      text-transform: uppercase
+
+      span
+        transition: var(--transition)
+    a
+      display: flex
+      align-items: flex-start
+      h1, h2, h3
+        position: relative
+        &:after
+          content: "\ea0f"
+          font-family: 'icomoon' !important
+          font-size: 0.72em
+          color: var(--accent)
+          display: inline-block
+          transform: translate(24px, -1px)
+          transition: var(--transition)
+          line-height: 1em
+          opacity: 0.5
+        &:focus:after,
+        &:active:after,
+        &:hover:after
+          opacity: 1
+  .button
+    position: absolute
+    right: 0
+    bottom: 0

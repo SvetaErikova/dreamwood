@@ -1,0 +1,81 @@
+//.content_scheme
+.scheme
+  position: relative
+  aspect-ratio: 1760 / 920
+  width: auto
+  height: 100%
+  min-height: 500px
+
+.scheme_svg
+  z-index: 3
+
+.scheme_svg g[data-placemark]
+  cursor: pointer
+  opacity: 0.7
+  &:hover
+    opacity: 1
+  &.not_visible
+    opacity: 0
+    pointer-events: none
+
+#placemark
+  &:hover
+    opacity: 1
+    .placemark_border
+      stroke-width: 3px
+      transition: var(--transition)
+    .placemark_center
+      transition: var(--transition)
+      stroke-width: 0
+
+.scheme--zoom
+  position: absolute
+  bottom: var(--g-80)
+  left: var(--g-80)
+  z-index: 5
+  display: flex
+  align-items: center
+  gap: 8px
+  &_in,
+  &_out
+    background-color: rgba(255, 252, 250, 0.5)
+    backdrop-filter: blur(6px)
+    border-radius: 8px
+    padding: 10px 18px
+    color: var(--c-text-accent)
+    span
+      font-size: var(--fs-32)
+
+.scheme--tooltip
+  position: absolute
+  opacity: 0
+  padding: 8px 16px
+  border-radius: 12px
+  box-shadow: 0 2px 3px rgba(23, 23, 23, 0.35)
+  border: 3px solid var(--c-text-accent)
+  background-color: #fff
+  z-index: 6
+  max-width: 280px
+  transition: var(--transition)
+  pointer-events: none
+  transform: translate(24px, 0)
+  h3
+    color: var(--c-text-accent)
+    text-transform: uppercase
+    font-weight: 600
+    font-size: var(--fs-16)
+    text-overflow: ellipsis
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 1
+    -webkit-box-orient: vertical
+  &.is_active
+    opacity: 1
+
+
+#scheme_panzoom
+  overflow: hidden
+  position: relative
+  z-index: 1
+
+

@@ -1,0 +1,19 @@
+.content_faq
+  .block--wrapper
+    display: grid
+    place-items: start
+    @media(max-width: 768px)
+      grid-template-columns: 1fr
+      grid-gap: 8px
+    @media(min-width: 769px)
+      grid-template-columns: 1fr 1fr
+      gap: 0 40px
+      .block--head,
+      .block--actions
+        grid-column: 1
+      .block--elements
+        grid-column: 2
+        grid-row: 1 / span 2
+  .block--elements
+    grid-template-columns: 1fr
+    grid-gap: 0

@@ -1,0 +1,170 @@
+/* Common styles for button */
+.button
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 4px
+  width: fit-content
+  padding: 0.86em 1.5em
+  font-size: 16px
+  line-height: 1.33
+  border: 1px solid transparent
+  cursor: pointer
+  z-index: 1
+  overflow: hidden
+  transition: var(--transition)
+  span
+    color: inherit
+    line-height: 1.33
+    font-weight: 500
+    text-align: center
+    white-space: nowrap
+  span[class^="icon-"],
+  span[class*=" icon-"],
+  svg[class^="icon"]
+    font-weight: 400
+    color: inherit
+    width: 1.33em
+    height: auto
+    aspect-ratio: 1 / 1
+    display: flex
+    align-items: center
+    justify-content: center
+    &:only-child
+      margin: 0 -8px
+// custom
+.phone-circle
+  font-size: 20px
+  font-weight: 500
+  display: flex
+  align-items: center
+  gap: var(--g-28)
+  transition: var(--transition)
+  .icon-phone-circle
+    display: inline-flex
+    padding: 12px
+    border-radius: 50px
+    border: 2px solid #15466B
+    &:before
+      font-size: 1.5em
+  span
+    white-space: nowrap
+
+
+
+/* Button appearance */
+
+.button.button-filled
+  background: var(--filled-bgc-base)
+  //background: var(--accent, red)
+  border-color: var(--filled-bc-base)
+  //border-color: var(--accent, red)
+  color: var(--filled-c-base)
+  border-radius: 50px
+  position: relative
+  &:hover,
+  &:focus,
+  &:active
+    background: var(--filled-bgc-hover)
+    border-color: var(--filled-bc-hover)
+    color: var(--filled-c-hover)
+
+
+.button.button-outlined
+  background-color: transparent
+  border-color: var(--outlined-bc-base)
+  color: var(--outlined-c-base)
+  border-radius: 50px
+  &:hover,
+  &:focus,
+  &:active
+    background-color: var(--outlined-bgc-hover)
+    border-color: var(--outlined-bc-hover)
+    color: var(--outlined-c-hover)
+
+
+.button.button-link
+  position: relative
+  justify-content: flex-start
+  background: transparent
+  border-color: transparent
+  color: var(--link-c-base)
+  border-radius: 0
+  padding: 0
+  &:visited
+    opacity: 0.6
+  &:hover,
+  &:focus,
+  &:active
+    opacity: 1
+    color: var(--link-c-hover)
+  span[class^="icon-"],
+  span[class*=" icon-"],
+  svg[class^="icon"]
+    &:only-child
+      margin: 0
+
+
+/* Button  colors  */
+
+.button.button-accent
+  --filled-bgc-base: var(--accent , #15466b)
+  --filled-bc-base: var(--accent , #15466b)
+  --filled-c-base: var(--c-text-white)
+  --filled-bgc-hover: transparent
+  --filled-bc-hover: var(--accent-hover)
+  --filled-c-hover: var(--c-text-white)
+
+  --outlined-bc-base:  var(--accent)
+  --outlined-c-base:  var(--accent)
+  --outlined-bgc-hover: var(--accent-hover)
+  --outlined-bc-hover:  var(--accent-hover)
+  --outlined-c-hover: var(--c-text-white)
+
+  --link-c-base: var(--accent)
+  --link-c-hover: var(--accent-hover)
+
+.button.button-primary
+  --filled-bgc-base: rgba(235, 235, 235, 0.8)
+  --filled-bc-base: rgba(235, 235, 235, 0.8)
+  --filled-c-base: #9756E9
+  --filled-bgc-hover: #9756E9
+  --filled-bc-hover: #9756E9
+  --filled-c-hover: #FFFFFF
+
+  --outlined-bc-base: var(--c-text-dark)
+  --outlined-c-base: var(--c-text-dark)
+  //--outlined-bgc-hover: #fff
+  //--outlined-bc-hover: rgba(31, 31, 31, 0.6)
+  //--outlined-c-hover: rgba(31, 31, 31, 1)
+
+  --link-c-base: var(--color-pink)
+  --link-c-hover: var(--c-text-dark)
+
+.button.button-secondary
+  --filled-bgc-base: var(--c-surface-accent)
+  --filled-bc-base: var(--c-surface-accent)
+  --filled-c-base: var(--c-text-white)
+  --filled-bgc-hover: var(--c-surface-accent-hover)
+  --filled-bc-hover: var(--c-surface-accent-hover)
+  --filled-c-hover: var(--c-text-white)
+
+  --outlined-bc-base:  var(--c-surface-accent)
+  --outlined-c-base:  var(--c-surface-accent)
+  --outlined-bgc-hover: var(--c-surface-accent)
+  --outlined-bc-hover:  var(--c-surface-accent)
+  --outlined-c-hover: var(--c-text-white)
+
+  --link-c-base: var(--c-text-dark)
+  --link-c-hover: var(--c-surface-accent-hover)
+
+.button.button-card
+
+  --link-c-base: var(--c-surface-accent-hover)
+  --link-c-hover: var(--c-text-dark)
+
+.button.button-filters
+  --outlined-bc-base:  var(--c-surface-accent)
+  --outlined-c-base:  var(--c-surface-accent)
+  padding: 7px 14px

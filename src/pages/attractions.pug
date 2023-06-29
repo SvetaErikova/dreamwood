@@ -1,0 +1,117 @@
+extends ../layouts/breadcrumbs
+
+block variables
+  - var title = "Аттракционы"
+  - var pageClass = 'page--attractions'
+  - var activePage = 'index'
+
+  section.block.block_list.content_attractions
+    .block--wrapper
+      +block--head('','аттракционы','и услуги','')
+      include ../components/filters/filters
+      .block--elements
+        a.card(href='/')
+          .card--image
+            img(src='/assets/img/card-offer.png')
+          .card--label.maintenance
+            p На техническом обслуживание
+          .card--content
+            .card--title
+              h3 Плющ
+              div.icons
+                span.icons--age 0+
+                span.icons--height 100см+
+            .card--text
+              p Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!
+            .card--link
+              .button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        a.card(href='/')
+          .card--image
+            img(src='/assets/img/card-offer.png')
+          .card--label.actions
+            p Акция
+          .card--content
+            .card--title
+              h3 шахта 1771
+              div.icons
+                span.icons--age 0+
+                span.icons--height 100см+
+            .card--text
+              p Проехав по железной дороге, загляните внутрь гор и получите массу эмоций от виражей и изгибов. Добавив шлемы виртуальной реальности вы окунетесь в историю 4-х стихий!
+            .card--link
+              .button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        a.card(href='/')
+          .card--image
+            img(src='/assets/img/card-offer.png')
+          .card--label.close
+            p Закрыто
+          .card--content
+            .card--title
+              h3 джип-райд
+              div.icons
+                span.icons--age 0+
+                span.icons--height 100см+
+            .card--text
+              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
+            .card--link
+              .button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        a.card(href='/')
+          .card--image
+            img(src='/assets/img/card-offer.png')
+          .card--label.close
+            p Закрыто
+          .card--content
+            .card--title
+              h3 джип-райд
+              div.icons
+                span.icons--age 0+
+                span.icons--height 100см+
+            .card--text
+              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
+            .card--link
+              .button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        a.card(href='/')
+          .card--image
+            img(src='/assets/img/card-offer.png')
+          .card--label.close
+            p Закрыто
+          .card--content
+            .card--title
+              h3 джип-райд
+              div.icons
+                span.icons--age 0+
+                span.icons--height 100см+
+            .card--text
+              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
+            .card--link
+              .button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        a.card(href='/')
+          .card--image
+            img(src='/assets/img/card-offer.png')
+          .card--label.close
+            p Закрыто
+          .card--content
+            .card--title
+              h3 джип-райд
+              div.icons
+                span.icons--age 0+
+                span.icons--height 100см+
+            .card--text
+              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
+            .card--link
+              .button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+
+      a(href='/').button.button-outlined.button-secondary
+        span Больше аттракционов

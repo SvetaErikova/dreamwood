@@ -1,0 +1,49 @@
+//dreamwood
+
+section.block.block_banner.block_banner-hero.block_banner-nav
+  .block--wrapper
+    .banner
+      .block_nav-page
+        .nav
+          a  Персонажи
+          a  Площадки
+          a  Индивидуальный сценарий
+          a  Готовые программы
+          a  Галерея
+
+      .block--content
+        <svg class="svg">
+        <clipPath id="my-clip-path-2" clipPathUnits="objectBoundingBox"><path d="M1,0 V0.857 H1 C0.872,0.857,0.673,0.704,0.503,0.727 C0.47,0.732,0.389,0.753,0.389,0.843 C0.389,0.917,0.418,0.978,0.427,0.996 C0.428,0.998,0.427,1,0.426,1 C0.4,0.991,0.27,0.944,0.186,0.87 C0.106,0.8,0.039,0.73,0,0.597 V0 H1"></path></clipPath>
+        </svg>
+        img(src="/assets/img/banner-attractions.png")
+      +block--head("","праздник мечты" ,"для вашего ребенка","Сделаем любой праздник незабываемым. Вас ждет: сказочная атмосфера парка, яркие персонажи и интересная программа!")
+      .block--actions
+        a(href="/").button.button-filled.button-accent
+          span Оставить заявку
+
+
+section.block.block_banner.block_banner-hero
+  .block--wrapper
+    .banner
+      .block--content
+        img(src="/assets/img/1.jpg")
+      +block--head("Subtitle","Title1" ,"title2","Sit diam aliquam semper faucibus molestie habitasse pulvinar.")
+      .block--actions
+        a(href="/").button.button-filled.button-accent
+          span Кнопка 1
+
+
+
+section.block.block_banner.block_banner-hero.block_banner-index
+  .block--wrapper
+    .banner
+      .block--content
+        img(src="/assets/img/banner.png")
+      .block--head
+        .block--head_title
+          h1.f-h1
+            //include ../img/svg/banner-group.svg
+        .block--actions
+          a(href="/").button.button-filled.button-accent
+            span Купить билет
+

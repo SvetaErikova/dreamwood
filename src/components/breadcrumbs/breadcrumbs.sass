@@ -1,0 +1,53 @@
+.breadcrumbs
+  padding: var(--g-32) var(--g-80)
+  display: flex
+  align-items: center
+  gap: 8px
+  --main-color: rgba(31, 31, 31, 0.36)
+  --non-active-color: var(--c-text-dark)
+  --hover-color: rgba(31, 31, 31, 0.8)
+  margin: 0 auto
+  z-index: 45
+  @media(max-width: 768px)
+    flex-wrap: nowrap
+    width: 100vw
+    overflow-x: auto
+    padding: 20px 16px
+    margin: 0
+    justify-content: flex-start
+  a
+    font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 1024px) / (1920 - 1024))), 16px)
+    line-height: 1.5
+    transition: var(--transition)
+    position: relative
+    color: var(--main-color)
+    white-space: nowrap
+    padding-right: 11px
+    &:not(:last-child):after
+      content: ""
+      position: absolute
+      right: 0
+      top: 50%
+      display: block
+      width: 3px
+      height: 3px
+      border-radius: 50%
+      background-color: currentColor
+    &:last-child
+      pointer-events: none
+      color: var(--non-active-color)
+    &:hover,
+    &:focus,
+    &:active
+      color: var(--hover-color)
+
+.header-transparent
+  & ~ .breadcrumbs
+    position: absolute
+    top: var(--headerHeight)
+    left: 0
+    --main-color: rgba(255,255,255, 0.36)
+    --non-active-color: #fff
+    --hover-color: rgba(255,255,255, 0.6)
+    @media(max-width: 768px)
+      left: 0

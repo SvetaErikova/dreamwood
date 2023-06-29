@@ -1,0 +1,33 @@
+mixin block--head(subtitle, title1, title2, caption)
+  .block--head
+    .block--head_subtitle
+      p=subtitle
+    .block--head_title
+      h2.f-h2=title1
+        br
+        =title2
+    .block--head_caption
+      p=caption
+
+mixin block--head_h1(subtitle, title, caption)
+  .block--head
+    .block--head_subtitle
+      p=subtitle
+    .block--head_title
+      h1.f-h1= title
+    .block--head_caption
+      p=caption
+
+mixin block--head_title_link(subtitle, title1, title2, caption, link)
+  .block--head
+    .block--head_subtitle
+      p=subtitle
+    .block--head_title
+      h2.f-h2=title1
+        br
+        =title2
+    .block--head_caption
+      p=caption
+    a.button.button-link.button-secondary(href='/')
+      span.block--head_icon
+      span=link

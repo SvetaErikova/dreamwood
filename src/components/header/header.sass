@@ -1,0 +1,295 @@
+.header
+  position: sticky
+  top: 0
+  left: 0
+  width: 100%
+  max-width: 100vw
+  z-index: 20
+  background-color: transparent
+  padding: 20px var(--g-80)
+  font-size: var(--fs-18)
+  @media(max-width: 768px)
+    padding: 8px var(--g-80)
+  .logo-text
+    fill: var(--c-text-dark)
+    transition: var(--transition)
+  &.header-transparent
+    position: fixed
+    color: var(--c-text-white)
+    .logo-text
+      fill: var(--c-text-white)
+  &.scrolled,
+  &.header-transparent.scrolled
+    color: var(--c-text-dark)
+    background: #fff
+    .header--burger
+      border-color: var(--c-text-dark)
+    .header--burger > div,
+    .header--burger > div:after,
+    .header--burger > div:before
+      background-color: var(--c-text-dark)
+  &--logo
+    display: flex
+    align-items: center
+  .button.button-outlined.button-accent
+    --outlined-bc-base:  var(--color-yellow)
+    --outlined-c-base:  var(--color-yellow)
+    //--outlined-shadow-base: rgba(151, 86, 233, 0.15)
+    --outlined-bgc-hover:  var(--c-surface-accent)
+    --outlined-bc-hover:  var(--c-surface-accent)
+    --outlined-c-hover: var(--c-text-white)
+
+// BURGER
+.header--burger
+  border-radius: 50%
+  padding: 20px 10px
+  border: 1px solid white
+  cursor: pointer
+.header__burger-line
+  position: relative
+  width: 20px
+  height: 2px
+  background: #fff
+  -webkit-transition: .5s
+  transition: .5s
+  z-index: 99
+  opacity: 1
+  &:before
+    content: ''
+    position: absolute
+    top: 8px
+    width: 20px
+    height: 2px
+    right: 0
+    background: #fff
+    -webkit-transition: .5s
+    transition: .5s
+  &:after
+    content: ''
+    position: absolute
+    top: -8px
+    width: 20px
+    height: 2px
+    background: #fff
+    -webkit-transition: .5s
+    transition: .5s
+
+
+.header--main
+  display: grid
+  grid-template-columns: 2fr 1.5fr 1fr
+  grid-template-areas: ' logo contacts actions'
+  gap: var(--g-32)
+  align-items: center
+  transition: var(--transition)
+  max-width: calc(1440px - var(--g-80) * 2)
+  margin: auto
+  @media(max-width: 1024px)
+    grid-template-areas: 'logo . actions'
+    grid-template-columns: auto 1fr auto
+    border-radius: 16px
+
+
+.header--logo
+  grid-area: logo
+  position: relative
+  height: 100%
+  overflow: visible
+  svg, img
+    object-fit: contain
+    object-position: center
+    transition: var(--transition)
+
+
+.header--actions
+  grid-area: actions
+  display: flex
+  align-items: center
+  gap: var(--g-32)
+  max-width: 42vw
+  justify-content: flex-end
+  @media(max-width: 1024px)
+    display: none
+.header--contacts_item
+  display: flex
+  align-items: center
+  height: 100%
+
+
+.is_dropdown
+  position: relative
+  .is_dropdown--content
+    opacity: 0
+    pointer-events: none
+    transition: opacity 0.13s linear, transform 0.18s linear
+    position: absolute
+    left: 50%
+    top: 0
+    padding-top: 20px
+    width: 200%
+    translate: -50% 20px
+    .image
+      border: var(--color-pink) var(--g-24) solid
+      border-radius: 20px
+      position: relative
+      display: flex
+      &:after
+        content: ''
+        position: absolute
+        display: inline-block
+        top: 0
+        left: 50%
+        width: 40px
+        height: 40px
+        background-color: var(--color-pink)
+        border-radius: 10px
+        rotate: 45deg
+        translate: -50% -70%
+        z-index: -1
+  &.is_open
+    .is_dropdown--content
+      opacity: 1
+      pointer-events: all
+      transform: translateY(0)
+
+.is_dropdown:hover > .is_dropdown--content,
+.is_dropdown--content:hover
+  opacity: 1
+  pointer-events: auto
+
+.header_menu
+  position: fixed
+  top: 0
+  display: grid
+  right: 0
+  width: 100%
+  height: 100vh
+  max-width: 410px
+  padding:  16px var(--g-24)
+  background: #F9FCFF
+  z-index: 99
+  transition: .24s ease-out
+  transition-delay: .05s
+  transform: translateX(100%)
+  opacity: 0
+  .header_menu_block
+    position: relative
+  .header_menu_block:not(:first-child)
+    transition: .24s ease-out
+    transition-delay: 0.2s
+    transform: translateX(100%)
+    opacity: 0
+  &_item
+    font-weight: 500
+    font-size: 18px
+  &-close
+    border-radius: 50%
+    padding: 20px 10px
+    border: 1px solid white
+    cursor: pointer
+    border: var(--c-text-dark) 1px solid
+    display: inline-block
+  &-close-line
+    position: relative
+    width: 20px
+    height: 2px
+    -webkit-transition: .5s
+    transition: .5s
+    z-index: 99
+    opacity: 1
+  &-close-line::before
+    top: 50%
+    background: var(--c-text-dark)
+    transform: rotate(45deg)
+    width: 20px
+    content: ''
+    position: absolute
+    top: 0px
+    width: 20px
+    height: 2px
+    right: 0
+  &-close-line::after
+    top: 50%
+    background: var(--c-text-dark)
+    transform: rotate(-45deg)
+    content: ''
+    position: absolute
+    top: 0px
+    width: 20px
+    height: 2px
+  .header_menu_block:after
+    content: ''
+    position: absolute
+    background-repeat: no-repeat
+    background-size: cover
+  .header_menu_block:nth-child(1):after
+    background-size: contain
+    width: 100%
+    height: 200%
+    right: calc( var(--g-24) * -1)
+    top: -16px
+    background-image: url("../img/svg/bck-decor-1.svg")
+    background-position: right
+  .header_menu_block:nth-child(2):before
+    content: ''
+    position: absolute
+    background-repeat: no-repeat
+    background-size: cover
+    right: 40%
+    top: -15%
+    background-image: url("../img/svg/holidays-decor-3.svg")
+    width: 69px
+    height: 93px
+  .header_menu_block:nth-child(2):after
+    right: 10px
+    top: 35%
+    background-image: url("../img/svg/holidays-decor-1.svg")
+    width: 67px
+    height: 64px
+  .header_menu_block:nth-child(3):after
+    right: 50%
+    bottom: 10%
+    background-image: url("../img/svg/icon-bird-red.svg")
+    width: 100px
+    height: 120px
+  .button.button-link
+    padding: 0.66em 0
+    display: flex
+    flex-direction: column
+    white-space: nowrap
+    font-size: var(--fs-18)
+    letter-spacing: -0.02em
+    line-height: 1.33
+    font-weight: 600
+    color: var(--c-text-dark)
+    opacity: 0.8
+    transition: opacity 0.18s ease-in-out
+    &:hover,
+    &:active,
+    &:focus
+      opacity: 1
+.header_menu.is_open,
+.header_menu.is_open .header_menu_block
+  transform: translateX(0)
+  opacity: 1
+
+.header--contacts
+  grid-area: contacts
+  margin-left: auto
+  display: flex
+  align-items: center
+  gap: var(--g-20)
+  .button
+    --link-c-hover: var(--color-pink)
+  @media(max-width: 1280px)
+    gap: 10px
+
+
+//.page--index
+//  .header-transparent
+//    color: var(--c-text-dark)
+//    background: transparent
+//    --accent: #9756E9
+//    .logo-text
+//      fill: var(--c-text-dark)
+

@@ -1,0 +1,97 @@
+.form
+  fieldset
+    border-color: transparent
+    padding: 0
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 20px
+  &__text
+    color: var(--c-text-transparent)
+    font-size: var(--fs-18)
+    text-align: center
+  &__input
+    display: flex
+    flex-direction: column
+    &:first-of-type
+      margin-top: var(--g-40)
+    span
+      font-size: 13px
+      color: var(--c-text-accent)
+      opacity: 0.6
+      text-transform: uppercase
+      margin-bottom: 8px
+    input, textarea , .form__input-file
+      outline: none
+      padding: 8px 0
+      line-height: 1.2
+      font-size: var(--fs-18)
+      font-weight: 400
+      border: 1px solid rgba(151, 86, 233, 0.5)
+      background-color: transparent
+      border-radius: 12px
+      transition: 0.3s ease-out
+      padding: 16px
+      background-color: var(--c-surface-default)
+      @media(max-width: 768px)
+        border-radius: 8px
+
+      &::placeholder,
+      &:placeholder-shown,
+      .js-changeDescriptionText
+        color: var(--c-text-transparent)
+      &:not(:placeholder-shown)
+        color: var(--c-dark)
+      &:focus
+        border-color: var(--c-text-dark)
+      &:invalid:not(:placeholder-shown)
+        border-color: var(--c-error)
+        & ~ .form__input-error
+          height: auto
+      //&:valid:not(:placeholder-shown)
+      //  border-color: var(--c-text-dark)
+    &.error
+      .form__input-error
+        height: auto
+
+    &-error
+      color: rgba(155, 0, 0, 0.42)
+      font-weight: 500
+      font-size: 12px
+      line-height: 1.56
+      height: 0
+      overflow: hidden
+      transition: 0.3s linear
+  &__policy
+    font-size: 16px
+    font-weight: 400
+    color: var(--c-text-secondary)
+    a:not(.button)
+      font-size: 16px
+      font-weight: 400
+      margin-left: 8px
+
+  &__button
+    display: flex
+    & .button
+      @media(max-width: 768px)
+        width: 100%
+.form.is_sending
+  button[type="submit"]
+    opacity: 0.5
+    pointer-events: none
+
+.content_subscription
+  fieldset
+    display: flex
+    gap: 8px
+    @media(max-width: 768px)
+      flex-direction: column
+      .form__input,
+      .form__button,
+      .form__button .button
+        width: 100%
+    .form__input
+      flex-grow: 1
+  .form__policy,
+  .form__input span
+    display: none

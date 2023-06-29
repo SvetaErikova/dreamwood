@@ -1,0 +1,63 @@
+@font-face
+  font-family: 'Euclid'
+  font-weight: 400
+  //font-stretch: 75 125
+  font-style: normal
+  src: url("../fonts/Euclid-Circular-B/EuclidCircularB-Regular.otf") format('truetype')
+
+@font-face
+  font-family: 'Euclid'
+  font-weight: 500
+  //font-stretch: 75 125
+  font-style: normal
+  src: url("../fonts/Euclid-Circular-B/EuclidCircularB-Medium.otf") format('truetype')
+
+@font-face
+  font-family: 'Oswald'
+  font-weight: 400
+  //font-stretch: 75 125
+  font-style: normal
+  src: url("../fonts/oswald/Oswald-Regular.ttf") format('truetype')
+
+@font-face
+  font-family: 'Oswald'
+  font-weight: 600
+  //font-stretch: 75 125
+  font-style: normal
+  src: url("../fonts/oswald/Oswald-DemiBold.ttf") format('truetype')
+
+@font-face
+  font-family: 'Oswald'
+  font-weight: 500
+  //font-stretch: 75 125
+  font-style: normal
+  src: url("../fonts/oswald/Oswald-Medium.ttf") format('truetype')
+
+html
+  font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 1024px) / (1920 - 1024))), 18px)
+  line-height: 1.25
+  font-family: 'Euclid', sans-serif
+  font-weight: 400
+  color: var(--c-text-dark)
+  text-size-adjust: none
+  -webkit-text-size-adjust: none
+
+h1,h2,h3,h4,h5
+  font-family: 'Oswald', sans-serif
+
+
+//.f-h1
+//  font-size: clamp(28px, calc(28px + (56 - 28) * ((100vw - 1024px) / (1920 - 1024))), 56px)
+//  line-height: 1.14
+//
+//.f-h2
+//  font-size: clamp(28px, calc(28px + (56 - 28) * ((100vw - 1024px) / (1920 - 1024))), 56px)
+//  line-height: 1.14
+//
+//.f-h3
+//  font-size: clamp(18px, calc(18px + (32 - 18) * ((100vw - 1024px) / (1920 - 1024))), 32px)
+//  line-height: 1.14
+//
+//.f-h4
+//  font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 1024px) / (1920 - 1024))), 24px)
+//  line-height: 1.14

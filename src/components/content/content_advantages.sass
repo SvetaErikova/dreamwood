@@ -1,0 +1,24 @@
+.content_advantages
+  --accent: var(--color-green)
+  &:not(.block_list-slider)
+    .block--elements
+      grid-template-columns: 1fr
+      @media (min-width: 768px)
+        grid-template-columns: repeat(3, 1fr)
+        .block--pagination
+          grid-column: span 4
+  .block--content
+    display: grid
+    grid-template-columns: repeat(5 , 1fr)
+    gap: 30px
+    .advantages-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 10px
+      .advantages-icon img
+        aspect-ratio: 1/1
+        height: 180px
+        object-fit: contain
+      .advantages-text
+        text-align: center

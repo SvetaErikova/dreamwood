@@ -1,0 +1,50 @@
+.content_feedback
+  &:not(.block_list-slider)
+    .block--wrapper
+      position: relative
+      max-width: 1240px
+      //background-image: url("../img/svg/feedback-bck.svg")
+    .block--image
+      position: relative
+      img
+        height: auto
+      &:after
+        content: ''
+        position: absolute
+        top: -54px
+        right: 15%
+        width: 297px
+        height: 307px
+        background-image: url("../img/svg/feedback-drimmi.svg")
+        background-repeat: no-repeat
+        aspect-ratio: 277 / 438
+  .block--content
+    position: absolute
+    top: 63%
+    left: 50%
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: var(--g-48)
+    translate: -50% -50%
+    max-width: 620px
+    .block--head
+      margin-bottom: 0
+      text-align: center
+      width: 100%
+    .block--actions
+      width: 100%
+      display: grid
+      grid-template-columns: 1fr 1fr
+      a
+        width: 100%
+
+  .button-reversed
+    --filled-bgc-base: var(--c-surface-accent-hover)
+    --filled-bc-base: var(--c-surface-accent-hover)
+    --filled-c-base: var(--c-text-white)
+    --filled-bgc-hover: var(--c-surface-accent)
+    --filled-bc-hover: var(--c-surface-accent)
+    --filled-c-hover: var(--c-text-white)
+

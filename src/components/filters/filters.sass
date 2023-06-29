@@ -1,0 +1,128 @@
+.filters-text
+  display: flex
+  justify-content: space-between
+  gap: 30px
+  margin-bottom: 20px
+  display: grid
+  grid-template-columns: 1fr 1fr
+  p
+    font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 1024px) / (1920 - 1024))), 18px)
+    letter-spacing: 0.003em
+.filters-block
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap:  15px 20px
+  margin-bottom: var(--g-64)
+  .filters-item
+    display: flex
+    justify-content: space-between
+    padding: 25px 20px
+    background-color: #F9FCFF
+    border-radius: 20px
+    font-weight: 500
+    font-size: 18px
+    .input-group
+      font-size: 16px
+    label
+      display: flex
+      align-items: center
+      gap: var(--g-28)
+      cursor: pointer
+      .custom-checkbox
+        position: relative
+        width: 24px
+        height: 24px
+        background-color: #fff
+        z-index: 1
+      .custom-checkbox:before
+        content: ''
+        top: 50%
+        left: 50%
+        translate: (-50% -50%)
+        position: absolute
+        width: 20px
+        height: 20px
+        border: var(--c-text-dark) 2px solid
+        border-radius: 50%
+      .custom-checkbox:after
+        content: ''
+        z-index: -1
+        top: 50%
+        left: 50%
+        translate: (-50% -50%)
+        position: absolute
+        width: 12px
+        height: 12px
+        background-color: var(--color-yellow)
+        border: var(--color-yellow) 1px solid
+        border-radius: 50%
+        opacity: 0
+        transition: var(--transition)
+    input
+      display: none
+
+    &:not(.age)
+      input:checked + span:before,
+      input:checked + span:after
+        border:  var(--color-yellow) 2px solid
+        opacity: 1
+
+
+  .age,
+  .height
+    .input-group
+      position: relative
+      display: flex
+      label
+        gap: 8px
+        flex-direction: column-reverse
+  .height
+    .input-group
+      gap: var(--g-48)
+      &:after
+        content: ''
+        left: 5px
+        right: 0
+        bottom: 12px
+        width: 95%
+        position: absolute
+        height: 2px
+        background-color: #15466B
+  .age
+    .input-group
+      gap: var(--g-20)
+    &-custom-checkbox
+      position: relative
+      z-index: 0
+      &:after
+        content: ''
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: -1
+        position: absolute
+        background-image: url("../img/svg/filters/filters-hover.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        transition: var(--transition)
+        opacity: 0
+      svg
+        z-index: 2
+  input:hover + span:after,
+  input:checked + span:after
+    opacity: 1
+    border: none
+    z-index: -1
+  .button
+    margin-left: auto
+
+  .filters-delete
+    display: flex
+    a
+      font-weight: 400
+      margin-right: 0
+
+
+

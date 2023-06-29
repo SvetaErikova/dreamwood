@@ -1,0 +1,88 @@
+.content_image-text-action-1
+  --accent: #AB8EB8
+  .block--image
+    &:after
+      content: ''
+      position: absolute
+      top: -5%
+      right: -5%
+      background-image: url("../img/svg/bck-decor-7.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      width: clamp(50px, calc(50px + (120 - 50) * ((100vw - 768px) / (1440 - 768))), 120px)
+      height: clamp(50px, calc(50px + (115 - 50) * ((100vw - 768px) / (1440 - 768))), 115px)
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      background-image: url("../img/svg/holidays-decor-2.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      width: clamp(59px, calc(59px + (121 - 59) * ((100vw - 768px) / (1440 - 768))), 121px)
+      height: clamp(72px, calc(72px + (145 - 72) * ((100vw - 768px) / (1440 - 768))), 145px)
+    .block--head
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        background-image: url("../img/svg/holidays-decor-3.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        width: clamp(42px, calc(42px + (143 - 42) * ((100vw - 768px) / (1440 - 768))), 143px)
+        height: clamp(83px, calc(83px + (191 - 83) * ((100vw - 768px) / (1440 - 768))), 191px)
+
+.content_image-text-action-2
+  --accent: var(--color-yellow)
+  .block--head
+    &:after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      background-image: url("../img/svg/bck-decor-9.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      width: clamp(42px, calc(42px + (143 - 42) * ((100vw - 768px) / (1440 - 768))), 143px)
+      height: clamp(83px, calc(83px + (191 - 83) * ((100vw - 768px) / (1440 - 768))), 191px)
+  .block--image
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      background-image: url("../img/svg/icon-bird-red.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      width: clamp(59px, calc(59px + (121 - 59) * ((100vw - 768px) / (1440 - 768))), 121px)
+      height: clamp(72px, calc(72px + (145 - 72) * ((100vw - 768px) / (1440 - 768))), 145px)
+
+
+
+
+.content_image-text-action-1,
+.content_image-text-action-2
+  --accent-hover: #15466B
+  .block--head
+    align-items: flex-start
+    position:  relative
+  .block--actions
+    margin-bottom: 0
+    display: flex
+    justify-content: flex-start
+    align-items: baseline
+    gap: 20px
+    & a
+      width: 45%
+    & .phone-circle
+      height: auto
+      color: var(--accent)
+      .icon-phone-circle
+        border-color: var(--accent)
+    .phone-circle:hover,
+    .phone-circle:hover > .icon-phone-circle
+      color: var(--c-text-dark)
+      border-color: var(--c-text-dark)
+
+

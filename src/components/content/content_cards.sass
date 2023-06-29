@@ -1,0 +1,8 @@
+.content_cards
+  &:not(.block_list-slider)
+    .block--elements
+      grid-template-columns: 1fr
+      @media (min-width: 768px)
+        grid-template-columns: repeat(4, 1fr)
+        .block--pagination
+          grid-column: span 4

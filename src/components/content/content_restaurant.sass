@@ -1,0 +1,22 @@
+.content_restaurant
+  --accent: var(--color-pink)
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: -40%
+    left: 0
+    right: 0
+    background-image: url("../img/svg/bck-big-decor-3.svg")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: right
+    z-index: -2
+  &:not(.block_list-slider)
+    .block--elements
+      grid-template-columns: 1fr
+      @media (min-width: 768px)
+        grid-template-columns: repeat(2, 1fr)
+        .block--pagination
+          grid-column: span 4

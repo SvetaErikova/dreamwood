@@ -1,0 +1,64 @@
+.content_article
+  padding: var(--g-80)
+  .block--wrapper
+    padding: 0 var(--g-150)
+    margin:  0 auto
+    display: grid
+    gap: 40px
+    grid-template-columns:  7fr 3fr
+    grid-template-areas: 'content aside'
+    @media(max-width: 992px)
+      grid-template-columns: 1fr
+  .block--content
+    overflow: hidden
+    margin-top: 0
+    grid-area: content
+  .content_article--sidebar
+    grid-area: aside
+
+
+
+.content_article--sidebar_sticky
+  padding: var(--g-32)
+  background-color: #F4EAFF
+  border-radius: 24px
+  margin-bottom: var(--g-32)
+  strong
+    font-size: var(--fs-24)
+    font-weight: 700
+    padding-bottom: 1em
+    line-height: 1.33
+    text-transform: uppercase
+    display: block
+  .sidebar_nav
+    list-style: none
+    display: flex
+    flex-direction: column
+    margin: 0
+    .sidebar_nav--item
+      position: relative
+      font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 1024px) / (1920 - 1024))), 18px)
+      line-height: 1.56
+      padding: 10px 0
+      display: flex
+      align-items: center
+      gap: 18px
+      opacity: 0.6
+      &:before
+        content: ""
+        display: block
+        width: 10px
+        height: 10px
+        background-color: transparent
+        border-radius: 50%
+      &.is_active
+        opacity: 1
+        &:before
+          background-color: var(--c-text-accent)
+      &:visited
+        &:before
+          background-color: var(--c-text-accent)
+      &:hover,
+      &:focus,
+      &:active
+        opacity: 1

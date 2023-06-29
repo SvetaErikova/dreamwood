@@ -1,0 +1,47 @@
+.content_tickets
+  &:not(.block_list-slider)
+    .block--wrapper
+      position: relative
+      max-width: 1240px
+    .block--image
+      position: relative
+      width: 110%
+      left: -5%
+      img
+        height: auto
+      &:after
+        content: ''
+        position: absolute
+        top: -35%
+        right: 0
+        width: 277px
+        height: 438px
+        background-image: url("../img/svg/tickets-bck-decor.svg")
+        background-repeat: no-repeat
+        aspect-ratio: 277 / 438
+  .block--content
+    position: absolute
+    top: 62%
+    right: -170px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: var(--g-28)
+    max-width: 632px
+    translate: -50% -50%
+    .block--title
+      text-align: center
+  .block--actions
+    display: grid
+    grid-template-columns: 1fr 1fr
+    a
+      width: 100%
+
+  .button-reversed
+    --filled-bgc-base: var(--c-surface-accent-hover)
+    --filled-bc-base: var(--c-surface-accent-hover)
+    --filled-c-base: var(--c-text-white)
+    --filled-bgc-hover: var(--c-surface-accent)
+    --filled-bc-hover: var(--c-surface-accent)
+    --filled-c-hover: var(--c-text-white)
+

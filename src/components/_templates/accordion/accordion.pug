@@ -1,0 +1,10 @@
+mixin accordion-list(lable,title, text)
+  .accordion.js-openAccordion
+    .accordion--button
+      span.label=lable
+      p.accordion--button_text=title
+      span.icon
+    .accordion--content.is_cascade
+      p=text
+      p=text
+

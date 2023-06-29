@@ -1,0 +1,41 @@
+form.form
+  input(type="hidden" value="" name="fields[form]")
+  input(type="hidden" value="")
+  fieldset
+    label.form__input
+      span Ваше имя*
+      input(type="text" placeholder="Иванов Иван Иванович" name="fields[name]" required autocomplete)
+      .form__input-error Ошибка заполнения
+    label.form__input
+      span Телефон*
+      input(type="tel" placeholder="+7 999 999-99-99" name="fields[phone]" inputmode="numeric" autocomplete="tel" required)
+      .form__input-error Ошибка заполнения
+    label.form__input
+      span Email*
+      input(type="email" placeholder="example@imperial.ru" name="fields[email]"  autocomplete="email" required)
+      .form__input-error Ошибка заполнения
+
+    label.form__input
+      span text
+      textarea(placeholder="Ваше сообщение" rows='5' cols='30')
+      .form__input-error Ошибка заполнения
+
+    //label.form__input
+    //  span Резюме*
+    //  label.form__input-file
+    //    p.js-changeDescriptionText Выберите файл для загрузки
+    //    input.hidden.js-input_file(type="file" required name="" accept=".doc,.docx,.pdf")
+    //    .js-clearFile
+    //  .form__input-error Ошибка заполнения
+    //label.form__input
+    //  span Картинка
+    //  label.form__input-file
+    //    p.js-changeDescriptionText Выберите файл для загрузки
+    //    input.hidden.js-input_file(type="file" required name="" accept=".svg,.png,.jpg,.jpeg,.pdf,.webp")
+    //    .js-clearFile
+    //  .form__input-error Ошибка заполнения
+    //p.form__policy Нажимая кнопку, вы соглашаетесь с
+    //  a(href="") политикой конфиденциальности
+    .form__button
+      button.button.button-outlined.button-primary(type="submit")
+        span Отправить

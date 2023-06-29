@@ -1,0 +1,54 @@
+mixin card--events(subtitle,title, image_src)
+  a.card(href='')
+    .card--image
+      img(src=image_src alt="")
+    .card--content
+      .card--subtitle
+        p=subtitle
+      .card--title
+        h3= title
+      .card--link
+        .button.button-link.button-card
+          span Подробнее
+          span.icon.icon-arrow-card
+
+mixin card--restaurant(title, text, image_src)
+  .card(href='')
+    .card--image
+      img(src=image_src alt="")
+    .card--content
+      .card--title
+        h3= title
+      .card--text
+        p= text
+      .card--link
+        a(href='/').button.button-outlined.menu
+          span Меню
+          span.icon.icon-restourant
+        a(href='/').button.button-link.button-card
+          span Подробнее
+          span.icon.icon-arrow-card
+
+
+mixin card--personage(subtitle,title, image_src)
+  .card
+    .card--image
+      img(src=image_src alt="")
+    .card--content
+      .card--title=title
+
+mixin card--area(subtitle,title, text, image_src)
+  a.card(href='')
+    .card--image
+      img(src=image_src alt="")
+    .card--content
+      .card--subtitle
+        p=subtitle
+      .card--title
+        h3= title
+      .card--text
+        p=text
+      .card--link
+        .button.button-link.button-card
+          span Подробнее
+          span.icon.icon-arrow-card
