@@ -1,0 +1,67 @@
+.content_image_text
+  @media(max-width: 768px)
+    padding: 0
+  .block--wrapper
+    display: grid
+    grid-template-columns: 1fr
+    gap: var(--g-32)
+  &--image
+    img
+      height: auto
+  &--text
+    max-width: 520px
+    margin: var(--g-32)
+    h3
+      font-size: var(--fs-48)
+      line-height: 1.32
+    .button
+      text-transform: uppercase
+    &:before
+      content: ''
+      display: block
+      background-repeat: no-repeat
+      background-size: contain
+  &--row
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: var(--g-20)
+    @media(max-width: 768px)
+      display: flex
+      flex-direction: column
+
+.content_image_text--row-education
+  .content_image_text--image
+    img
+      @media(min-width: 769px)
+        margin-right: calc(var(--fs-120) * -1)
+        width: calc(100% + var(--fs-120))
+  .content_image_text--text
+    @media(min-width: 769px)
+      margin-top: var(--g-80)
+      margin-left: var(--fs-120)
+      position: relative
+      &:before
+        background-image: url('../img/content_image_text_star.svg')
+        aspect-ratio: 114 / 118
+        width: var(--fs-120)
+        margin-bottom: var(--g-32)
+
+.content_image_text--row-health
+  flex-direction: column-reverse
+  .content_image_text--text
+    @media(min-width: 769px)
+      padding-left: calc(var(--fs-120) * 2)
+      transform: translateY( -40px )
+      max-width: 100%
+      position: relative
+      &:before
+        position: absolute
+        left: 0
+        background-image: url('../img/content_image_text_check.svg')
+        aspect-ratio: 153 / 117
+        width: var(--g-160)
+
+.content_image_text--row-adventure
+  .content_image_text--image
+    @media(min-width: 769px)
+      transform: translateY(-30%)

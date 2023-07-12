@@ -1,0 +1,127 @@
+.content_gallery
+  max-width: 100%
+  overflow: hidden
+  --accent : var(--color-purple)
+  &.block:not(.block_banner) .block--wrapper
+    max-width: 100%
+    margin: 0
+  .slider_controls
+    position: absolute
+    z-index: 5
+    width: 100%
+    top: 50%
+    display: flex
+    transform: translate(0, -50%)
+    justify-content: space-between
+    @media(max-width: 475px)
+      top: auto
+      bottom: -60px
+      right: 0%
+      justify-content: flex-end
+
+  figcaption
+    display: none
+  .block--head
+    position: relative
+    max-width: 1440px
+    width: 100%
+    margin: auto
+    margin-bottom: var(--g-48)
+    &:after
+      content: ''
+      position: absolute
+      top: -50%
+      right: 50%
+      background-image: url("../img/svg/bck-decor-3.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      width:  107px
+      height: 70px
+      @media(max-width: 768px)
+        right: 5%
+.gallery
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-auto-rows: 240px
+  gap: var(--g-40)
+  @media(max-width: 992px)
+    grid-template-columns: 1fr 1fr
+    grid-auto-rows: 120px
+  .gallery--item
+    border-radius: 5px
+    overflow: hidden
+    height: 400px
+    width: auto
+    img, figure
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: relative
+    .video
+      position: relative
+      &:after
+        content: "\e90f"
+        position: absolute
+        top: 50%
+        right: 50%
+        background-repeat: no-repeat
+        background-size: contain
+        width:  50px
+        height: 50px
+        translate: -50% -50%
+    &:nth-child(3n+1)
+      grid-column: span 2
+      grid-row: span 2
+
+
+
+.js-gallerySwiper
+  --container-gallery: 1440px
+  display: flex
+  //width: 1440px
+  width: 100%
+  max-width: var(--container-gallery)
+  margin:  0 auto
+  position: relative
+  overflow: visible
+  @media (max-width: 1510px)
+    --container-gallery: 1240px
+  @media (max-width: 1320px)
+    --container-gallery: 998px
+  @media (max-width: 1050px)
+    --container-gallery: 768px
+  //@media (max-width: 1050px)
+  .gallery--item
+    flex-shrink: 0
+    flex-grow: 0
+    transition: width 0.24s linear
+    width: calc((var(--container-gallery)  - 80px)  / 4 )
+    transform-origin: center
+  .gallery--item.swiper-slide-next
+    width: calc((var(--container-gallery)  - 80px)  / 2 )
+  .gallery--item:not(.swiper-slide-next)
+    width: calc((var(--container-gallery)  - 80px)  / 4 )
+
+  &:after
+    content: ''
+    position: absolute
+    top: -12%
+    right: 33%
+    background-image: url("../img/svg/bck-decor-4.svg")
+    background-repeat: no-repeat
+    background-size: contain
+    width:  97px
+    height: 87px
+  &:before
+    content: ''
+    position: absolute
+    bottom: -20%
+    right: 30%
+    background-image: url("../img/svg/bck-decor-5.svg")
+    background-repeat: no-repeat
+    background-size: contain
+    width:  323px
+    height: 179px
+
+
+

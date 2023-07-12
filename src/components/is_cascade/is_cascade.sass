@@ -1,0 +1,133 @@
+.is_cascade
+  h1, h2, h3
+    font-family: Oswald
+    line-height: 1.17
+    text-transform: uppercase
+    font-feature-settings: 'pnum' on, 'lnum' on
+    position: relative
+    font-size: var(--fs-36)
+    margin-bottom: 24px
+    font-weight: 700
+    &:not(:first-child)
+      margin-top: 64px
+  h4, h5, h6
+    font-family: Oswald
+    font-weight: 600
+    line-height: 1.17
+    text-transform: uppercase
+    font-feature-settings: 'pnum' on, 'lnum' on
+    position: relative
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 1024px) / (1920 - 1024))), 24px)
+    margin-bottom: 18px
+    margin-top: var(--g-48)
+  & > p,
+  & > span,
+  & ul, ol
+    margin: var(--g-24) 0
+    font-size: var(--fs-18)
+    line-height: 1.8
+    color: var(--c-text-dark-paragraph)
+  li
+    opacity: 0.8
+    color: var(--c-text-dark-1)
+    letter-spacing: -0.02em
+    margin-bottom: 1em
+    margin-left: 24px
+    & > a
+      text-decoration: underline
+      text-underline-offset: 2px
+      &:hover,
+      &:active,
+      &:focus
+        text-underline: none
+
+  img, video, iframe
+    aspect-ratio: 1010 / 556
+    width: 100%
+    object-fit: cover
+    border-radius: 24px
+  figure, iframe
+    margin: 64px 0
+  figcaption
+    opacity: 0.8
+    margin-top: 12px
+  blockquote
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    margin: var(--g-32) 0
+    position: relative
+    //&:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: var(--g-40)
+      height: 38px
+      background-image: url("data:image/svg+xml,%3Csvg width='45' height='38' viewBox='0 0 45 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M45 28.7111C45 23.6444 40.6731 19.4222 35.4808 19.4222H34.6154L43.2692 0C27.6923 18.5778 25.9615 21.9556 25.9615 28.7111C25.9615 33.7778 30.2885 38 35.4808 38C40.6731 38 45 33.7778 45 28.7111ZM19.0385 28.7111C19.0385 23.6444 14.7115 19.4222 9.51923 19.4222H8.65385L17.3077 0C1.73077 18.5778 0 21.9556 0 28.7111C0 33.7778 4.32692 38 9.51923 38C14.7115 38 19.0385 33.7778 19.0385 28.7111Z' fill='%23F5703F'/%3E%3C/svg%3E")
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+    p
+      margin-left: var(--g-150)
+      margin-bottom: 27px
+      font-size: var(--fs-24)
+      line-height: 1.48
+    span
+      font-size: var(--fs-18)
+
+  .is_cascade--slider
+    margin: 64px 0
+    overflow: hidden
+    .gallery
+      gap: 0
+    .js-gallerySwiper
+      .gallery--item
+        height: auto
+        width: 100% !important
+        aspect-ratio: 1010 / 556
+    figure
+      width: 100%
+      margin: 0
+    figcaption
+      display: none
+    .slider_controls
+      margin-top: 20px
+
+  table
+    margin: var(--g-32) 0
+    border-collapse: collapse
+    width: 100%
+    overflow: hidden
+    @media(max-width: 992px)
+      margin: 0 -16px
+      padding: 0 16px
+      max-width: 100vw
+      overflow-x: auto
+      display: flex
+    thead, th
+      font-weight: 600
+      background-color: #F4EAFF
+      color: var(--c-text-dark)
+      text-align: left
+      td, th
+        border: 1px solid #F4EAFF
+    td, th
+      border: 1px solid rgba(35, 35, 35, 0.08)
+      padding: 8px 16px
+
+  a:not(.button)
+    text-underline-offset: 3px
+    text-decoration: underline
+    &:hover,
+    &:focus,
+    &:active
+      text-decoration-color: transparent
+
+
+  .accordion--content
+    p:first-of-type
+      margin: 0
+
+
+

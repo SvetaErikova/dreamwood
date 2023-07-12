@@ -1,0 +1,55 @@
+/* Anti-flicker effect safari */
+.swiper-slide, .card, .gallery__item
+  -webkit-transform: translate3d(0, 0, 0)
+  -webkit-transform: translateZ(0)
+  -webkit-backface-visibility: hidden
+
+.swiper-wrapper
+  -webkit-transform-style: preserve-3d
+
+
+.swiper-button-next,
+.swiper-button-prev
+  width: clamp(32px, calc(32px + (40 - 32) * ((100vw - 1024px) / (1920 - 1024))), 40px)
+  height: clamp(32px, calc(32px + (40 - 32) * ((100vw - 1024px) / (1920 - 1024))), 40px)
+  border-radius: 50%
+  cursor:  pointer
+  background-color: #fff
+  color: var(--c-text-dark)
+  transition: .18s ease-in-out
+  position: static
+  flex: 0 0 auto
+  pointer-events: all
+  padding: 10px
+  margin-top: 0
+  border: 2px solid currentColor
+  &:after
+    font-family: 'icomoon' !important
+    font-size: 19px
+  &.swiper-button-disabled
+    opacity: 0.8
+    pointer-events: none
+  &:hover,
+  &:active
+    border-color: var(--accent)
+    background: var(--accent)
+    &:after
+      color: #fff
+
+.swiper-button-prev
+  //translate: -50%
+  &:after
+    content: "\e903"
+.swiper-button-next
+  //translate:  50%
+  &:after
+    content: "\e902"
+
+.slider_controls
+  z-index: 5
+  display: flex
+  align-items: center
+  gap: var(--fs-18)
+  padding: 0
+
+

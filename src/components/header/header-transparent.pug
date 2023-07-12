@@ -1,0 +1,52 @@
+header.header.header-transparent
+  .header--main
+    a.header--logo(href="/")
+      include ../../img/svg/logo.svg
+    .header--contacts
+      .header--contacts_item.is_dropdown
+        a.button.button-accent.button-link(href="/" )
+          span.icon-time
+          span График работы
+        .is_dropdown--content(aria-hidden="true")
+          .image
+            img(src="/assets/img/schedule.png" alt="")
+      .header--contacts_item
+        a.button.button-accent.button-link(href="tel:" title="")
+          span.icon-phone-circle
+          span 8 (800) 550-06-79
+
+
+    .header--actions
+      a.button.button-outlined.button-accent(href="/")
+        span Купить билет
+      .header--burger
+        .header__burger-line
+  nav.header_menu
+    .header_menu_block
+      .header_menu-close
+        .header_menu-close-line
+    .header_menu_block
+      .header_menu_item
+        a.button.button-accent.button-link(href="/" title="")
+          span Метрополис
+      .header_menu_item
+        a.button.button-accent.button-link(href="/" title="")
+          span Точки питания
+      .header_menu_item
+        a.button.button-accent.button-link(href="/" title="")
+          span Организация праздников
+      .header_menu_item
+        a.button.button-accent.button-link(href="/" title="")
+          span Вопросы и ответы
+      .header_menu_item
+        a.button.button-accent.button-link(href="/" title="")
+          span Афиша и новости
+      .header_menu_item
+        a.button.button-accent.button-link(href="/" title="")
+          span Аттракционы и услуги
+      .header_menu_item
+        a.button.button-accent.button-link(href="/" title="")
+          span Расписание активностей
+    .header_menu_block
+      a.button.button-outlined.button-accent(href="/")
+        span Купить билет

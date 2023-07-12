@@ -1,0 +1,78 @@
+.accordion
+  cursor: pointer
+  position: relative
+  margin-top: 10px
+  padding: var(--g-20)
+  background: #fff
+  border-radius: var(--border-corner)
+  &:nth-child(3n+1) .label
+    background-color: var(--color-green)
+  &:nth-child(3n+2) .label
+    background-color:  var(--color-pink)
+  &:nth-child(3n) .label
+    background-color: var(--color-blue)
+  &.is_open
+    .accordion--content
+      transition: opacity 0.3s ease-out
+      opacity: 1
+      height: auto
+      pointer-events: auto
+      display: block
+    .icon
+      transform-origin: center
+      &:after
+        font-family: 'icomoon' !important
+        content: "\e90d"
+        color: #CACCCD
+  &--button
+    cursor: pointer
+    display: flex
+    align-items: center
+    gap: 18px
+    position: relative
+    font-size: var(--fs-24)
+    .accordion--button_text
+      font-size: var(--fs-18)
+      color: var(--c-text-dark)
+      line-height: 1.33
+      margin: 0
+    .label
+      width: 130px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: clamp(11px, calc(11px + (14  - 11) * ((100vw - 768px) / (1440 - 768))), 14px)
+      padding: 5px 10px
+      color: #fff
+      border-radius: 35px
+    .icon
+      margin-left: auto
+      height: 1.33em
+      width: 1.33em
+      font-size: var(--fs-24)
+      font-weight: 900
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-shrink: 0
+      flex-grow: 0
+      color: var(--c-text-accent)
+      transition: 0.18s ease-in-out
+      &:after
+        font-family: 'icomoon' !important
+        content: "\e916"
+  &--content
+    display: none
+    opacity: 0
+    transition: height 0.2s 0.1s linear, opacity 0.2s 0.15s linear
+    height: 0
+    pointer-events: none
+    letter-spacing: -0.02em
+    line-height: 1.48
+    font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 1024px) / (1920 - 1024))), 24px)
+    border-radius: 12px
+    padding: var(--g-24) 0
+    margin-top: var(--g-24)
+    &.is_cascade > p:first-child
+      margin: 0
+

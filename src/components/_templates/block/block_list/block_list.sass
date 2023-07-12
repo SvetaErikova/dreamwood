@@ -1,0 +1,50 @@
+.block_list
+  .block--elements
+    display: grid
+    gap: 40px
+    @media (min-width: 768px)
+      grid-template-columns: repeat(3, 1fr)
+      .block--pagination
+        grid-column: span 3
+    @media(max-width: 1441px)
+      gap: 24px
+    @media(max-width: 1024px)
+      gap: 18px
+    @media(max-width: 768px)
+      gap: 8px
+      grid-template-columns: 2fr
+    @media(max-width: 460px)
+      grid-template-columns: 1fr
+      .card
+        width: 100%
+
+  &.block_list-slider
+    position: relative
+    .swiper-wrapper
+     @media(max-width: 475px)
+      padding-bottom: 50px
+    .block--elements
+      position: relative
+      display: flex
+      flex-direction: column
+      gap: 0
+      overflow: hidden
+      padding: 0 20px
+      @media(max-width: 1024px)
+        margin-left: calc(var(--g-40) * -1)
+        margin-right: calc(var(--g-40) * -1)
+    .slider_controls
+      position: absolute
+      width: 100%
+      top: 50%
+      right: -50%
+      display: flex
+      transform: translate(-50%, -50%)
+      justify-content: space-between
+      z-index: 5
+      @media(max-width: 475px)
+        top: auto
+        bottom: -10px
+        right: -45%
+        justify-content: flex-end
+

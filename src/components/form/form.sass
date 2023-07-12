@@ -1,0 +1,273 @@
+.content--form
+  overflow: hidden
+  .block--wrapper
+    position: relative
+    padding-top: 345px
+    @media(max-width: 660px)
+      padding-top: 370px
+    @media(max-width: 560px)
+      padding-top: 53%
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-image: url("../img/svg/cake.svg")
+      background-position: top center
+      background-repeat: no-repeat
+      background-size: auto
+      z-index: -2
+      @media(max-width: 860px)
+        right: calc(var(--g-40) * -1)
+        left: calc(var(--g-40) * -1)
+
+      @media(max-width: 560px)
+        background-image: url("../img/svg/cake-mini.svg")
+        background-size: cover
+    .block--title
+      font-weight: 600
+      line-height: 1.24
+      text-transform: uppercase
+      font-size: clamp(21px, calc(21px + (42  - 21) * ((100vw - 375px) / (1440 - 375))), 42px)
+      color: #fff
+      margin-bottom: 50px
+      @media(max-width: 1024px)
+        margin-bottom: 70px
+    .block--subtitle
+      margin: auto
+      max-width: 420px
+      margin-bottom: 20px
+      font-size: 14px
+    .form--label
+      max-width: 130px
+      padding: 5px 15px
+      font-size: 14px
+      background-color: var(--color-purple)
+      color: #fff
+      border-radius: 35px
+      margin: auto
+      margin-bottom: 25px
+    .form--questions-title
+      margin-bottom: var(--g-40)
+      color: var(--c-text-dark)
+      text-transform: uppercase
+        --fs-40: clamp(18px, calc(18px + (26 - 18) * ((100vw - 375px) / (1440 - 375))), 26px)
+      font-weight: 450
+      font-family: Oswald
+.form
+  padding: 0 0 var(--g-64) 0
+  max-width: 800px
+  margin: auto
+  text-align: center
+
+  fieldset
+    display: none
+    min-height: 330px
+  fieldset.active
+    border-color: transparent
+    padding: 0
+    display: block
+  .form__input,
+  .form--checkboxs
+    height: 55px
+
+  &__text
+    color: var(--c-text-transparent)
+    font-size: var(--fs-18)
+    text-align: center
+  &__input
+    position: relative
+    display: flex
+    flex-direction: column
+
+    input, textarea , .form__input-file
+      outline: none
+      padding: 8px 0
+      line-height: 1.2
+      font-size: var(--fs-18)
+      font-weight: 400
+      border: 1px solid transparent
+      border-radius: 10px
+      transition: 0.3s ease-out
+      padding: 16px
+      background-color: var(--c-surface-default)
+      @media(max-width: 768px)
+        border-radius: 8px
+      &::placeholder
+        opacity: 0.5
+      &::placeholder,
+      &:placeholder-shown,
+      .js-changeDescriptionText
+        color: var(--c-text-transparent)
+      &:not(:placeholder-shown)
+        color: var(--c-dark)
+      &:focus
+        border-color: var(--c-text-dark)
+      &:invalid:not(:placeholder-shown)
+        border-color: var(--c-error)
+        & ~ .form__input-error
+          height: auto
+      //&:valid:not(:placeholder-shown)
+      //  border-color: var(--c-text-dark)
+    &.error
+      .form__input-error
+        height: auto
+    &-error
+      color: rgba(155, 0, 0, 0.42)
+      font-weight: 500
+      font-size: 12px
+      line-height: 1.56
+      height: 0
+      overflow: hidden
+      transition: 0.3s linear
+      position: absolute
+      bottom: -20px
+      left: 16px
+  &__policy
+    font-size: 16px
+    font-weight: 400
+    color: var(--c-text-secondary)
+    a:not(.button)
+      font-size: 16px
+      font-weight: 400
+      margin-left: 8px
+
+  &__button
+    margin-top: 30px
+    display: flex
+    justify-content: space-between
+    & .button
+      padding: 7px 15px
+      width: 133px
+  .button.form_next:disabled
+    opacity: 0.5
+    cursor: auto
+.form.is_sending
+  button[type="submit"]
+    opacity: 0.5
+    pointer-events: none
+
+.content_subscription
+  fieldset
+    display: flex
+    gap: 8px
+    @media(max-width: 768px)
+      flex-direction: column
+      .form__input,
+      .form__button,
+      .form__button .button
+        width: 100%
+    .form__input
+      flex-grow: 1
+  .form__policy,
+  .form__input span
+    display: none
+
+
+.form--checkboxs
+  display: flex
+  justify-content: center
+  gap: 50px
+  height: 55px
+  @media(max-width: 768px)
+    height: auto
+    gap: 10px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: auto
+  label
+    white-space: nowrap
+    display: flex
+    align-items: center
+    gap: 12px
+    cursor: pointer
+    @media(max-width: 768px)
+      gap: 9px
+    svg
+      @media(max-width: 768px)
+        width: 90%
+    .custom-checkbox
+      position: relative
+      width: 24px
+      height: 24px
+      z-index: 1
+      @media(max-width: 768px)
+        font-size: 14px
+        width: 16px
+        height: 16px
+    .custom-checkbox:before
+      content: ''
+      top: 50%
+      left: 50%
+      translate: (-50% -50%)
+      position: absolute
+      width: 20px
+      height: 20px
+      border: var(--color-yellow) 2px solid
+      border-radius: 50%
+      @media(max-width: 768px)
+        width: 16px
+        height: 16px
+    .custom-checkbox:after
+      content: ''
+      z-index: -1
+      top: 50%
+      left: 50%
+      translate: (-50% -50%)
+      position: absolute
+      width: 12px
+      height: 12px
+      background-color: var(--color-yellow)
+      border: var(--color-yellow) 1px solid
+      border-radius: 50%
+      opacity: 0
+      transition: var(--transition)
+      @media(max-width: 768px)
+        width: 9px
+        height: 9px
+  input
+    display: none
+  input:checked + span:before,
+  input:checked + span:after
+    border:  var(--color-yellow) 2px solid
+    opacity: 1
+
+
+
+.form-finish
+  &.form-finish-sent
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: -30%
+      right: -100%
+      bottom: -90%
+      left: -100%
+      background-image: url("../img/svg/cake-balls.svg")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      z-index: -1
+      min-height: 320px
+      @media(max-width: 768px)
+        background-image: url("../img/svg/cake-balls-s.svg")
+  .form-finish-text
+    padding-top: 10%
+
+  .form-finish-subtitle
+    margin: 0 0 20px 0
+  .form--finish-title
+    font-family: Oswald
+    font-size: 13px
+    font-size: 26px
+    font-weight: 450
+    margin-bottom: var(--g-40)
+    text-transform: uppercase
+    color: var(--c-text-dark)
+  .js-btn-reset
+    margin: auto
+
+

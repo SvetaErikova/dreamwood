@@ -1,0 +1,87 @@
+.content_faq
+  --accent: var(--color-pink)
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background: url("../img/svg/faq-bck.svg") no-repeat
+    background-size: auto
+    z-index: -2
+  .block--wrapper
+    grid-template-columns: 1fr
+  .block--elements
+    grid-template-columns: 1fr
+  .block--head:after
+    content: ''
+    position: absolute
+    right: -15%
+    top: -5%
+    width: 78px
+    height: 75px
+    background: url("../img/svg/bck-decor-7.svg") no-repeat center
+    background-size: contain
+    @media(max-width: 768px)
+      display: none
+
+
+  .faq-filters
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(3 , 1fr)
+    justify-items: center
+    @media(max-width: 475px)
+      display: flex
+      flex-wrap: nowrap
+      overflow-x: auto
+
+
+    &-item
+      cursor: pointer
+      padding-bottom: var(--g-32)
+      color: #BBBBBB
+      border-bottom: 1px solid #BBBBBB
+      width: 100%
+      text-align: center
+      transition: var(--transition)
+      font-size: var(--fs-18)
+      @media(max-width: 475px)
+        white-space: nowrap
+        padding: 0 15px var(--g-32) 15px
+    &-item.is_active
+      color: #2D2D2D
+      border-bottom: 2px solid #2D2D2D
+
+  .block--list
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: -80px
+      right: -75px
+      width: clamp(42px, calc(42px + (107 - 42) * ((100vw - 375px) / (1440 - 375))), 107px)
+      height: clamp(56px, calc(56px + (142 - 56) * ((100vw - 375px) / (1440 - 375))), 142px)
+      background: url("../img/svg/bck-decor-9.svg") no-repeat center
+      background-size: contain
+      @media(max-width: 540px)
+        top: -20px
+        right: calc(var(--g-40) * -1)
+    &:before
+      content: ''
+      position: absolute
+      right: 30%
+      bottom: -55px
+      width: 56px
+      height: 50px
+      background: url("../img/svg/heart.svg") no-repeat center
+      background-size: contain
+
+    .accordion[data-content_item]
+      display: none
+    .accordion.is_active[data-content_item]
+      display: block
+    .accordion--button_text
+      font-weight: 500
+

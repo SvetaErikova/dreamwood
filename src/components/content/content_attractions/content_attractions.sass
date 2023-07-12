@@ -1,0 +1,66 @@
+.content_attractions
+  --accent: var(--color-yellow)
+  position: relative
+  &:after
+    content: ''
+    top: -100px
+    left: 50%
+    width: 100%
+    height: clamp(700px, calc(700px + (1300 - 700) * ((100vw - 375px) / (1440 - 375))), 1300px)
+    //width: clamp(857px, calc(857px + (1583 - 857) * ((100vw - 375px) / (1440 - 375))), 1583px)
+    position: absolute
+    background-image: url("../img/svg/bck-big-decor-2.svg")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    z-index: -1
+    translate: -50%
+    @media (max-width: 768px)
+      top: 0
+      background-position: top center
+      background-size: cover
+
+  &:before
+    content: ''
+    bottom: -50px
+    left: 0
+    width: 245px
+    height: 175px
+    position: absolute
+    background-image: url("../img/svg/bck-decor-6.svg")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    z-index: -1
+    @media (max-width: 768px)
+      display: none
+  &:not(.block_list-slider)
+    .block--elements
+      grid-template-columns: 1fr
+      gap: 60px
+      @media (min-width: 620px)
+        grid-template-columns: repeat(2, 1fr)
+      @media (min-width: 998px)
+        grid-template-columns: repeat(3, 1fr)
+    .block--pagination
+      grid-column: span 4
+  .block--head
+    position: relative
+    &:after
+      content: ''
+      top: -15%
+      right: -20%
+      width: 195px
+      height: 82px
+      position: absolute
+      background-image: url("../img/svg/bck-decor-2.svg")
+      @media (max-width: 768px)
+        top: 0
+        right: 0
+      @media (max-width: 475px)
+        top: -70%
+  & >
+  .button.button-outlined.button-secondary
+    margin-top: var(--g-32)
+    margin: auto
+

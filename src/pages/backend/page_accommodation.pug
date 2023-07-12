@@ -1,0 +1,104 @@
+//extends ../../layouts/breadcrumbs-hero
+//
+//block variables
+//  - var title = "Номер детальная страница"
+//  - var pageClass = 'page-accommodation'
+//  - var activePage = 'index'
+//
+//block content
+//  section.block.block_banner.banner-hero
+//    .block--wrapper
+//      .banner
+//        .block--content
+//          img(src="/assets/img/1.jpg")
+//        +block--head("Subtitle","Title for this page","Sit diam aliquam semper faucibus molestie habitasse pulvinar.")
+//        .block--actions
+//          a(href="/").button.button-filled.button-accent
+//            span Кнопка 1
+//  section.block.block_element.content_accommodation
+//    .block--wrapper
+//      .block--content
+//        .accommodation_description
+//          aside.accommodation_description--sidebar
+//            .accommodation_description--aside
+//              <!-- Модуль бронирования -->
+//            .content_offers
+//              //+card--offer('АКЦИЯ “Красоты крыма”', 'Забронируйте сейчас и получите скидку 15% на захватывающий тур по потрясающим ландшафтам и природным чудесам Крыма.', '/assets/img/1.jpg')
+//          .accommodation_description__content.is_cascade
+//            h2.fs-h2 O номере
+//            ul.accommodation_description__advantages
+//              li
+//                strong Вместимость
+//                p до 4 человек
+//              li
+//                strong Количество комнат
+//                p 2
+//              li
+//                strong Площадь номера
+//                p 62 м кв
+//              li
+//                strong Спальные места
+//                p Двуспальная кровать
+//            .accommodation_description__text
+//              .js-hidden-content.is_cascade
+//                p Просторный номер площадью 20 кв.м отлично подойдет для семейной пары. С балкона открываются виды во внутренний дворик, на море, реку и Кавказские горы.
+//                p Просторный номер площадью 20 кв.м отлично подойдет для семейной пары. С балкона открываются виды во внутренний дворик, на море, реку и Кавказские горы.
+//                p Просторный номер площадью 20 кв.м отлично подойдет для семейной пары. С балкона открываются виды во внутренний дворик, на море, реку и Кавказские горы.
+//                p Просторный номер площадью 20 кв.м отлично подойдет для семейной пары. С балкона открываются виды во внутренний дворик, на море, реку и Кавказские горы.
+//              button.button.button-link.button-secondary.js-show-content
+//                span Показать ещё
+//            .room_content__advantages
+//              h3.fs-h2 Удобства номера
+//              ul.room_content__advantages_list
+//                li
+//                  span
+//                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 26.5L24.5 18.5H26L27 26.5H25.5Z" fill="#8561CC"/>
+//                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 26.5L7.5 18.5H6L5 26.5H6.5Z" fill="#8561CC"/>
+//                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.61 7H11.61V11H20.61V7ZM10.11 5.5V12.5H22.11V5.5H10.11Z" fill="#8561CC"/>
+//                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10999 11.5V13.5H23.11V11.5H9.10999Z" fill="#8561CC"/>
+//                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26 15H6C5.72386 15 5.5 15.2239 5.5 15.5V16.5C5.5 16.7761 5.72386 17 6 17H26C26.2761 17 26.5 16.7761 26.5 16.5V15.5C26.5 15.2239 26.2761 15 26 15ZM6 13.5C4.89543 13.5 4 14.3954 4 15.5V16.5C4 17.6046 4.89543 18.5 6 18.5H26C27.1046 18.5 28 17.6046 28 16.5V15.5C28 14.3954 27.1046 13.5 26 13.5H6Z" fill="#8561CC"/>
+//                    </svg>
+//                  span Кондиционер
+//                li
+//                  span
+//                    img(src="/assets/img/icons_advantages/ballrooms.svg")
+//                  span Спутниковое телевидение
+//                li
+//                  span
+//                    img(src="/assets/img/icons_advantages/ballrooms.svg")
+//                  span Спутниковое телевидение
+//                li
+//                  span
+//                    img(src="/assets/img/icons_advantages/ballrooms.svg")
+//                  span Спутниковое телевидение
+//                li
+//                  span
+//                    img(src="/assets/img/icons_advantages/ballrooms.svg")
+//                  span Спутниковое телевидение
+//                li
+//                  span
+//                    img(src="/assets/img/icons_advantages/ballrooms.svg")
+//                  span Спутниковое телевидение
+//                li
+//                  span
+//                    img(src="/assets/img/icons_advantages/ballrooms.svg")
+//                  span Спутниковое телевидение
+//                li
+//                  span
+//                    img(src="/assets/img/icons_advantages/ballrooms.svg")
+//                  span Спутниковое телевидение
+//                li
+//                  span
+//                    img(src="/assets/img/icons_advantages/ballrooms.svg")
+//                  span Спутниковое телевидение
+//              button.button.button-link.button-secondary(data-openpopup="popup_for_room_advantages")
+//                span Смотреть весь список
+//
+//
+//  section.block.block_element.content_gallery
+//    .block--wrapper
+//      +block--head("","","")
+//      .block--content
+//        .gallery.js-gallerySwiper
+//          include ../../components/gallery/gallery

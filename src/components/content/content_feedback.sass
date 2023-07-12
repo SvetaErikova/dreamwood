@@ -1,0 +1,100 @@
+.content_feedback
+  &:not(.block_list-slider)
+    .block--wrapper
+      position: relative
+      max-width: 1240px
+      //background-image: url("../img/svg/feedback-bck.svg")
+    .block--image
+      position: relative
+      @media(max-width: 570px)
+        margin-right: calc(var(--g-40) * -1)
+        margin-left: calc(var(--g-40) * -1)
+      img
+        height: auto
+        @media(max-width: 768px)
+          height: 700px
+          object-fit: contain
+        @media(max-width: 570px)
+          object-fit: cover
+        @media(max-width: 450px)
+          height: 560px
+          width: 100%
+
+      &:after
+        content: ''
+        position: absolute
+        top: -6%
+        right: 15%
+        width: 297px
+        height: 307px
+        background-image: url("../img/svg/feedback-drimmi.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        aspect-ratio: 277 / 438
+        @media(max-width: 1300px)
+          width: clamp(164px, calc(164px + (297 - 164) * ((100vw - 375px) / (1440 - 375))), 297px)
+          height: clamp(154px, calc(154px + (307 - 154) * ((100vw - 375px) / (1440 - 375))), 307px)
+          top: -35px
+        @media(max-width: 1240px)
+          top: -38px
+        @media(max-width: 998px)
+          top: -49px
+        @media(max-width: 840px)
+          top: -54px
+        @media(max-width: 768px)
+          top: 9.5%
+          right: 19%
+          width: 164px
+          height: 154px
+        @media(max-width: 450px)
+          right: 5%
+          top: 4.6%
+  .block--content
+    position: absolute
+    top: 63%
+    left: 50%
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: var(--g-48)
+    translate: -50% -50%
+    max-width: 620px
+    @media(max-width: 768px)
+      width: 55%
+      padding: 0 40px
+      top: 65%
+      gap: 65px
+    @media(max-width: 580px)
+      width: 70%
+    @media(max-width: 450px)
+      width: 100%
+      padding: 0 80px
+      gap: 30px
+      top: 67%
+    @media(max-width: 415px)
+      padding: 0 60px
+    .block--head
+      margin-bottom: 0
+      text-align: center
+      width: 100%
+      align-items: center
+      &_title
+        font-size: clamp(21px, calc(21px + (42 - 21) * ((100vw - 375px) / (1440 - 375))), 42px)
+    .block--actions
+      width: 100%
+      display: grid
+      grid-template-columns: 1fr 1fr
+      @media(max-width: 768px)
+        grid-template-columns: 1fr
+      a
+        width: 100%
+
+  .button-reversed
+    --filled-bgc-base: var(--c-surface-accent-hover)
+    --filled-bc-base: var(--c-surface-accent-hover)
+    --filled-c-base: var(--c-text-white)
+    --filled-bgc-hover: var(--c-surface-accent)
+    --filled-bc-hover: var(--c-surface-accent)
+    --filled-c-hover: var(--c-text-white)
+

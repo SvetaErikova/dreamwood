@@ -1,0 +1,9 @@
+.content_area
+  --accent: var(--color-yellow)
+  &:not(.block_list-slider)
+    .block--elements
+      grid-template-columns: 1fr
+      @media (min-width: 768px)
+        grid-template-columns: repeat(3, 1fr)
+        .block--pagination
+          grid-column: span 4

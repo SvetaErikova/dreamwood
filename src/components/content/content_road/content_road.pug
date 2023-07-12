@@ -1,0 +1,29 @@
+section.block.block_html_code.content_road.block_tabs
+  .block--wrapper
+    +block--head('','Как нас найти','','')
+    .block--sections
+      p На каком транспорте вы планируете посетить парк?
+      .road-filters
+        .button.button-outlined.button-filters.road-filters_item(data-content="car")
+          span.icon.icon-car
+          span На машине
+        .button.button-outlined.button-filters.road-filters_item(data-content="bus")
+          span.icon.icon-bus
+          span На автобусе
+    .block--content
+      .road-item(data-content_item="car")
+        ol
+          li Найти ДРИМВУД в навигаторе (ориентир Mriya Resort & SPA).
+          li После поворота с Южнобережного шоссе следовать указателям (подробная карта в разделе "вопрос и ответы").
+          li Оставить автомобиль на парковке, пройти в Welcome Center.
+          li Приобрести билет и получить браслет у кассы.
+      .road-item(data-content_item="bus")
+        ol
+          li Найти ДРИМВУД в навигаторе (ориентир Mriya Resort & SPA).
+          li После поворота с Южнобережного шоссе следовать указателям (подробная карта в разделе "вопрос и ответы").
+          li Оставить автомобиль на парковке, пройти в Welcome Center.
+          li Приобрести билет и получить браслет у кассы.
+          li Приобрести билет и получить браслет у кассы.
+    .block--image
+      <script src="https://api-maps.yandex.ru/2.1/?apikey=d3be6419-a631-4935-9a55-9408a02fb8eb&lang=ru_RU" type="text/javascript"></script>
+      #map

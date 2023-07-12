@@ -1,0 +1,32 @@
+.content_events
+  --accent: var(--color-pink)
+  &:not(.block_list-slider)
+    .block--elements
+      grid-template-columns: 1fr
+      @media (min-width: 768px)
+        grid-template-columns: repeat(4, 1fr)
+        .block--pagination
+          grid-column: span 4
+
+.page--events
+  &:not(.block_list-slider)
+    .block--elements
+      grid-template-columns: 1fr
+      margin-bottom: 60px
+      @media (min-width: 768px)
+        grid-template-columns: repeat(3, 1fr)
+        .block--pagination
+          grid-column: span 4
+  & >
+  .button
+    margin: auto
+
+  .block_list:not(.block_list-slider)
+    .card:nth-child(-n+3)
+      display: flex
+    .card:nth-child(n+3)
+      display: none
+  .block_list:not(.block_list-slider)
+    .block--elements.active
+      .card:nth-child(n+3)
+        display: flex

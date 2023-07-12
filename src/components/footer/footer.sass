@@ -1,0 +1,155 @@
+.footer
+  background-color: #DFEFF6
+  padding: var(--g-40) var(--g-80)
+  .block--wrapper
+    max-width: calc(1440px - var(--g-80) * 2)
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: 'social social''logo nav' 'bottom bottom'
+    gap: var(--g-80) var(--g-40)
+    @media(max-width: 768px)
+      grid-template-areas: 'social social''logo logo' 'nav nav ' 'bottom bottom'
+
+.footer_logo
+  grid-area: logo
+  padding: 100px 0
+  border-top: 1px dashed #ABABAB
+  @media(max-width: 768px)
+    padding: 100px 0 0 0
+
+.footer--bottom
+  grid-area: bottom
+  display: flex
+  gap: 16px
+  .developer
+    margin-left: auto
+    display: flex
+    align-items: baseline
+    gap: var(--g-20)
+
+  @media(max-width: 768px)
+    flex-direction: column
+
+
+.footer-soc
+  grid-area: social
+  display: flex
+  align-items: center
+  justify-content: space-around
+  align-items: center
+  gap:  var(--g-24)
+  @media(max-width: 998px)
+    flex-direction: column
+  &--item-tripadvisor
+    @media(max-width: 475px)
+      svg
+        width: 67px
+        height: 41px
+  &--item-vk
+    @media(max-width: 475px)
+      svg
+        width: 56px
+        height:  51px
+  &--item-yandex
+    @media(max-width: 475px)
+      svg
+        width: 43px
+        height:  51px
+  &--item
+    display: flex
+    align-items: center
+    gap: var(--g-24)
+    & a
+      position: relative
+    & a:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate( -50%, -50%)
+      background-position: center
+      background-repeat: no-repeat
+      object-fit: cover
+    &-tripadvisor:after
+      width: 44px
+      height: 28px
+      background:  url("../img/svg/soc/tripadvisor.svg") no-repeat center
+      @media(max-width: 475px)
+        width: 21px
+        height: 14px
+        background-size: contain
+    &-vk:after
+      width: 39px
+      height: 23px
+      background:  url("../img/svg/soc/vk.svg") no-repeat center
+      @media(max-width: 475px)
+        width: 19px
+        height: 11px
+        background-size: contain
+    &-yandex:after
+      width: 33px
+      height: 33px
+      background:  url("../img/svg/soc/yandex.svg") no-repeat center
+      @media(max-width: 475px)
+        width: 16px
+        height: 16px
+        background-size: contain
+  .footer-soc--text
+    svg
+      width: clamp(285px, calc(285px + (586 - 285) * ((100vw - 375px) / (1440 - 375))), 586px)
+      height: clamp(70px, calc(70px + (142 - 70) * ((100vw - 375px) / (1440 - 375))), 142px)
+.footer_nav
+
+  font-size: var(--fs-16)
+  font-weight: 500
+  grid-area: nav
+  padding: 0 var(--g-32)
+  display: grid
+  grid-template-columns: 1fr  1fr
+  grid-template-rows: auto 1fr
+  gap: var(--g-48)
+  @media(max-width: 768px)
+    overflow-x: auto
+    gap: 50px
+    position: relative
+    padding: 0
+  &--item
+    border-top: 1px solid #ABABAB
+    padding: 100px 0 var(--g-52)
+    @media(max-width: 768px)
+      border-top: none
+      padding: 30px 0
+    &:nth-child(2)
+      .footer_nav--item_list
+        column-count: 2
+        column-gap: var(--g-32)
+    .button
+      padding: 10px 0
+      display: flex
+      font-size: var(--fs-18)
+    .icon-vk
+      background: url("../img/icons/icon-vk.svg") center no-repeat
+      background-size: contain
+      width: 20px
+      height: 20px
+  .button
+    @media(max-width: 768px)
+      width: 100%
+
+
+
+
+  .button
+    --outlined-bgc-hover: var(--color-pink)
+    --outlined-bc-hover:  var(--color-pink)
+    grid-row: 2
+  .icon-phone-circle
+    grid-row: 2
+    height: auto
+    @media(max-width: 768px)
+      display: none
+  .phone-circle:hover,
+  .phone-circle:hover > .icon-phone-circle
+    color: var(--color-pink)
+    border-color: var(--color-pink)
+

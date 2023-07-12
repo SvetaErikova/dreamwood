@@ -1,0 +1,11 @@
+.content_galleries
+  --accent : var(--color-purple)
+
+  .block--elements
+    grid-template-columns: 1fr
+    @media (min-width: 768px)
+      grid-template-columns: repeat(4, 1fr)
+      .block--pagination
+        grid-column: span 4
+
+

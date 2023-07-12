@@ -1,0 +1,109 @@
+extends ../layouts/breadcrumbs
+
+block variables
+  - var title = "Рестораны"
+  - var pageClass = 'page--restaurants'
+  - var activePage = 'index'
+
+block content
+  section.block.block_list.content_restaurant
+    .block--wrapper
+      .block--head
+        .block--head_title
+          h2 ЕСЛИ ИССЛЕДОВАТЕЛИ <br> ПРОГОЛОДАЛИСЬ
+      .block--elements
+        .card
+          .card--image
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+          .card--content
+            .card--title
+              h3 Форестино
+            .card--info
+              .card--info-item
+                span.icon.icon-time-rest
+                .card--info-text
+                  div Пн, вт, пт: до 16:00
+                  div Сб, вс:  до 18:00
+                  div Ср, чт: выходные дни
+              .card--info-item
+                span.icon.icon-restourant
+                .card--info-text
+                  span Европейская, азиатская
+              .card--info-item
+                span.icon.icon-rub
+                .card--info-text
+                  span Средний чек — 850 руб.
+            .card--text
+              p Вкусное путешествие в сказку для всей семьи! Волшебный семейный ресторан в парке «Дримвуд». В Форестино царят волшебные законы: ресторан опутан корнями гигантского дерева, по которым бегают паровозики и божьи коровки, доставляя еду и напитки к Вашему столу.
+            .card--link
+              a(href='/').button.button-outlined.menu
+                span Меню
+                span.icon.icon-restourant
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+
+        .card.card-reversed
+          .card--image
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+          .card--content
+            .card--title
+              h3 Plaza cafe
+            .card--info
+              .card--info-item
+                span.icon.icon-time-rest
+                .card--info-text
+                  span Ежедневно с 10:00 до 22:00
+              .card--info-item
+                span.icon.icon-restourant
+                .card--info-text
+                  span Европейская, азиатская
+              .card--info-item
+                span.icon.icon-rub
+                .card--info-text
+                  span Средний чек — 850 руб.
+            .card--text
+              p Ароматная выпечка и креативные молочные коктейли. Кафе располагается по-соседству с боулингом, бильярдом, детским клубом и кинотеатром, а как известно, после игр или просмотра фильма всегда хочется подкрепиться чем-нибудь вкусным.
+            .card--link
+              a(href='/').button.button-outlined.menu
+                span Меню
+                span.icon.icon-restourant
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        .card
+          .card--image
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+            img.card--image_slide(src='./assets/img/card-offer.png' alt="")
+          .card--content
+            .card--title
+              h3 Форестино
+            .card--info
+              .card--info-item
+                span.icon.icon-time-rest
+                .card--info-text
+                  span Пн, вт, пт: до 16:00
+                  span Сб, вс:  до 18:00
+                  span Ср, чт: выходные дни
+              .card--info-item
+                span.icon.icon-restourant
+                .card--info-text
+                  span Европейская, азиатская
+              .card--info-item
+                span.icon.icon-rub
+                .card--info-text
+                  span Средний чек — 850 руб.
+            .card--text
+              p Вкусное путешествие в сказку для всей семьи! Волшебный семейный ресторан в парке «Дримвуд». В Форестино царят волшебные законы: ресторан опутан корнями гигантского дерева, по которым бегают паровозики и божьи коровки, доставляя еду и напитки к Вашему столу.
+            .card--link
+              a(href='/').button.button-outlined.menu
+                span Меню
+                span.icon.icon-restourant
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
