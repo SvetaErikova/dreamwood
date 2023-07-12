@@ -81,7 +81,21 @@ block_with_filters.forEach(block => {
           not_found.style.display = 'none'
         }
 
-
+        let loader = block.querySelector('.loader')
+        function loader_active(){
+          loader.style.display='block'
+          for (i = 0; filter_elements.length >= i; i++){
+            filter_elements[i].style.opacity = 0
+          }
+        }
+        function  loader_no_active(){
+          loader.style.display='none'
+          for (i = 0; filter_elements.length >= i; i++){
+            filter_elements[i].style.opacity = 1
+          }
+        }
+        setTimeout(loader_active )
+        setTimeout(loader_no_active , 600)
         })
 
       })

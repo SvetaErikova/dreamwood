@@ -40,10 +40,10 @@ Inputmask({
 //     validateInputs(input)
 //   })
 // })
-
-function validateForm(form){
-  form.reportValidity()
-}
+//
+// function validateForm(form){
+//   form.reportValidity()
+// }
 
 
 /* form */
@@ -69,9 +69,13 @@ if ( form_block ) {
       if ( !inputs ) return;
 
       // смена состояния инпута
-      i.addEventListener('change', (e)=> {
-        let fieldsets_active = form_block.querySelector('fieldsets.active')
-        form_block.querySelector('fieldset.active .form_next').disabled = false
+      i.addEventListener('input', (e)=> {
+        if (form_block.querySelector('.active input').value <= 1){
+          button_next.disabled  = true
+        } else {
+          form_block.querySelector('fieldset.active .form_next').disabled = false
+        }
+
       })
       })
 
@@ -92,11 +96,11 @@ if ( form_block ) {
 
   })
   // Reset filters
-  // reset_button.addEventListener('click', ()=>{
-  //   for (let i = 1; i <= fieldsets.length; i++){
-  //     fieldsets[0].classList.add('active')
-  //     fieldsets[i].classList.remove('active')
-  //   }
-  // })
+  reset_button.addEventListener('click', ()=>{
+    for (let i = 1; i <= fieldsets.length; i++){
+      fieldsets[0].classList.add('active')
+      form_block.querySelectorAll('fieldset')[i].classList.remove('active')
+    }
+  })
 }
-// сделать активные поля обязательными
+

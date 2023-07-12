@@ -9,6 +9,7 @@
     font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 1024px) / (1920 - 1024))), 18px)
     letter-spacing: 0.003em
 .filters-block
+  position: relative
   display: grid
   grid-template-columns: 1fr 1fr
   gap:  15px 20px
@@ -146,3 +147,54 @@
     display: none
     text-align: center
     font-size: var(--fs-26)
+
+
+
+// прелоадер
+.loader
+  display: none
+  overflow: hidden
+  font-size: 10px
+  margin: 50px auto
+  text-indent: -9999em
+  width: 11em
+  height: 11em
+  border-radius: 50%
+  background: #fdc504
+  background: -moz-linear-gradient(left, #fdc504 10%, rgba(101,171,248, 0) 42%)
+  background: -o-linear-gradient(left, #fdc504 10%, rgba(101,171,248, 0) 42%)
+  background: linear-gradient(to right, #fdc504 10%, rgba(101,171,248, 0) 42%)
+  position: absolute
+  animation: load3 1.4s infinite linear
+  transform: translateZ(0)
+  z-index: 2
+  translate: -50% -50%
+  left: 50%
+  top: var(--g-64)
+
+
+.loader:after
+  background: white
+  width: 75%
+  height: 75%
+  border-radius: 50%
+  content: ''
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+
+@keyframes load3
+  0%
+    rotate: 0deg
+
+  100%
+    rotate: 360deg
+
+
+
+
+

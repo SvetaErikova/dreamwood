@@ -2,6 +2,8 @@
   flex-shrink: 0
   flex-grow: 0
 
+
+
 .card--title
   text-overflow: ellipsis
   overflow: hidden
@@ -53,6 +55,14 @@
     translate: -50% -50%
     background-color: #E96852
 
+.block_list:not(.block_list-slider)
+  .card
+    border-radius: var(--border-corner)
+    @media(max-width: 768px)
+      box-shadow: 2px 2px 23px 0px rgba(34, 60, 80, 0.2)
+  .card--content
+    @media(max-width: 768px)
+      padding: 10px
 
 
 // ok
@@ -396,6 +406,7 @@
     align-items: flex-start
     justify-content: space-between
     width: 100%
+    gap: var(--g-24)
     h3
       font-weight: 450
       text-transform: uppercase

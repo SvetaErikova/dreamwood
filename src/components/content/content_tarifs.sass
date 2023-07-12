@@ -37,7 +37,7 @@
   .block--tickets-mini
     .block--title
       color: var(--color-pink)
-      font-size: 21px
+      font-size: clamp(18px, calc(18px + (21 - 18) * ((100vw - 768px) / (1440 - 768))), 21px)
       text-transform: uppercase
       width: 350px
       font-family: Oswald
@@ -45,6 +45,9 @@
       position: relative
       padding: 16px 25px
       margin-bottom: 60px
+      @media(max-width: 475px)
+        padding: 20px 15px
+        width: 300px
       &:after
         content: ''
         width: 361px
@@ -59,7 +62,8 @@
         background-position: center
         background-size: contain
         z-index: -1
-
+        @media(max-width: 475px)
+          width: 312px
   .block--tarifs
     display: flex
     flex-direction: column
