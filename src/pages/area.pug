@@ -1,0 +1,217 @@
+extends ../layouts/hero
+
+block variables
+  - var title = "Площадка"
+  - var pageClass = 'page--area'
+  - var activePage = 'index'
+
+
+block content
+  section.block.block_banner.block_banner-hero
+    .block--wrapper
+      .banner
+        .block--content
+          <svg class="hero_clip_svg">
+          <clipPath id="my-clip-path-2" clipPathUnits="objectBoundingBox"><path d="M1,0 V0.857 H1 C0.872,0.857,0.673,0.704,0.503,0.727 C0.47,0.732,0.389,0.753,0.389,0.843 C0.389,0.917,0.418,0.978,0.427,0.996 C0.428,0.998,0.427,1,0.426,1 C0.4,0.991,0.27,0.944,0.186,0.87 C0.106,0.8,0.039,0.73,0,0.597 V0 H1"></path></clipPath>
+          </svg>
+          <svg class="hero_clip_svg">
+          <clipPath id="my-clip-path-2-mob" clipPathUnits="objectBoundingBox"><path d="M1,0 v0.809 c-0.13,-0.015,-0.262,-0.023,-0.386,-0.017 c-0.073,0.003,-0.253,0.02,-0.253,0.089 c0,0.053,0.055,0.098,0.079,0.115 c0.003,0.002,0,0.006,-0.005,0.005 C0.377,0.993,0.171,0.966,0,0.925 V0 H1"></path></clipPath>
+          </svg>
+          img(src="./assets/img/banner-attractions.png")
+        +block--head("","МЕТРОПОЛИС" ,"","За фасадами города скрываются настоящие чудеса. Откройте их все!")
+
+  section.block.block_image_text.block_image_text-reversed.mask-lips
+    .block--wrapper
+      .block--image
+        <svg class="svg">
+        <clipPath id="mask-lips" clipPathUnits="objectBoundingBox"><path d="M0.73,0.112 C0.715,0.096,0.697,0.088,0.679,0.083 C0.662,0.077,0.644,0.083,0.627,0.088 C0.609,0.093,0.591,0.096,0.576,0.112 C0.563,0.126,0.542,0.13,0.534,0.108 C0.525,0.086,0.515,0.063,0.5,0.048 C0.485,0.032,0.468,0.025,0.452,0.02 C0.436,0.015,0.417,0,0.399,0.005 C0.379,0.01,0.362,0.03,0.343,0.039 C0.323,0.048,0.304,0.055,0.285,0.068 C0.267,0.082,0.253,0.103,0.236,0.119 C0.214,0.142,0.209,0.132,0.187,0.155 C0.164,0.178,0.166,0.183,0.143,0.206 C0.121,0.229,0.117,0.222,0.095,0.245 C0.072,0.268,0.073,0.27,0.05,0.293 C0.027,0.316,0.011,0.302,0.006,0.343 C0,0.385,0.022,0.379,0.037,0.413 C0.052,0.448,0.052,0.448,0.067,0.483 C0.082,0.518,0.085,0.515,0.1,0.549 C0.115,0.584,0.117,0.583,0.132,0.617 C0.147,0.652,0.147,0.652,0.161,0.687 C0.172,0.712,0.178,0.744,0.19,0.765 C0.203,0.786,0.221,0.805,0.236,0.824 C0.25,0.844,0.265,0.866,0.281,0.882 C0.297,0.898,0.315,0.912,0.333,0.926 C0.351,0.94,0.37,0.946,0.388,0.956 C0.406,0.966,0.423,0.987,0.442,0.993 C0.461,0.999,0.481,0.994,0.5,0.996 C0.52,0.998,0.54,1,0.56,1 C0.579,1,0.599,1,0.618,0.995 C0.638,0.988,0.655,0.972,0.673,0.963 C0.691,0.953,0.711,0.946,0.729,0.933 C0.748,0.919,0.765,0.908,0.783,0.892 C0.805,0.869,0.802,0.861,0.825,0.838 C0.848,0.815,0.851,0.823,0.874,0.8 C0.896,0.777,0.893,0.77,0.916,0.747 C0.939,0.724,0.943,0.734,0.966,0.711 C0.988,0.688,0.998,0.697,1,0.658 C1,0.619,0.996,0.623,0.981,0.589 C0.966,0.554,0.962,0.557,0.947,0.522 C0.932,0.487,0.932,0.487,0.917,0.453 C0.902,0.418,0.907,0.413,0.892,0.378 C0.877,0.343,0.873,0.348,0.858,0.313 C0.847,0.288,0.833,0.265,0.821,0.241 C0.809,0.218,0.798,0.189,0.783,0.169 C0.767,0.149,0.752,0.129,0.734,0.113 L0.73,0.112"></path></clipPath>
+        </svg>
+        img(src="./assets/img/holidays-img.png" alt="")
+      +block--head("","" ,"","")
+      .block--content.is_cascade
+        p Прогуливаясь по улицам Метрополиса, обязательно загляните во все двери — здесь вы найдете самые разнообразные развлечения: начиная от кинотеатра и боулинга, заканчивая роботами, виртуальной реальностью и космическими кораблями!
+        p А на главной площади Метрополиса ежедневно проходят веселые городские танцы Mini Disko для юных жителей!
+      .block--subtitle
+        span Звучит, как сказка? <br>Это она и есть!
+        span.icon
+
+  section.block.block_list.content_activity
+    .block--wrapper
+      +block--head('','аттракционы','и услуги','')
+      .block--elements
+        .card(href='/')
+          .card--image
+            img.card--image_slide(src='./assets/img/attractions_events/1.jpg')
+            img.card--image_slide(src='./assets/img/attractions_events/1.jpg')
+          .card--label.maintenance
+            p На техническом обслуживание
+          .card--content
+            .card--title
+              h3 Боулинг
+              div.icons
+                span.icons--age 6+
+                span.icons--sale
+            .card--text
+              p В городе приключений Metropolis находится очень веселое и яркое место - Боулинг!
+              p Устройте семейное состязание в меткости и выбейте страйк по космической дорожке со сверхзвуковой скоростью!
+            .card--link
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        .card(href='/')
+          .card--image
+            img.card--image_slide(src='./assets/img/attractions_events/2.jpg')
+            img.card--image_slide(src='./assets/img/attractions_events/2.jpg')
+            img.card--image_slide(src='./assets/img/attractions_events/2.jpg')
+          .card--label.actions
+            p Акция
+          .card--content
+            .card--title
+              h3 Зал игровых автоматов
+              div.icons
+                span.icons--age 3+
+                span.icons--sale
+            .card--text
+              p Прокатиться на серфе? Первым пересечь финишную прямую на мотоцикле
+              p Победить в баскетбольном состязании?
+              p Зачем выбирать, когда можно попробовать все! Увлекательные детские игровые автоматы ждут вас в Metropolis!
+            .card--link
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        .card(href='/')
+          .card--image
+            img.card--image_slide(src='./assets/img/attractions_events/3.jpg')
+            img.card--image_slide(src='./assets/img/attractions_events/3.jpg')
+            img.card--image_slide(src='./assets/img/attractions_events/3.jpg')
+          .card--label.close
+            p Закрыто
+          .card--content
+            .card--title
+              h3 2D Кинотеатр
+              div.icons
+                span.icons--age 0+
+                span.icons--sale
+            .card--text
+              p Кинотеатр - отличное место для семейного отдыха, где можно расслабиться в комфортабельных креслах, насладиться передовым стерео звучанием и вдохновиться приключенческим кино!
+            .card--link
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        .card(href='/')
+          .card--image
+            img.card--image_slide(src='./assets/img/attractions_events/3.jpg')
+          .card--label.maintenance
+            p На техническом обслуживание
+          .card--content
+            .card--title
+              h3 4D Кинотеатр
+              div.icons
+                span.icons--age 3+
+                span.icons--sale
+            .card--text
+              p Брызги воды и ветер в лицо, захватывающие приключения ждут вас в 4D кинотеатре!
+              p Вы можете посмотреть приключенческие фильмы в современном формате, используя все органы чувств.
+            .card--link
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        .card(href='/')
+          .card--image
+            img.card--image_slide(src='./assets/img/attractions_events/4.jpg')
+          .card--label.actions
+            p Акция
+          .card--content
+            .card--title
+              h3 EXO PLAN EXO JET
+              div.icons
+                span.icons--age 0+
+                span.icons--sale 100см+
+            .card--text
+              p Проехав по железной дороге, загляните внутрь гор и получите массу эмоций от виражей и изгибов. Добавив шлемы виртуальной реальности вы окунетесь в историю 4-х стихий!
+            .card--link
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        .card
+          .card--image
+            img.card--image_slide(src='./assets/img/attractions_events/4.jpg')
+          .card--label.close
+            p Закрыто
+          .card--content
+            .card--title
+              h3 VR
+              div.icons
+                span.icons--age 0+
+                span.icons--sale
+            .card--text
+              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
+            .card--link
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+      //a(href='/').button.button-outlined.button-secondary
+      //  span Больше аттракционов
+
+
+  section.block.block_html_code.content_ticket
+    .block--wrapper
+      +block--head('','Купить билет', '','')
+      .block--image
+        picture
+          source(srcset="./assets/img/svg/tickets-bck-s.svg" media="(max-width: 860px)")
+          img(src="./assets/img/svg/tickets-bck.svg" alt="")
+      .block--content
+        .block--title
+          include ../img/svg/tickets-title.svg
+          .block--subtitle Вы можете посмотреть расписание активностей или приобрести билеты онлайн со скидкой и без очереди.
+        .block--actions
+          a(href='programm.html').button.button-filled.button-secondary.button-reversed
+            span  Расписание активностей
+          a(href='/').button.button-filled.button-secondary
+            span  Купить билет
+
+
+  section.block.block_element.content_gallery
+    .block--wrapper
+      +block--head('','ВОЛШЕБНЫЕ', 'МОМЕНТЫ','')
+      .block--content
+        .gallery.js-gallerySwiper
+          .gallery--item.video
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox="./assets/img/card-offer.png")
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-1.png" alt="" data-fancybox="./assets/img/gallery-2.png")
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-2.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-3.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-4.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+
+
+
+
+

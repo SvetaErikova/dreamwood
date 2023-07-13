@@ -1,44 +1,3 @@
-/* Кнопка скопировать номер */
-//
-// const copyToClipboard = (content, el) => {
-//   if (window.isSecureContext && navigator.clipboard) {
-//     navigator.clipboard.writeText(content);
-//   } else {
-//     unsecuredCopyToClipboard(content, el);
-//   }
-// };
-//
-// const unsecuredCopyToClipboard = (text, parentEl) => {
-//   const textArea = document.createElement("textarea");
-//   textArea.value=text;
-//   parentEl.appendChild(textArea);
-//   textArea.focus();
-//   textArea.select();
-//   try{
-//     document.execCommand('copy')
-//   }
-//   catch(err){
-//     console.error('Unable to copy to clipboard',err)
-//   }
-//   parentEl.removeChild(textArea)
-// };
-//
-// let copy_buttons = document.querySelectorAll('.js_copy_phone')
-//
-// copy_buttons.forEach(b =>{
-//   b.addEventListener('click', (e)=>{
-//     let text = b.dataset.phone_number
-//     copyToClipboard(text, e.currentTarget.parentNode)
-//     b.textContent = "Скопировано!";
-//     b.classList.add('is_copying')
-//
-//     setTimeout(()=>{
-//       b.textContent = "Скопировать номер";
-//       b.classList.remove('is_copying')
-//     }, 1400)
-//   })
-// })
-
 
 /* Открытие карточек */
 if ( window.matchMedia('(max-width:1023px)').matches ){
@@ -69,64 +28,70 @@ window.addEventListener('load', (e) => {
 })
 
 
-/* Скролл хедера мобилка */
+/* График работы мобилка */
 
-// if ( window.matchMedia('(max-width:992px)').matches ) {
-//
-//   window.addEventListener('scroll', (e)=>{
-//     let current_scroll = window.pageYOffset || document.documentElement.scrollTop;
-//
-//     current_scroll >= last_scroll && current_scroll ? document.querySelector('header').classList.add('scrolled-up') : document.querySelector('header').classList.remove('scrolled-up')
-//
-//     last_scroll = current_scroll
-//   })
-//
-//   let submenu_button = document.querySelector('#js-open_panel')
-//
-//   submenu_button.addEventListener('click', ()=>{
-//
-//     submenu_button.nextElementSibling.classList.toggle('active')
-//   })
-// }
+if ( window.matchMedia('(max-width:768px)').matches ) {
+
+  document.querySelector('.header--contacts_item.is_dropdown').addEventListener('click', (e) =>{
+    PopupManager.open('popup_for_schedule')
+  })
+}
 
 
-
-/* Навигация в хедере */
-
-// if ( window.matchMedia('(min-width:993px)').matches ) {
-//
-//   let header_nav = document.querySelector('.header--nav')
-//   let dropdown_button = header_nav.querySelector('.header--nav_item-more')
-//   let dropdown_menu = header_nav.querySelector('.header--nav_item-more .is_dropdown--content .header_menu')
-//
-//   function isOverflown(element) {
-//     return element.scrollWidth > element.clientWidth;
-//   }
-//
-//   if ( isOverflown(header_nav) ) {
-//     while( isOverflown(header_nav) ){
-//
-//       let last_link = header_nav.querySelector('.header--nav > div:last-of-type')
-//       header_nav.removeChild(last_link)
-//       dropdown_menu.appendChild(last_link)
-//     }
-//
-//     dropdown_button.classList.remove('hidden')
-//   }
-//
-// }
 
 // opening menu
-
 let opening_menu = document.querySelector('.header--burger')
 let menu = document.querySelector('.header_menu')
+if (opening_menu){
+  let opening_menu = document.querySelector('.header--burger')
 
-opening_menu.addEventListener('click', (e) => {
-      menu.classList.add('is_open')
+
+  opening_menu.addEventListener('click', (e) => {
+    menu.classList.add('is_open')
   })
 
-let  close_menu = document.querySelector('.header_menu-close')
 
-close_menu.addEventListener('click', (e) => {
-  menu.classList.remove('is_open')
+
+  let  close_menu = document.querySelector('.header_menu-close')
+
+  close_menu.addEventListener('click', (e) => {
+    menu.classList.remove('is_open')
+  })
+
+
+}
+// скрытие меню клику вне меню
+document.addEventListener( 'click', (e) => {
+  let menu = document.querySelector('.header_menu.is_open')
+  if(menu){
+    if (e.target !== menu && e.target !== opening_menu ) {
+      menu.classList.remove('is_open')
+    }
+  }
 })
+
+// скрытие меню по кнопке Escape
+document.addEventListener('keydown', function(e) {
+  if( e.key ){
+    menu.classList.remove('is_open')
+  }
+});
+
+// плавный скролл
+
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]')
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener('click', function (e) {
+    e.preventDefault()
+    const id = smoothLink.getAttribute('href')
+
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
+
+

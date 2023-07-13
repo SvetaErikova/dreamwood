@@ -5,8 +5,10 @@ section.block.block_html_code.content_road.block_tabs
       p На каком транспорте вы планируете посетить парк?
       .road-filters
         .button.button-outlined.button-filters.road-filters_item(data-content="car")
+          span.icon.icon-car
           span На машине
         .button.button-outlined.button-filters.road-filters_item(data-content="bus")
+          span.icon.icon-bus
           span На автобусе
     .block--content
       .road-item(data-content_item="car")
@@ -23,5 +25,5 @@ section.block.block_html_code.content_road.block_tabs
           li Приобрести билет и получить браслет у кассы.
           li Приобрести билет и получить браслет у кассы.
     .block--image
-      .#map
-
+      <script src="https://api-maps.yandex.ru/2.1/?apikey=d3be6419-a631-4935-9a55-9408a02fb8eb&lang=ru_RU" type="text/javascript"></script>
+      #map

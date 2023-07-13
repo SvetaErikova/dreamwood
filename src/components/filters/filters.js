@@ -1,118 +1,115 @@
-// /* Filters */
-// function arrayRemove(arr, value) {
-//   return arr.filter(function(ele){
-//     return ele != value;
-//   });
-// }
-//
-// function findCommonElements(arr1, arr2) {
-//   return arr1.some(item => arr2.includes(item))
-// }
-//
-// /* Кнопка показать всё */
-//
-// let list_to_crop = document.querySelectorAll('.js-long_list')
-//
-// list_to_crop.forEach(list =>{
-//   let button = list.querySelector('.js-toggle_content');
-//
-//   button.addEventListener('click', ()=>{
-//     button.classList.toggle('active')
-//     list.classList.toggle('active');
-//
-//     if (button.classList.contains('active')) {
-//       button.textContent = 'Скрыть'
-//       document.querySelector('.filters__more').style.display = 'flex'
-//     } else {
-//       button.textContent = 'Показать ещё'
-//       document.querySelector('.filters__more').style.display = 'none'
-//     }
-//
-//   })
-//
-// })
-//
-//
-// select = document.querySelectorAll('.select')
-// select.forEach(function(selectActive){
-//   selectActive.addEventListener('change', (e) =>{
-//     s = e.currentTarget
-//     option = s.querySelectorAll('.option')
-//     for(i=1; i < option.length; i++){
-//       if(s.value === option[i].value){
-//         s.classList.add('select-active')
-//         s.dataset.target = option[i].value
-//       }
-//     }
-//   })
-// })
-//
-// let block_with_filters = document.querySelectorAll('.js-filtered_block');
-//
-// block_with_filters.forEach(block => {
-//   let filter_block = block.querySelectorAll('.js-filters')
-//
-//   let targets_list = document.getElementById('content_to_sort');
-//   let content_elements = targets_list.querySelectorAll('li[data-content]');
-//   let reset_button = block.querySelectorAll('button[type=reset]');
-//
-//   filter_block.forEach(b => {
-//     let inputs = b.querySelectorAll('[data-target]');
-//     let data_attr = [];
-//
-//     inputs.forEach(i => {
-//       if ( !inputs && !content_elements ) return;
-//
-//       i.addEventListener('change', (e)=> {
-//         data_attr = []
-//
-//         let active_input = block.querySelectorAll(':scope .select-active, [data-target]:checked');
-//
-//         //console.log(active_input)
-//
-//         if ( active_input.length < 1 ) {
-//           content_elements.forEach( el => {
-//             el.classList.remove('hidden')
-//           })
-//         }
-//         active_input.forEach(ai => {
-//           let attr = ai.getAttribute('data-target')
-//           data_attr.push(attr);
-//         })
-//
-//         if ( data_attr.length < 1 ) return;
-//
-//         let cards_to_show = [];
-//
-//         content_elements.forEach(block => {
-//           let data_content = block.getAttribute('data-content').split(',')
-//           console.log('карточка:'+data_content)
-//           console.log('кнопка:'+data_attr)
-//
-//           data_attr.forEach(attr => {
-//             if ( block.getAttribute('data-content').includes(attr) ) {
-//               console.log(block.getAttribute('data-content').includes(attr) )
-//
-//               cards_to_show.push(block)
-//               block.classList.remove('hidden')
-//             }else
-//               block.classList.add('hidden')
-//           })
-//         })
-//
-//       })
-//     })
-//   })
-//
-//
-//   // Reset filters
-//
-//   reset_button.forEach(button => {
-//     button.addEventListener('click', ()=>{
-//       content_elements.forEach( el => {
-//         el.classList.remove('hidden')
-//       })
-//     })
-//   })
-//
-// })
+ /* Filters */
+
+
+
+
+/* Кнопка показать всё */
+
+let btn_more = document.querySelector('.js-btn-more')
+let block_long_list = document.querySelectorAll('.block_list:not(.block_list-slider)')
+
+block_long_list.forEach(list =>{
+  if(btn_more){
+    let long_list = list.querySelector('.block--elements')
+    btn_more.addEventListener('click', ()=>{
+      btn_more.classList.toggle('active')
+      long_list.classList.toggle('active');
+
+      if (btn_more.classList.contains('active')) {
+        btn_more.textContent = 'Скрыть'
+      } else {
+        list.scrollIntoView({block: 'start'})
+        btn_more.textContent = 'Показать ещё'
+      }
+
+    })
+
+  }
+
+
+})
+
+
+let block_with_filters = document.querySelectorAll('.js-filtered_block');
+
+
+
+block_with_filters.forEach(block => {
+  let filter_block = block.querySelectorAll('.js-filters')
+  let filter_list = block.querySelector('.block--elements')
+  let filter_elements = filter_list.querySelectorAll('.card');
+  let reset_button = block.querySelector('button[type=reset]');
+  let not_found = block.querySelector('.not-found')
+
+  let block_inputs = block.querySelectorAll('.filters-item')
+
+  filter_block.forEach(b => {
+    // Все инпуты
+    let inputs = b.querySelectorAll('.filters-item input');
+
+
+
+    inputs.forEach(i => {
+      if ( !inputs && !filter_elements ) return;
+
+
+      // смена состояния инпута
+      i.addEventListener('change', (e)=> {
+
+        let loader = block.querySelector('.loader')
+        function loader_active(){
+          loader.style.display='block'
+          for (i = 0; cards_to_show.length >= i; i++){
+            cards_to_show[i].style.opacity = 0
+          }
+        }
+        function  loader_no_active(){
+          loader.style.display='none'
+          for (i = 0; cards_to_show.length >= i; i++){
+            cards_to_show[i].style.opacity = 1
+          }
+        }
+
+        let cards_to_show = []
+        let active_input_height = block.querySelector('.filters-item [data-height]:checked');
+        let active_input_age = block.querySelector('.filters-item [data-age]:checked');
+        let active_input_price = block.querySelector('.filters-item [data-price]:checked');
+
+        filter_elements.forEach(el => {
+
+          if( el.getAttribute('data-height') >= active_input_height.getAttribute('data-height') &&
+            el.getAttribute('data-age') >= active_input_age.getAttribute('data-age') &&
+            el.getAttribute('data-price').includes(active_input_price.getAttribute('data-price'))) {
+            el.classList.remove('hidden')
+            cards_to_show.push(el)
+          }
+          else {
+            el.classList.add('hidden')
+          }
+          })
+
+        if(cards_to_show.length < 1){
+          not_found.style.display = 'block'
+        } else{
+          not_found.style.display = 'none'
+        }
+        setTimeout(loader_active)
+        setTimeout(loader_no_active , 600)
+        })
+
+      })
+
+    })
+
+  // Reset filters
+  reset_button.addEventListener('click', ()=>{
+    block_inputs.forEach(bi =>{
+      filter_elements.forEach( el => {
+        el.classList.remove('hidden')
+        document.querySelector('.js-filtered_block').scrollIntoView()
+        not_found.style.display = 'none'
+      })
+    })
+  })
+})
+

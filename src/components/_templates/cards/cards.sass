@@ -2,10 +2,15 @@
   flex-shrink: 0
   flex-grow: 0
 
+
+
 .card--title
   text-overflow: ellipsis
+  display: flex
+  gap: var(--g-20)
+  justify-content: space-between
+  align-items: flex-start
   overflow: hidden
-  display: -webkit-box
   -webkit-line-clamp: 3
   -webkit-box-orient: vertical
   transition: var(--transition)
@@ -15,9 +20,60 @@
   align-items: flex-start
   position: relative
   z-index: 2
+  .card--image_slide
+    position: relative
+    flex: 0 0 auto
+  .swiper-button-next,
+  .swiper-button-prev
+    color: #0281C9
+    background: #E6F2FB
+    border: none
+    z-index: 10
+    top: 50%
+    position: absolute
+    width: 27px
+    height: 27px
+    &:hover,
+    &:focus,
+    &:active
+      color: #E6F2FB
+      background-color: #0281C9
+  .swiper-button-next:after
+    content: '\e909'
+  .swiper-button-prev:after
+    content: '\e90c'
+  .swiper-pagination-bullet
+    background-color: #fff
+    opacity: 1
+    position: relative
+  .swiper-pagination-bullet-active:after
+    content: ''
+    position: absolute
+    width: 6px
+    height: 6px
+    display: block
+    border-radius: 50%
+    left: 50%
+    top: 50%
+    translate: -50% -50%
+    background-color: #E96852
+
+.block_list:not(.block_list-slider)
+  .card
+    @media(max-width: 768px)
+      border-radius: var(--border-corner)
+      box-shadow: 2px 2px 23px 0px rgba(34, 60, 80, 0.2)
+  .card--content
+    @media(max-width: 768px)
+      padding: 10px
 
 
-// ok
+.content_events
+  .card--image
+    aspect-ratio: 280 / 288
+.page--events
+  .card--image
+    aspect-ratio: 380 / 288
 .content_events
   .card
     display: flex
@@ -28,7 +84,6 @@
     transition: var(--transition)
     background-color: var(--background-card)
   .card--image
-    aspect-ratio: 280 / 288
     overflow: hidden
     flex: 0 0 auto
     width: 100%
@@ -63,11 +118,8 @@
     font-weight: 500
     margin-bottom: 16px
 
-  .card--link
-    .arrow-pink
-      color: var(--color-pink)
 
-// ok
+
 .content_area
   .content_events,
   .card
@@ -113,11 +165,16 @@
 
   .card--link
     margin-top: auto
-    .arrow-pink
-      color: var(--color-pink)
 
-// ok
+
+.content_activity
+  .card--image
+    aspect-ratio: 580 / 320
 .content_attractions
+  .card--image
+    aspect-ratio: 380 / 320
+.content_attractions,
+.content_activity
   .card
     display: flex
     flex-direction: column
@@ -125,7 +182,6 @@
     position: relative
     transition: var(--transition)
   .card--image
-    aspect-ratio: 380 / 320
     overflow: hidden
     flex: 0 0 auto
     width: 100%
@@ -138,11 +194,11 @@
       width: 100%
       height: 100%
       transition: var(--transition)
+      flex: 0 0 auto
   .card--content
     display: flex
     align-items: flex-start
     flex-direction: column
-    //padding: 16px var(--g-24)
     height: 100%
   .card--label
     position: absolute
@@ -151,9 +207,7 @@
     right: var(--g-20)
     padding: 5px 8px
     min-width: 100px
-    //border: 2px solid rgba(151, 86, 233, 0.5)
     border-radius:  var(--border-corner)
-    //background-color: #fff
     font-weight: 500
     font-size: 14px
     line-height: 1.35
@@ -168,9 +222,6 @@
     &:empty
       display: none
   .card--title
-    display: flex
-    align-items: center
-    justify-content: space-between
     width: 100%
     margin-bottom: var(--fs-24)
     h3
@@ -194,15 +245,25 @@
           background-size: contain
           width: 24px
           height: 24px
-      &--height
+      &--height,
+      &--sale
         color: var(--color-green)
         display: flex
         align-items: center
         gap: 8px
+      &--height
         &:before
           content: ''
           display: inline-block
           background: url("../img/svg/filters/height.svg") center no-repeat
+          background-size: contain
+          width: 24px
+          height: 24px
+      &--sale
+        &:before
+          content: ''
+          display: inline-block
+          background: url("../img/svg/filters/sale.svg") center no-repeat
           background-size: contain
           width: 24px
           height: 24px
@@ -221,8 +282,7 @@
     gap: 8px
 
 
-// ok
-.content_restaurant
+.block_list-slider.content_restaurant
   .card
     display: flex
     flex-direction: column
@@ -271,10 +331,8 @@
       --outlined-bc-hover:  var(--color-green)
       --outlined-c-hover: var(--c-text-white)
       padding: 5px 10px
-    .arrow-pink
-      color: var(--color-pink)
 
-// ok
+
 .content_personage
   --accent : var(--color-blue)
   .card
@@ -285,6 +343,7 @@
     position: relative
     transition: var(--transition)
     background-color: var(--background-card)
+    border-radius: var(--border-corner)
   .card--image
     aspect-ratio: 280 / 280
     overflow: hidden
@@ -311,7 +370,6 @@
       color: var(--accent)
 
 
-
 .content_shows
   .card
     display: flex
@@ -321,6 +379,7 @@
     position: relative
     transition: var(--transition)
     background-color: #F9FCFF
+    border-radius: var(--border-corner)
   .card--image
     aspect-ratio: 280 / 288
     overflow: hidden
@@ -341,8 +400,6 @@
     background-color: var(--c-surface-default)
     height: 100%
   .card--title
-    display: flex
-    align-items: flex-start
     justify-content: space-between
     width: 100%
     h3
@@ -369,79 +426,17 @@
           height: 24px
   .card--link
     margin-top: auto
-    .arrow-pink
-      color: var(--color-pink)
-
-
-
-
-.content_cards,
-.content_galleries
-  .card
-    overflow: hidden
-    display: flex
-    flex-direction: column
-    border-radius: 24px
-    transition: var(--transition)
-    &:hover
-      box-shadow: 0 8px 10px 2px rgba(151, 86, 233, 0.25)
-      .card--image img
-        scale: 1.1
-      .card--title:after
-        transform: translateX(0)
-        color: rgba(151, 86, 233, 1)
-    @media(max-width: 768px)
-      border-radius: 16px
-      box-shadow: 0 6px 12px 2px rgba(151, 86, 233, 0.12)
-  .card--content
-    padding: var(--g-20) var(--g-28)
-    position: relative
-    z-index: 3
-  .card--title
-    text-transform: uppercase
-    font-size: var(--fs-24)
-    font-weight: 700
-    position: relative
-    padding-right: 48px
-    h3
-      text-transform: uppercase
-      font-size: var(--fs-24)
-      font-weight: 700
-    &:after
-      content: "\e912"
-      font-family: 'icomoon' !important
-      font-size: inherit
-      color: rgba(151, 86, 233, 0.7)
-      position: absolute
-      right: 0
-      top: 0
-      transform: translateX(-24px)
-      transition: var(--transition)
-  .card--image
-    aspect-ratio: 410 / 480
-    border-radius: 24px
-    overflow: hidden
-    @media(max-width: 768px)
-      border-radius: 16px
-    img
-      transition: var(--transition)
-      scale: 1
-      transform-origin: center
-      width: 100%
-      height: 100%
-  .card--subtitle
-    font-size: 16px
-    letter-spacing: 1.5px
-    font-weight: 600
-    color: #9756E9
-    margin-bottom: 8px
-
-.content_cards
-  @media(max-width: 768px)
-    .card
-      box-shadow: 0 8px 10px 2px rgba(151, 86, 233, 0.25)
-
-
 
 .icon.icon-arrow-card:before
   content: '\e902'
+  font-size: 14px
+  padding: 1px 3px 1px 3px
+  color: #fff
+  background-color: var(--color-pink)
+  border-radius: 50%
+  transition: var(--transition)
+
+.card--link
+  .button:hover .icon-arrow-card:before
+    color: #fff
+    background-color: var(--c-text-dark)

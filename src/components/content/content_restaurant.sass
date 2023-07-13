@@ -5,14 +5,18 @@
     content: ''
     position: absolute
     top: 0
-    bottom: -40%
-    left: 0
     right: 0
+    width: clamp(773px, calc(773px + (1369  - 773) * ((100vw - 768px) / (1440 - 768))), 1369px)
+    height: clamp(633px, calc(633px + (1121  - 633) * ((100vw - 768px) / (1440 - 768))), 1121px)
     background-image: url("../img/svg/bck-big-decor-3.svg")
     background-repeat: no-repeat
     background-size: contain
     background-position: right
     z-index: -2
+    @media (max-width: 768px)
+      width: 100%
+      background-size: cover
+      background-position: center
   &:not(.block_list-slider)
     .block--elements
       grid-template-columns: 1fr
@@ -20,3 +24,140 @@
         grid-template-columns: repeat(2, 1fr)
         .block--pagination
           grid-column: span 4
+
+
+.page--restaurants
+  .content_restaurant
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 30%
+      width: clamp(50px, calc(50px + (120 - 50) * ((100vw - 375px) / (1440 - 768))), 120px)
+      height: clamp(50px, calc(50px + (115 - 50) * ((100vw - 375px) / (1440 - 768))), 115px)
+      background-image: url("../img/svg/bck-decor-7.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: right
+      z-index: -1
+    .block--elements
+      grid-template-columns: 1fr
+      gap:  clamp(50px, calc(50px + (80 - 50) * ((100vw - 768px) / (1440 - 768))), 80px)
+
+    .card
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: 'img content'
+      gap: 40px
+      position: relative
+      background-color: transparent
+      align-items: stretch
+      @media(max-width: 768px)
+        grid-template-columns: 1fr
+        grid-template-areas: 'img img' 'content content'
+        gap: 20px 0
+    .card--image
+      grid-area: img
+      aspect-ratio: 576 / 320
+      overflow: hidden
+      flex: 0 0 auto
+      width: 100%
+      height: auto
+      border-radius: var(--border-corner)
+      @media(max-width: 768px)
+        border-radius: 16px
+      img
+        width: 100%
+        height: 100%
+        transition: var(--transition)
+        flex: 0 0 auto
+    .card--content
+      grid-area: content
+      display: flex
+      align-items: flex-start
+      flex-direction: column
+      justify-content: space-around
+      padding: var(--g-24) 0
+      height: 100%
+      gap: var(--g-24)
+      @media(max-width: 768px)
+        padding: 10px
+    .card--title
+      h3
+        font-weight: 450
+        text-transform: uppercase
+        line-height: 1.36
+        font-size: 21px
+        letter-spacing: -0.01em
+        margin-bottom: var(--fs-24)
+    .card--info
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: 10px var(--g-24)
+      width: 100%
+      @media(max-width: 540px)
+        grid-template-columns: 1fr
+        grid-template-rows: auto
+      &-item
+        display:  flex
+        gap: 10px
+        grid-column: 2
+        @media(max-width: 540px)
+          grid-column: auto
+          grid-row: 2
+        .card--info-text
+          display: flex
+          flex-direction: column
+          @media(max-width: 540px)
+            gap: 10px
+            flex-direction: row
+            flex-wrap: wrap
+
+      &-item:first-of-type
+        grid-column: 1
+        grid-row: span 2
+        @media(max-width: 540px)
+          grid-column: span 2
+          grid-row: 1
+      .icon
+        color: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 26px
+        height: 26px
+        background-color: var(--c-text-dark)
+        border-radius: 50%
+    .card--text
+      line-height: 1.4
+      font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 1024px) / (1920 - 1024))), 16px)
+    .card--link
+      display: flex
+      gap: 24px
+      .menu
+        --outlined-bc-base:  var(--color-green)
+        --outlined-c-base:  var(--color-green)
+        --outlined-bgc-hover: var(--color-green)
+        --outlined-bc-hover:  var(--color-green)
+        --outlined-c-hover: var(--c-text-white)
+        padding: 5px 10px
+  .card.card-reversed
+    grid-template-areas: 'content img '
+    @media(max-width: 768px)
+      grid-template-columns: 1fr
+      grid-template-areas: 'img img' 'content content'
+      gap: 30px
+  .card:first-of-type:after
+    content: ''
+    position: absolute
+    top: 15%
+    left: -8%
+    width: 146px
+    height: 156px
+    background-image: url("../img/svg/bck-decor-11.svg")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: right
+    z-index: -1
+    @media(max-width: 768px)
+      display: none

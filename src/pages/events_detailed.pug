@@ -1,0 +1,42 @@
+extends ../layouts/hero
+
+block variables
+  - var title = "Афиша детальная"
+  - var pageClass = 'events_detailed'
+  - var activePage = 'index'
+
+block content
+  section.block.block_banner.block_banner-hero
+    .block--wrapper
+      .banner
+        .block--content
+          <svg class="hero_clip_svg">
+          <clipPath id="my-clip-path-2" clipPathUnits="objectBoundingBox"><path d="M1,0 V0.857 H1 C0.872,0.857,0.673,0.704,0.503,0.727 C0.47,0.732,0.389,0.753,0.389,0.843 C0.389,0.917,0.418,0.978,0.427,0.996 C0.428,0.998,0.427,1,0.426,1 C0.4,0.991,0.27,0.944,0.186,0.87 C0.106,0.8,0.039,0.73,0,0.597 V0 H1"></path></clipPath>
+          </svg>
+          <svg class="hero_clip_svg">
+          <clipPath id="my-clip-path-2-mob" clipPathUnits="objectBoundingBox"><path d="M1,0 v0.809 c-0.13,-0.015,-0.262,-0.023,-0.386,-0.017 c-0.073,0.003,-0.253,0.02,-0.253,0.089 c0,0.053,0.055,0.098,0.079,0.115 c0.003,0.002,0,0.006,-0.005,0.005 C0.377,0.993,0.171,0.966,0,0.925 V0 H1"></path></clipPath>
+          </svg>
+          img(src="./assets/img/banner-attractions.png")
+        +block--head("20-25 июля","название дня" ,"","За фасадами города скрываются настоящие чудеса. Откройте их все!")
+
+  section.block
+    .block--wrapper
+      .block--content.is_cascade
+        h2  О мероприятии
+        h3 О мероприятии
+        h4 О мероприятии
+        h5 О мероприятии
+        h6 О мероприятии
+        p Среди миллиарда ярких звезд, на обратной стороне холодной Луны, живет лунный кролик.В новогоднюю ночь он решает спуститься на Землюс вихрем снежинок, чтобы узнать, как устроен наш мир, ведь он долго наблюдал за нами.
+        p Теперь ему предстоит встретиться с опасностями таинственного леса и найти друзей, которые помогут ему вернуться домой.
+          a(href="" target="_blank")
+          span кнопка
+        img(src="./assets/img/banner-attractions.png")
+        ul
+          li Анимационная программа для детей
+          li Анимационная программа для детей
+          li Анимационная программа для детей
+          li Анимационная программа для детей
+          li Анимационная программа для детей
+
+

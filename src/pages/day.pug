@@ -1,53 +1,39 @@
 extends ../layouts/hero
 
 block variables
-  - var title = "Главная"
-  - var pageClass = 'page--index'
+  - var title = "Тематический день"
+  - var pageClass = 'page--day'
   - var activePage = 'index'
 
+
+block content
   section.block.block_banner.block_banner-hero.block_banner-nav
     .block--wrapper
       .banner
         .block_nav-page
           .nav
-            a  Персонажи
-            a  Площадки
-            a  Индивидуальный сценарий
-            a  Готовые программы
-            a  Галерея
-
+            a(href='#about')  О мероприятие
+            a(href='#programm')  Программа
+            a(href='#programm')  Расписание
+            a(href='#gallery')  Галерея
         .block--content
           <svg class="hero_clip_svg">
           <clipPath id="my-clip-path-2" clipPathUnits="objectBoundingBox"><path d="M1,0 V0.857 H1 C0.872,0.857,0.673,0.704,0.503,0.727 C0.47,0.732,0.389,0.753,0.389,0.843 C0.389,0.917,0.418,0.978,0.427,0.996 C0.428,0.998,0.427,1,0.426,1 C0.4,0.991,0.27,0.944,0.186,0.87 C0.106,0.8,0.039,0.73,0,0.597 V0 H1"></path></clipPath>
           </svg>
-          img(src="/assets/img/banner-attractions.png")
-        +block--head("","праздник мечты" ,"для вашего ребенка","Сделаем любой праздник незабываемым. Вас ждет: сказочная атмосфера парка, яркие персонажи и интересная программа!")
-        .block--actions
-          a(href="/").button.button-filled.button-accent
-            span Оставить заявку
+          <svg class="hero_clip_svg">
+          <clipPath id="my-clip-path-2-mob" clipPathUnits="objectBoundingBox"><path d="M1,0 v0.809 c-0.13,-0.015,-0.262,-0.023,-0.386,-0.017 c-0.073,0.003,-0.253,0.02,-0.253,0.089 c0,0.053,0.055,0.098,0.079,0.115 c0.003,0.002,0,0.006,-0.005,0.005 C0.377,0.993,0.171,0.966,0,0.925 V0 H1"></path></clipPath>
+          </svg>
+          img(src="./assets/img/banner-attractions.png")
+        +block--head("20-25 июля","название дня" ,"","За фасадами города скрываются настоящие чудеса. Откройте их все!")
 
-  section.block.block_image_text.block_image_text-reversed.mask-lips
-    .block--wrapper
-      .block--image
-        <svg class="svg">
-        <clipPath id="mask-lips" clipPathUnits="objectBoundingBox"><path d="M0.73,0.112 C0.715,0.096,0.697,0.088,0.679,0.083 C0.662,0.077,0.644,0.083,0.627,0.088 C0.609,0.093,0.591,0.096,0.576,0.112 C0.563,0.126,0.542,0.13,0.534,0.108 C0.525,0.086,0.515,0.063,0.5,0.048 C0.485,0.032,0.468,0.025,0.452,0.02 C0.436,0.015,0.417,0,0.399,0.005 C0.379,0.01,0.362,0.03,0.343,0.039 C0.323,0.048,0.304,0.055,0.285,0.068 C0.267,0.082,0.253,0.103,0.236,0.119 C0.214,0.142,0.209,0.132,0.187,0.155 C0.164,0.178,0.166,0.183,0.143,0.206 C0.121,0.229,0.117,0.222,0.095,0.245 C0.072,0.268,0.073,0.27,0.05,0.293 C0.027,0.316,0.011,0.302,0.006,0.343 C0,0.385,0.022,0.379,0.037,0.413 C0.052,0.448,0.052,0.448,0.067,0.483 C0.082,0.518,0.085,0.515,0.1,0.549 C0.115,0.584,0.117,0.583,0.132,0.617 C0.147,0.652,0.147,0.652,0.161,0.687 C0.172,0.712,0.178,0.744,0.19,0.765 C0.203,0.786,0.221,0.805,0.236,0.824 C0.25,0.844,0.265,0.866,0.281,0.882 C0.297,0.898,0.315,0.912,0.333,0.926 C0.351,0.94,0.37,0.946,0.388,0.956 C0.406,0.966,0.423,0.987,0.442,0.993 C0.461,0.999,0.481,0.994,0.5,0.996 C0.52,0.998,0.54,1,0.56,1 C0.579,1,0.599,1,0.618,0.995 C0.638,0.988,0.655,0.972,0.673,0.963 C0.691,0.953,0.711,0.946,0.729,0.933 C0.748,0.919,0.765,0.908,0.783,0.892 C0.805,0.869,0.802,0.861,0.825,0.838 C0.848,0.815,0.851,0.823,0.874,0.8 C0.896,0.777,0.893,0.77,0.916,0.747 C0.939,0.724,0.943,0.734,0.966,0.711 C0.988,0.688,0.998,0.697,1,0.658 C1,0.619,0.996,0.623,0.981,0.589 C0.966,0.554,0.962,0.557,0.947,0.522 C0.932,0.487,0.932,0.487,0.917,0.453 C0.902,0.418,0.907,0.413,0.892,0.378 C0.877,0.343,0.873,0.348,0.858,0.313 C0.847,0.288,0.833,0.265,0.821,0.241 C0.809,0.218,0.798,0.189,0.783,0.169 C0.767,0.149,0.752,0.129,0.734,0.113 L0.73,0.112"></path></clipPath>
-        </svg>
-        img(src="/assets/img/holidays-img.png" alt="")
-      +block--head("","" ,"","")
-      .block--content.is_cascade
-        p Прогуливаясь по улицам Метрополиса, обязательно загляните во все двери — здесь вы найдете самые разнообразные развлечения: начиная от кинотеатра и боулинга, заканчивая роботами, виртуальной реальностью и космическими кораблями!
-        p А на главной площади Метрополиса ежедневно проходят веселые городские танцы Mini Disko для юных жителей!
-      .block--subtitle
-        span Звучит, как сказка? <br>Это она и есть!
-        span.icon
 
-  section.block.block_image_text.block_image_text-reversed.mask-fire
+  section.block.block_image_text.block_image_text-reversed.mask-fire#about
     .block--wrapper
       .block--image
         <svg class="svg">
         <clipPath id="mask-fire" clipPathUnits="objectBoundingBox"><path d="M0.694,0.974 L0.816,0.897 L0.921,0.808 L0.992,0.694 L1,0.567 L0.981,0.441 L0.951,0.316 L0.88,0.205 L0.805,0.092 L0.702,0 L0.629,0.099 L0.554,0.206 L0.449,0.113 L0.337,0.023 L0.297,0.146 L0.265,0.258 L0.146,0.196 L0.004,0.158 L0.001,0.284 L0,0.41 L0.009,0.538 L0.047,0.659 L0.111,0.772 L0.183,0.884 L0.305,0.959 L0.452,0.987 L0.602,1 L0.694,0.974"></path></clipPath>
         </svg>
-        img(src="/assets/img/holidays-img.png" alt="")
+        img(src="./assets/img/holidays-img.png" alt="")
       +block--head('','О мероприятии','','')
       .block--content
         p Среди миллиарда ярких звезд, на обратной стороне холодной Луны, живет лунный кролик.В новогоднюю ночь он решает спуститься на Землюс вихрем снежинок, чтобы узнать, как устроен наш мир, ведь он долго наблюдал за нами.Теперь ему предстоит встретиться с опасностями таинственного леса и найти друзей, которые помогут ему вернуться домой.
@@ -59,38 +45,83 @@ block variables
       .block--content
         .advantages-item
           .advantages-icon
-            img(src="/assets/img/svg/advantages-icon-1.svg" alt="")
+            img(src="./assets/img/svg/advantages-icon-1.svg" alt="")
           .advantages-text Анимационная программа для детей
         .advantages-item
           .advantages-icon
-            img(src="/assets/img/svg/advantages-icon-2.svg" alt="")
+            img(src="./assets/img/svg/advantages-icon-2.svg" alt="")
           .advantages-text Интерактивная программа для взрослых
         .advantages-item
           .advantages-icon
-            img(src="/assets/img/svg/advantages-icon-3.svg" alt="")
+            img(src="./assets/img/svg/advantages-icon-3.svg" alt="")
           .advantages-text Тематические мастер-классы
         .advantages-item
           .advantages-icon
-            img(src="/assets/img/svg/advantages-icon-4.svg" alt="")
+            img(src="./assets/img/svg/advantages-icon-4.svg" alt="")
           .advantages-text Танцевально-акробатические номера от артистов оригинального жанра
         .advantages-item
           .advantages-icon
-            img(src="/assets/img/svg/advantages-icon-5.svg" alt="")
+            img(src="./assets/img/svg/advantages-icon-5.svg" alt="")
           .advantages-text Тесла-шоу
 
-  section.block.block_image_text.mask-bird.content_image-text-action-2
+  section.block.block_list.content_program#programm
+    .block--wrapper
+      +block--head('','расписание','активностей дня','')
+      include ../components/content/content_program/content_program
+
+
+  section.block.block_image_text.mask-flower.content_image-text-action-2
     .block--wrapper
       .block--image
         <svg class="svg">
-        <clipPath id="mask-bird" clipPathUnits="objectBoundingBox"><path d="M0.942,0.296 C0.932,0.312,0.919,0.315,0.91,0.322 C0.902,0.327,0.892,0.333,0.891,0.341 C0.884,0.368,0.872,0.389,0.847,0.405 C0.827,0.419,0.823,0.424,0.848,0.432 C0.905,0.451,0.949,0.481,0.981,0.522 C1,0.565,1,0.609,0.986,0.653 C0.944,0.735,0.882,0.803,0.79,0.85 C0.699,0.895,0.617,0.952,0.525,0.995 C0.519,0.998,0.515,1,0.508,1 C0.501,0.997,0.51,0.99,0.511,0.985 C0.524,0.863,0.535,0.742,0.561,0.623 C0.569,0.583,0.583,0.543,0.59,0.501 C0.566,0.506,0.542,0.514,0.526,0.524 C0.436,0.584,0.349,0.645,0.265,0.711 C0.246,0.725,0.238,0.72,0.222,0.702 C0.165,0.64,0.127,0.572,0.092,0.501 C0.085,0.487,0.082,0.472,0.073,0.459 C0.064,0.448,0.065,0.438,0.084,0.438 C0.186,0.438,0.287,0.424,0.388,0.419 C0.427,0.418,0.461,0.402,0.498,0.394 C0.505,0.393,0.51,0.389,0.516,0.386 C0.527,0.379,0.53,0.371,0.518,0.365 C0.488,0.352,0.458,0.338,0.427,0.325 C0.372,0.303,0.321,0.278,0.272,0.248 C0.219,0.215,0.164,0.184,0.114,0.148 C0.079,0.121,0.053,0.085,0.016,0.058 C0,0.047,0,0.04,0.023,0.036 C0.14,0.018,0.26,0.017,0.379,0.011 C0.429,0.008,0.477,0,0.528,0.002 C0.586,0.004,0.643,0.012,0.694,0.034 C0.743,0.057,0.773,0.094,0.792,0.138 C0.811,0.184,0.8,0.224,0.775,0.266 C0.761,0.289,0.765,0.296,0.796,0.295 C0.843,0.294,0.889,0.305,0.941,0.296 L0.942,0.296 M0.843,0.356 C0.854,0.352,0.861,0.346,0.857,0.337 C0.853,0.328,0.843,0.32,0.831,0.323 C0.819,0.326,0.821,0.337,0.825,0.345 C0.828,0.354,0.834,0.357,0.843,0.356"></path></clipPath>
+        <clipPath id="mask-flower" clipPathUnits="objectBoundingBox"><path d="M0.247,0.825 C0.237,0.861,0.233,0.897,0.24,0.929 C0.244,0.951,0.257,0.958,0.281,0.947 C0.318,0.929,0.352,0.911,0.379,0.879 C0.42,0.832,0.441,0.832,0.472,0.768 C0.509,0.882,0.589,0.908,0.656,0.986 C0.67,1,0.687,1,0.697,0.986 C0.738,0.89,0.749,0.825,0.735,0.715 C0.725,0.693,0.735,0.686,0.749,0.683 C0.773,0.683,0.793,0.683,0.817,0.675 C0.878,0.665,0.9,0.621,0.964,0.631 C0.995,0.635,1,0.624,0.995,0.592 C0.974,0.538,0.963,0.488,0.916,0.445 C0.864,0.397,0.828,0.391,0.749,0.38 C0.732,0.384,0.725,0.384,0.729,0.363 C0.746,0.249,0.721,0.229,0.711,0.137 C0.711,0.104,0.683,0.054,0.673,0.029 C0.66,-0.007,0.65,-0.007,0.623,0.015 C0.609,0.025,0.599,0.04,0.589,0.054 C0.541,0.119,0.495,0.137,0.48,0.184 C0.474,0.206,0.46,0.22,0.44,0.199 C0.426,0.184,0.392,0.176,0.376,0.161 C0.318,0.118,0.281,0.147,0.22,0.115 C0.193,0.101,0.183,0.108,0.183,0.137 C0.183,0.215,0.179,0.294,0.217,0.363 C0.227,0.384,0.227,0.388,0.206,0.391 C0.145,0.406,0.088,0.427,0.03,0.456 C0.02,0.459,0,0.456,0,0.474 C0,0.488,0.014,0.495,0.024,0.502 C0.098,0.56,0.149,0.631,0.24,0.649 C0.281,0.657,0.291,0.657,0.274,0.7 C0.257,0.743,0.259,0.777,0.247,0.825"></path></clipPath>
         </svg>
-        img(src="/assets/img/holidays-img.png" alt="")
+        img(src="./assets/img/holidays-img.png" alt="")
       +block--head('','праздники','в парке','')
       .block--content
         p Сделаем любой праздник незабываемым. Вас ждут: сказочная атмосфера парка, яркие персонажи и интересная программа!
       .block--actions
         a(href="/").button.button-filled.button-accent
           span Подробнее
-        a(href='/').phone-circle
+        a(href="tel:" ).phone-circle
           span.icon-phone-circle
           span 8 800 550 06 79
+
+  section.block.block_element.content_gallery#gallery
+    .block--wrapper
+      +block--head('','ВОЛШЕБНЫЕ', 'МОМЕНТЫ','')
+      .block--content
+        .gallery.js-gallerySwiper
+          .gallery--item.video
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox="./assets/img/card-offer.png")
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-1.png" alt="" data-fancybox="./assets/img/gallery-2.png")
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-2.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-3.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-4.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)

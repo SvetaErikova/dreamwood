@@ -1,26 +1,30 @@
 extends ../layouts/hero
 
 block variables
-  - var title = "Главная"
-  - var pageClass = 'page--index'
+  - var title = "Организация праздников"
+  - var pageClass = 'page--holidays'
   - var activePage = 'index'
 
+
+block content
   section.block.block_banner.block_banner-hero.block_banner-nav
     .block--wrapper
       .banner
         .block_nav-page
           .nav
-            a Персонажи
-            a Площадки
-            a Индивидуальный сценарий
-            a Готовые программы
-            a Галерея
-
+            a(href='#personage') Персонажи
+            a(href='#area') Площадки
+            a(href='#form') Индивидуальный сценарий
+            a(href='#shows') Готовые программы
+            a(href='#gallery') Галерея
         .block--content
-          img(src="/assets/img/banner-attractions.png")
+          <svg class="hero_clip_svg">
+          <clipPath id="my-clip-path-2" clipPathUnits="objectBoundingBox"><path d="M1,0 V0.857 H1 C0.872,0.857,0.673,0.704,0.503,0.727 C0.47,0.732,0.389,0.753,0.389,0.843 C0.389,0.917,0.418,0.978,0.427,0.996 C0.428,0.998,0.427,1,0.426,1 C0.4,0.991,0.27,0.944,0.186,0.87 C0.106,0.8,0.039,0.73,0,0.597 V0 H1"></path></clipPath>
+          </svg>
+          img(src="./assets/img/banner-attractions.png")
         +block--head("","праздник мечты" ,"для вашего ребенка","Сделаем любой праздник незабываемым. Вас ждет: сказочная атмосфера парка, яркие персонажи и интересная программа!")
         .block--actions
-          a(href="/").button.button-filled.button-accent
+          a(href="/").button.button-filled.button-accent.js-btn-open-form
             span Оставить заявку
 
   section.block.block_image_text.block_image_text-reversed.block_image_text-list.mask-heart
@@ -29,36 +33,34 @@ block variables
         <svg class="svg">
         <clipPath id="mask-heart" clipPathUnits="objectBoundingBox"><path d="M0.788,0.117 C0.756,0.116,0.756,0.122,0.724,0.122 C0.692,0.122,0.69,0.108,0.659,0.115 C0.627,0.122,0.63,0.133,0.601,0.146 C0.571,0.16,0.574,0.176,0.542,0.168 C0.511,0.16,0.523,0.144,0.503,0.117 C0.482,0.09,0.486,0.086,0.46,0.065 C0.435,0.044,0.43,0.051,0.401,0.037 C0.371,0.022,0.374,0.014,0.342,0.007 C0.306,0,0.306,0.012,0.269,0.014 C0.233,0.015,0.232,0.007,0.197,0.018 C0.163,0.029,0.168,0.037,0.137,0.057 C0.106,0.077,0.095,0.063,0.071,0.091 C0.047,0.118,0.059,0.127,0.043,0.161 C0.026,0.194,0.017,0.19,0.008,0.227 C0,0.263,0.01,0.265,0.009,0.304 C0.009,0.342,0.006,0.342,0.013,0.38 C0.019,0.418,0.017,0.419,0.03,0.455 C0.042,0.492,0.045,0.491,0.061,0.526 C0.076,0.562,0.075,0.562,0.093,0.597 C0.111,0.631,0.108,0.633,0.128,0.666 C0.148,0.7,0.155,0.695,0.177,0.727 C0.198,0.759,0.196,0.76,0.217,0.793 C0.239,0.825,0.236,0.827,0.257,0.86 C0.278,0.892,0.282,0.889,0.304,0.921 C0.318,0.942,0.314,0.945,0.328,0.966 C0.342,0.987,0.335,0.997,0.359,1 C0.383,1,0.382,0.999,0.404,0.987 C0.426,0.975,0.422,0.967,0.443,0.955 C0.476,0.936,0.479,0.942,0.512,0.923 C0.544,0.903,0.543,0.9,0.575,0.881 C0.607,0.861,0.607,0.86,0.639,0.84 C0.671,0.82,0.675,0.825,0.706,0.805 C0.738,0.784,0.734,0.778,0.766,0.756 C0.797,0.734,0.798,0.737,0.827,0.712 C0.856,0.687,0.858,0.689,0.884,0.661 C0.91,0.634,0.912,0.635,0.933,0.603 C0.955,0.572,0.951,0.569,0.967,0.535 C0.984,0.5,0.995,0.504,1,0.466 C1,0.43,0.994,0.428,0.993,0.391 C0.992,0.353,1,0.351,0.997,0.315 C0.987,0.278,0.976,0.282,0.958,0.25 C0.939,0.217,0.949,0.208,0.922,0.183 C0.895,0.157,0.888,0.166,0.855,0.149 C0.822,0.133,0.834,0.138,0.801,0.12 C0.797,0.117,0.789,0.117,0.788,0.117 L0.788,0.117"></path></clipPath>
         </svg>
-        img(src="/assets/img/holidays-img.png" alt="")
+        img(src="./assets/img/holidays-img.png" alt="")
       +block--head('','Организуем праздники','под любое событие','')
       .block--content
         ul.block--list
           li Дни рождения для детей от 0 до 13 лет
           li Семейные праздники
-          li Выпускные детских садов до 100 человек
           li Школьные выпускные до 50 человек
-
-
+          li Выпускные детских садов до 100 человек
+      .block--actions
   .block--actions
 
-  section.block.block_list.block_list-slider.content_personage
+  section.block.block_list.block_list-slider.content_personage#personage
     .block--wrapper
       +block--head('','более 20 персонажей','на выбор','')
       .block--elements
-        +card--personage('','Название персонажа', '/assets/img/card-offer.png')
-        +card--personage('','Название персонажа', '/assets/img/card-offer.png')
-        +card--personage('','Название персонажа', '/assets/img/card-offer.png')
-        +card--personage('','Название персонажа', '/assets/img/card-offer.png')
-        +card--personage('','Название персонажа', '/assets/img/card-offer.png')
+        +card--personage('','Название персонажа', './assets/img/card-offer.png')
+        +card--personage('','Название персонажа', './assets/img/card-offer.png')
+        +card--personage('','Название персонажа', './assets/img/card-offer.png')
+        +card--personage('','Название персонажа', './assets/img/card-offer.png')
+        +card--personage('','Название персонажа', './assets/img/card-offer.png')
 
-  section.block.block_list.content_shows
+  section.block.block_list.content_shows#shows
     .block--wrapper
       +block--head('','готовые программы','и шоу','')
-      include ../components/content/content_shows/content_shows
       .block--elements
         a.card(href='/')
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--content
             .card--title
               h3 космическое путешествие
@@ -67,10 +69,10 @@ block variables
             .card--link
               .button.button-link.button-card
                 span Подробнее
-                span
+                span.icon.icon-arrow-card
         a.card(href='/')
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--content
             .card--title
               h3 dinoLAnd
@@ -79,10 +81,10 @@ block variables
             .card--link
               .button.button-link.button-card
                 span Подробнее
-                span
-        a.card(href='/')
+                span.icon.icon-arrow-card
+        a.card(href='/' )
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--content
             .card--title
               h3 Бал принцесс
@@ -91,10 +93,10 @@ block variables
             .card--link
               .button.button-link.button-card
                 span Подробнее
-                span
-        a.card(href='/')
+                span.icon.icon-arrow-card
+        a.card(href='/' )
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--content
             .card--title
               h3 День волшебства
@@ -103,24 +105,30 @@ block variables
             .card--link
               .button.button-link.button-card
                 span Подробнее
-                span
+                span.icon.icon-arrow-card
 
 
-  section.block.block_list.block_list-slider.content_area
+  section.block.block_list.content_area#area
     .block--wrapper
       +block--head('','Сказочные площадки','для вашего праздника','')
       .block--elements
-        +card--area('','купол дримвуд','Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!', '/assets/img/card-offer.png')
-        +card--area('','Метрополис','Проехав по железной дороге, загляните внутрь гор и получите массу эмоций от виражей и изгибов. Добавив шлемы виртуальной реальности вы окунетесь в историю 4-х стихий!', '/assets/img/card-offer.png')
-        +card--area('','Корабль','Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!', '/assets/img/card-offer.png')
-        +card--area('','Название персонажа','Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!', '/assets/img/card-offer.png')
-        +card--area('','Название персонажа','Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!', '/assets/img/card-offer.png')
+        +card--area('','купол дримвуд','Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!', './assets/img/card-offer.png')
+        +card--area('','Метрополис','Проехав по железной дороге, загляните внутрь гор и получите массу эмоций от виражей и изгибов. Добавив шлемы виртуальной реальности вы окунетесь в историю 4-х стихий!', './assets/img/card-offer.png')
+        +card--area('','Корабль','Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!', './assets/img/card-offer.png')
 
 
-  section.block.block_image_text.block_image_text-list
+  include ../components/form/form
+
+  section.block.block_image_text.block_image_text-list.mask-flower-2
     .block--wrapper
       .block--image
-        img(src="/assets/img/card-offer.png" alt="")
+        <svg class="hero_clip_svg">
+        <clipPath id="mask-flower-2" clipPathUnits="objectBoundingBox"><path d="M0.706,0.203 C0.674,0.219,0.644,0.238,0.618,0.266 C0.598,0.29,0.589,0.281,0.583,0.254 C0.579,0.222,0.572,0.189,0.564,0.158 C0.544,0.083,0.504,0.019,0.433,0 C0.359,-0.018,0.288,0,0.236,0.069 C0.178,0.143,0.191,0.222,0.226,0.299 C0.242,0.334,0.237,0.349,0.201,0.351 C0.192,0.353,0.181,0.355,0.172,0.356 C0.088,0.374,0.01,0.457,0,0.54 C-0.013,0.657,0.134,0.794,0.246,0.772 C0.312,0.759,0.377,0.74,0.439,0.694 C0.438,0.74,0.436,0.779,0.438,0.817 C0.443,0.917,0.528,1,0.617,0.993 C0.688,0.987,0.758,0.913,0.771,0.82 C0.778,0.777,0.778,0.73,0.779,0.686 C0.78,0.651,0.789,0.64,0.821,0.634 C0.951,0.613,1,0.45,0.985,0.317 C0.949,0.216,0.801,0.155,0.706,0.203"></path></clipPath>
+        </svg>
+        <svg class="hero_clip_svg">
+        <clipPath id="my-clip-path-2-mob" clipPathUnits="objectBoundingBox"><path d="M1,0 v0.809 c-0.13,-0.015,-0.262,-0.023,-0.386,-0.017 c-0.073,0.003,-0.253,0.02,-0.253,0.089 c0,0.053,0.055,0.098,0.079,0.115 c0.003,0.002,0,0.006,-0.005,0.005 C0.377,0.993,0.171,0.966,0,0.925 V0 H1"></path></clipPath>
+        </svg>
+        img(src="./assets/img/card-offer.png" alt="")
       +block--head('','праздники','под ключ','')
       .block--content
         p Возьмем на себя все организационные моменты:
@@ -135,22 +143,63 @@ block variables
           li Разработка декора
           li Фотограф и видеограф
           li Бьюти Бар
+      .block--actions
+  section.block.block_element.content_gallery#gallery
+    .block--wrapper
+      +block--head('','ВОЛШЕБНЫЕ', 'МОМЕНТЫ','')
+      .block--content
+        .gallery.js-gallerySwiper
+          .gallery--item.video
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox="./assets/img/card-offer.png")
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-1.png" alt="" data-fancybox="./assets/img/gallery-2.png")
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-2.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-3.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/gallery-4.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+          .gallery--item
+            figure
+              img(src="./assets/img/card-offer.png" alt="" data-fancybox)
+
+
 
   section.block.block_html_code.content_feedback
     .block--wrapper
       .block--image
-        img(src="/assets/img/svg/feedback-bck.svg" alt="")
+        picture
+          source(srcset="./assets/img/svg/feedback-bck-s.svg" media="(max-width: 768px)")
+          img(src="./assets/img/svg/feedback-bck.svg" alt="")
+
       .block--content
         +block--head('','хотите организовать праздник','или остались вопросы?','Оставьте свои контактные данные и мы свяжемся с вами в ближайшее время!')
         .block--actions
-          a(href='/').button.button-filled.button-secondary
+          a(href='/').button.button-filled.button-secondary.js-btn-open-form
             span  Заказать звонок
-          a(href='/').button.button-filled.button-secondary.button-reversed
+          a(href='/').button.button-filled.button-secondary.button-reversed.js-btn-open-form
             span  Оставить заявку
 
 
 
-  section.block.block_list.content_program
-    .block--wrapper
-      +block--head('','расписание','активностей дня','')
-      include ../components/content/content_program/content_program
+

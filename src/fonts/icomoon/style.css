@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?y3298d');
-  src:  url('fonts/icomoon.eot?y3298d#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?y3298d') format('truetype'),
-    url('fonts/icomoon.woff?y3298d') format('woff'),
-    url('fonts/icomoon.svg?y3298d#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?1noeeq');
+  src:  url('fonts/icomoon.eot?1noeeq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1noeeq') format('truetype'),
+    url('fonts/icomoon.woff?1noeeq') format('woff'),
+    url('fonts/icomoon.svg?1noeeq#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,74 +25,98 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-card.path1:before {
-  content: "\e900";
+.icon-burger:before {
+  content: "\e917";
 }
-.icon-arrow-card.path2:before {
+.icon-accordion-open:before {
+  content: "\e90d";
+  color: #cacccd;
+}
+.icon-accordion-closed:before {
+  content: "\e916";
+  color: #15466b;
+}
+.icon-card-arrow-next:before {
+  content: "\e909";
+  color: #0281c9;
+}
+.icon-card-arrow-prev:before {
+  content: "\e90c";
+  color: #0281c9;
+}
+.icon-time-rest:before {
+  content: "\e900";
+  color: #f9fcff;
+}
+.icon-rub:before {
   content: "\e901";
-  margin-left: -1em;
-
+  color: #f9fcff;
+}
+.icon-archive:before {
+  content: "\e908";
+  color: #15466b;
 }
 .icon-arrow-next:before {
   content: "\e902";
-
+  color: #15466b;
 }
 .icon-arrow-prev:before {
   content: "\e903";
+  color: #15466b;
 }
 .icon-bus:before {
   content: "\e904";
+  color: #15466b;
 }
 .icon-car:before {
   content: "\e905";
+  color: #15466b;
 }
 .icon-cupol:before {
   content: "\e906";
+  color: #fff;
 }
 .icon-delete:before {
   content: "\e907";
-}
-.icon-menu .path1:before {
-  content: "\e908";
-}
-.icon-menu .path2:before {
-  content: "\e909";
+  color: #15466b;
 }
 .icon-metropolis:before {
   content: "\e90a";
+  color: #15466b;
 }
 .icon-mount:before {
   content: "\e90b";
-
+  color: #15466b;
 }
 .icon-phone-circle:before {
   content: "\e90e";
-
+  color: #15466b;
 }
 .icon-play:before {
   content: "\e90f";
-
+  color: #fdc504;
 }
 .icon-restourant:before {
-
+  content: "\e910";
+  color: #15466b;
 }
 .icon-time:before {
   content: "\e911";
-
+  color: #fff;
 }
 .icon-visibility:before {
   content: "\e912";
-
+  color: #15466b;
 }
 .icon-water:before {
   content: "\e913";
-
+  color: #15466b;
 }
 .icon-wind:before {
   content: "\e914";
-
+  color: #15466b;
 }
 .icon-wood:before {
   content: "\e915";
-
+  color: #15466b;
 }

@@ -5,11 +5,11 @@
   padding: var(--g-20)
   background: #fff
   border-radius: var(--border-corner)
-  &:nth-child(3n+1) .lable
+  &:nth-child(3n+1) .label
     background-color: var(--color-green)
-  &:nth-child(3n+2) .lable
+  &:nth-child(3n+2) .label
     background-color:  var(--color-pink)
-  &:nth-child(3n) .lable
+  &:nth-child(3n) .label
     background-color: var(--color-blue)
   &.is_open
     .accordion--content
@@ -19,8 +19,14 @@
       pointer-events: auto
       display: block
     .icon
-      transform: rotate(135deg)
       transform-origin: center
+      &:after
+        font-family: 'icomoon' !important
+        content: "\e90d"
+        color: #CACCCD
+    & .accordion--button
+      border-bottom: 1px solid rgba(187, 187, 187, 0.3)
+      padding-bottom: var(--g-20)
   &--button
     cursor: pointer
     display: flex
@@ -33,12 +39,12 @@
       color: var(--c-text-dark)
       line-height: 1.33
       margin: 0
-    .lable
+    .label
       width: 130px
       display: flex
       align-items: center
       justify-content: center
-      font-size: 14px
+      font-size: clamp(11px, calc(11px + (14  - 11) * ((100vw - 768px) / (1440 - 768))), 14px)
       padding: 5px 10px
       color: #fff
       border-radius: 35px
@@ -54,11 +60,10 @@
       flex-shrink: 0
       flex-grow: 0
       color: var(--c-text-accent)
-      transform: rotate(0deg)
       transition: 0.18s ease-in-out
       &:after
         font-family: 'icomoon' !important
-        content: "\ea0e"
+        content: "\e916"
   &--content
     display: none
     opacity: 0
@@ -69,8 +74,7 @@
     line-height: 1.48
     font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 1024px) / (1920 - 1024))), 24px)
     border-radius: 12px
-    padding: var(--g-24)
-    margin-top: var(--g-24)
+    padding: var(--g-24) 0
     &.is_cascade > p:first-child
       margin: 0
 

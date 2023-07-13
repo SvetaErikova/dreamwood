@@ -25,13 +25,16 @@
         grid-column: 1
     .block--image ~ .block--head,
     .block--image ~ .block--content,
-    .block--image ~ .block--actions
+    .block--image ~ .block--actions,
+    .block--image ~ .block--subtitle
       grid-column: 2
       width: 100%
       padding-left: var(--g-40)
       padding-right: var(--g-40)
       @media(max-width: 992px)
         padding: 0
+        grid-row: 3 /  span
+        grid-column: 1
     .block--image ~ .block--head
       justify-content: flex-end
       padding-top: var(--g-40)
@@ -43,6 +46,9 @@
       grid-column: 1
       grid-row: 1 / span 3
       position: relative
+      @media(max-width: 992px)
+        grid-row: 4
+        grid-column: 1
       img
         position: relative
         background-color: #fff
@@ -56,8 +62,8 @@
       font-size: var(--fs-20)
       font-weight: 500
       margin-bottom: 40px
-      p
-        max-width: 435px
+      //p
+      //  max-width: 435px
       &.is_cascade
         margin: 0
     .block--actions
@@ -66,22 +72,15 @@
       justify-content: flex-start
       align-items: flex-start
       gap: 20px
+      @media(max-width: 993px)
+        justify-content: space-between
       .button
         padding: 1.2em 1.5em
       & a
         --filled-bc-hover: var(--c-text-dark)
-        width: 45%
         &:hover
           color: var(--c-text-dark)
-      & .phone-circle
-        height: auto
-        color: var(--accent)
-        .icon-phone-circle
-          border-color: var(--accent)
-      .phone-circle:hover,
-      .phone-circle:hover > .icon-phone-circle
-        color: var(--c-text-dark)
-        border-color: var(--c-text-dark)
+
 
   .block--subtitle
     font-family: 'Oswald'
@@ -92,8 +91,6 @@
     text-transform: uppercase
     justify-content: flex-start
     align-items: baseline
-    padding-right: var(--g-40)
-    padding-left: var(--g-40)
     .icon:after
       display: inline-block
       width: 23px
@@ -110,7 +107,6 @@
         grid-column: 2
         @media(max-width: 993px)
           grid-column: 1
-          grid-row: 1 / span 1
         &  ~ .block--head,
         & ~ .block--content,
         & ~ .block--actions,
@@ -230,11 +226,11 @@
       padding-left: 0
       padding-right: 0
       padding-top: 0
-      margin-bottom: 30px
+      margin-bottom: 50px
     .block--wrapper .block--image ~ .block--content
       padding-right: 0
       padding-left: 0
-      grid-row: span 2
+      grid-row: 2
       line-height: 1.4
       font-size: var(--fs-20)
       font-weight: 400
@@ -251,9 +247,12 @@
         display: flex
         position: relative
         gap: 20px
+        @media(max-width: 992px)
+          flex-direction: column
         &:before
           content: ''
           min-width: 36px
+          width: 36px
           height: 36px
           background-color: #D9D9D9
           border-radius: 50%
@@ -262,49 +261,3 @@
           left: 0
 
 
-  // mask
-.mask-heart
-  --accent: var( --color-orange)
-  .block--image
-    img
-      clip-path: url(#mask-heart)
-
-.mask-bird
-  .block--image
-    img
-      clip-path: url(#mask-bird)
-
-.mask-lips
-  .block--image
-    img
-      clip-path: url(#mask-lips)
-
-.mask-fire
-  --accent: var( --color-orange)
-  .block--image
-    img
-      clip-path: url(#mask-fire)
-
-.mask-flower
-  --accent: var( --color-yellow)
-  .block--image
-    img
-      clip-path: url(#mask-flower)
-
-.mask-heart,
-.mask-bird,
-.mask-lips,
-.mask-fire,
-.mask-flower
-  position: relative
-  &:after
-    content: ''
-    position: absolute
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    background-image: url("../img/svg/bck-mask-item.svg")
-    background-repeat: no-repeat
-    background-size: auto
-    z-index: -2

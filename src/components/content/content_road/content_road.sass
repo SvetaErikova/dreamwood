@@ -1,27 +1,51 @@
 .content_road
   --accent: var(--color-green)
-  background-image: url("../img/map-bck.png")
-  background-repeat: no-repeat
-  background-position: top center
-  background-size: cover
-  padding-bottom: 650px
+
+  padding-bottom: 550px
   position: relative
+  @media (max-width: 1024px)
+    padding-bottom: 400px
+  @media (max-width: 768px)
+    padding-bottom: 350px
+  @media (max-width: 475px)
+    padding-bottom: 320px
   &:after
     content: ''
     position: absolute
-    top: -80%
+    top: -70%
     bottom: 0
     right: 0
     left: 0
     background-image: url("../img/svg/bck-big-decor-1.svg")
     background-repeat: no-repeat
     background-size: cover
+    z-index: -3
+    @media (max-width: 768px)
+      top: -50%
+    @media (max-width: 768px)
+      top: -30%
+  &:before
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+    height: 600px
+    background-image: url("../img/map-bck.png")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center bottom
     z-index: -1
+
+
   &:not(.block_list-slider)
     .block--wrapper
       grid-template-columns: 1fr
+      grid-template-areas: 'head head' 'image image' 'filters filters' 'text text'
       align-items: start
-      @media (min-width: 768px)
+      display: grid
+      gap: 20px
+      @media (min-width: 1140px)
         display: grid
         grid-template-columns: 1fr 1fr
         grid-template-areas: 'head head' 'filters image' 'text image'
@@ -31,6 +55,8 @@
     .block--sections
       grid-area: filters
       gap: var(--g-40)
+      @media (max-width: 550px)
+        flex-direction: column
     .block--content
       grid-area: text
     .block--image
@@ -52,6 +78,8 @@
       position: absolute
       opacity: 0
       transition: var(--transition)
+    & .icon
+      font-size: 1.3em
   .block--image
     border-radius: var(--border-corner)
     border: 1px solid #DCD3D3

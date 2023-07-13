@@ -35,7 +35,7 @@
       top: 0
       left: 0
       z-index: 2
-      background: linear-gradient(180deg, rgba(31, 31, 31, 0.49) 7.43%, rgba(31, 31, 31, 0.2) 38.42%, rgba(31, 31, 31, 0.59) 100%)
+      background: linear-gradient(180deg, rgba(31, 31, 31, .89) 7.43%, rgba(31, 31, 31, .4) 38.42%, rgba(31, 31, 31, .59) 100%)
       background-blend-mode: multiply
   .block--head
     max-width: 1160px
@@ -72,57 +72,136 @@
       --filled-bgc-hover: var(--c-surface-accent-hover)
       --filled-bc-hover: var(--c-surface-accent-hover)
       --filled-c-hover: var(--c-text-white)
-  @media(max-width: 768px)
-    .block--actions
-      width: 100%
-      .button:only-child
-        min-width: 100%
+
 
 .hero_clip_svg
   width: 0
   height: 0
   pointer-events: none
+  position: absolute
 
+.block_banner.block_banner-hero + .block
+  margin-top: -50px
+  @media(max-width: 580px)
+    margin-top: -30px
 
 .block_banner.block_banner-hero
   padding: 0
-  height: 125vh
+  height: 100vh
+  min-height: 900px
   margin: 0
   position: relative
+  @media(max-width: 998px)
+    min-height: 800px
+  @media(max-width: 768px)
+    height: 90vh
+    min-height: 650px
   .block--wrapper
     padding: 0
     max-width: 100%
   .block--content
     clip-path: url(#my-clip-path-2)
+    @media(max-width: 768px)
+      clip-path: url(#my-clip-path-2-mob)
   .banner
     justify-content: flex-start
     width: 100%
-    height: 125vh
+    height: 100vh
+    min-height: 900px
     padding: var(--headerHeight,138px) var(--g-80) var(--g-160)
     border-radius: 0
+    @media(max-width: 998px)
+      min-height: 800px
+    @media(max-width: 768px)
+      height: 90vh
+      min-height: 650px
+
   .block--head
-    padding-top: 18vh
+    padding-top: 7%
     position: relative
     justify-content: flex-start
+    @media(max-width: 768px)
+      padding-top: 25%
+      width: 60%
+    @media(max-width: 520px)
+      width: 100%
+    @media(max-width: 380px)
+      padding-top: 30%
   .block--head_title
     font-size: var(--fs-88)
   .block--head_caption
-    font-size: var(--fs-40)
+    font-size: var(--fs-28)
+
+.block_banner.block_banner-index + .block
+  margin-top: -400px
+  @media(max-width: 998px)
+    margin-top: -300px
+  @media(max-width: 768px)
+    margin-top: -200px
+
 
 .block_banner.block_banner-index
   padding: 0
   height: 125vh
+  min-height: 1000px
   margin: 0
   position: relative
+  @media(max-width: 998px)
+    min-height: 950px
+    height: 110vh
+  @media(max-width: 768px)
+    min-height: 800px
+    height: 100vh
   &:before
     content: ''
     position: absolute
     width: 290px
     height: 250px
-    bottom: 41.5vh
+    bottom: 33.2%
     left: calc( var(--g-80) + 11.46vw)
-    background-image: url("../img/svg/drimmi.svg")
+    background-image: url("../img/drimmi.png")
+    background-repeat: no-repeat
+    background-size: contain
     z-index: 10
+    @media(max-width: 1440px)
+      bottom: 33.3%
+    @media(max-width: 998px)
+      bottom: 33%
+      left: calc( var(--g-80) + 8.46vw)
+    @media(max-width: 850px)
+      left: calc( var(--g-80) + 7vw)
+      bottom: 33.3%
+      rotate: -2deg
+    @media(max-width: 768px)
+      background-image: url("../img/drimmi-s.png")
+      background-size: contain
+      width: 210px
+      height: 210px
+      bottom: 24.2%
+      left: calc( var(--g-80) + 3vw)
+      rotate: -6deg
+    @media(max-width: 700px)
+      bottom: 24.3%
+      rotate: -6deg
+    @media(max-width: 610px)
+      bottom: 24.1%
+    @media(max-width: 550px)
+      bottom: 23.9%
+      rotate: -4deg
+    @media(max-width: 500px)
+      bottom: 23.6%
+      rotate: -2deg
+    @media(max-width: 470px)
+      bottom: 23.5%
+    @media(max-width: 440px)
+      bottom: 23.2%
+      rotate: 1deg
+    @media(max-width: 400px)
+      bottom: 23.1%
+      rotate: 3deg
+    @media(max-width: 385px)
+      rotate: 3deg
+      bottom: 23%
   .block--wrapper
     padding: 0
     max-width: 100%
@@ -130,12 +209,21 @@
   .banner
     width: 100%
     height: 125vh
+    min-height: 1000px
     padding: var(--headerHeight,138px) var(--g-80) var(--g-160)
     border-radius: 0
     position: relative
+    @media(max-width: 998px)
+      height: 110vh
+      min-height: 950px
+    @media(max-width: 768px)
+      min-height: 800px
+      height: 100vh
   .block--content
     background-color: #fff
     clip-path: url(#my-clip-path)
+    @media(max-width: 768px)
+      clip-path: url(#my-clip-path-s)
   .block--content img
     object-position: center top
     &:after
@@ -151,11 +239,19 @@
     height: calc(100vh - var(--headerHeight))
     position: relative
     align-items: center
-    padding-top: 20vh
+
     width: auto
+    @media(max-width: 998px)
+      padding-top: 5vh
+      width: 100%
   .block--head_title
-    font-size: var(--fs-72)
+    font-size: var(--fs-88)
     margin-bottom: var(--g-40)
+    @media(max-width: 998px)
+      margin-right: auto
+    svg
+      width: clamp(339px, calc(339px + (679  - 339) * ((100vw - 768px) / (1440 - 768))), 679px)
+      height: clamp(83px, calc(83px + (167  - 83) * ((100vw - 768px) / (1440 - 768))), 167px)
   .block--actions
     margin-top: var(--fs-48)
     margin-left: auto
@@ -165,10 +261,12 @@
   .block_nav-page
     position: absolute
     margin: auto
-    top: var(--headerHeight, 138px)
+    right: var(--g-80)
+    top: calc( var(--headerHeight, 138px) + 20px)
     color: #F9FCFF
     z-index: 3
-    width: 100%
+    @media(max-width: 998px)
+      display: none
     .nav
       max-width: 1140px
       display: flex
@@ -184,14 +282,19 @@
       border-color: var(--color-pink)
       color: var(--color-pink)
 
+.page--day
+  .block_banner-hero
+    &:before
+      content: ''
+      position: absolute
+      width: clamp(139px, calc(139px + (277  - 139) * ((100vw - 375px) / (1440 - 375))), 277px)
+      height: clamp(218px, calc(218px + (438  - 218) * ((100vw - 375px) / (1440 - 375))), 438px)
+      bottom: 5%
+      right: calc( var(--g-80) + 10.46vw)
+      background-image: url("../img/drimmi-with-ball.png")
+      background-repeat: no-repeat
+      background-size: contain
+      z-index: 10
+      @media(max-width: 500px)
+        right: calc( var(--g-80) + 6vw)
 
-//.block_booking
-//  padding: var(--g-80)
-//  display: flex
-//  align-items: center
-//  justify-content: center
-//  .booking
-//    width: 100%
-//    border-radius: 24px
-//    background-color: #fff
-//    height: 300px

@@ -10,15 +10,22 @@
   .block--content
     display: grid
     grid-template-columns: repeat(5 , 1fr)
-    gap: 30px
+    gap: var(--g-32)
+    @media (max-width: 768px)
+      grid-template-columns: repeat(2 , 1fr)
     .advantages-item
       display: flex
       flex-direction: column
       align-items: center
       padding: 10px
+      font-size: var(--fs-18)
+      @media (max-width: 768px)
+        padding: 0
       .advantages-icon img
         aspect-ratio: 1/1
         height: 180px
         object-fit: contain
+        @media (max-width: 768px)
+          height: 110px
       .advantages-text
         text-align: center

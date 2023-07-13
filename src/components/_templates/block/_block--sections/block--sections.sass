@@ -5,14 +5,11 @@
   gap: var(--g-20)
   flex-wrap: wrap
   margin-bottom: var(--g-40)
-  max-width: 1200px
-  margin-right: 140px
   @media(max-width: 768px)
     flex-wrap: nowrap
-    width: 100vw
+    //width: 100vw
     overflow-x: auto
-    padding: 20px 16px
-    margin: 0 -16px
+    padding: 20px 0
     justify-content: flex-start
   a
     border-radius: 12px
@@ -27,13 +24,5 @@
     display: flex
     align-items: center
     gap: 8px
-    border: 1px solid rgba(151, 86, 233, 0.5)
-    &:hover,
-    &:focus,
-    &:active
-      background-color: #9756E9
-      color: var(--c-text-white)
-    &.is_active
-      color: var(--c-text-white)
-      background-color:  #9756E9
+
 

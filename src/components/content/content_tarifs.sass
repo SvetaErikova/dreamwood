@@ -1,0 +1,178 @@
+
+.content_tarifs
+  position: relative
+  &:after
+    content: ''
+    right: 0
+    left: 0
+    bottom: -3%
+    height: 90px
+    position: absolute
+    background-image: url("../img/svg/tickets-bck-3.svg")
+    background-repeat: no-repeat
+    background-position: bottom
+    background-size: auto
+    z-index: -2
+  &:before
+    content: ''
+    left: 50%
+    top: 0
+    height: 100%
+    width: 100%
+    max-width: 1440px
+    translate: -50% 0
+    position: absolute
+    background-image: url("../img/svg/tickets-bck-4.svg")
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: contain
+    z-index: -2
+    @media(max-width: 768px)
+      display: none
+  .block--content
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: var(--g-80)
+    @media(max-width: 998px)
+      grid-template-columns: 1fr
+      gap: 30px
+
+  .block--tickets-mini
+    .block--title
+      color: var(--color-pink)
+      font-size: clamp(18px, calc(18px + (21 - 18) * ((100vw - 768px) / (1440 - 768))), 21px)
+      text-transform: uppercase
+      width: 350px
+      font-family: Oswald
+      font-weight: 600
+      position: relative
+      padding: 16px 25px
+      margin-bottom: 60px
+      @media(max-width: 475px)
+        padding: 20px 15px
+        width: 300px
+      &:after
+        content: ''
+        width: 361px
+        height: 86px
+        top: 0
+        right: 0
+        left: 0
+        bottom: -6%
+        position: absolute
+        background-image: url("../img/svg/ticket-mini-code.svg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        z-index: -1
+        @media(max-width: 475px)
+          width: 312px
+  .block--tarifs
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: var(--g-80)
+    @media(max-width: 768px)
+      display: block
+    .block--title
+      font-family: Oswald
+      font-size: 21px
+      text-transform: uppercase
+      margin-bottom: 30px
+    .block--subtitle
+      font-size: var(--fs-18)
+      margin-bottom: 30px
+  .accordion
+    &--button
+      display:  grid
+      grid-template-columns: repeat(3 , 1fr)
+      @media(max-width: 425px)
+        grid-template-columns: 1fr auto auto
+      .icon
+        margin-right: 0
+        @media(max-width: 998px)
+          margin-left: auto
+      .price
+        text-align: center
+        font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 768px) / (1440 - 768))), 16px)
+      .sale
+        position: relative
+        rotate: -15deg
+        &:after
+          content: ''
+          width: clamp(117px, calc(117px + (145 - 117) * ((100vw - 375px) / (1440 - 375))), 145px)
+          height: clamp(50px, calc(50px + (61 - 50) * ((100vw - 375px) / (1440 - 375))), 61px)
+          position: absolute
+          background-image: url("../img/svg/ticket-mini.svg")
+          background-size: contain
+          background-repeat: no-repeat
+          translate: -50% -50%
+          left: 50%
+          top: 50%
+          z-index: -1
+
+.block--afisha
+  height: 100%
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  position: relative
+  &:after
+    content: ''
+    width: 257px
+    max-height: 407px
+    height: 100%
+    position: absolute
+    background-image: url("../img/drimmi-with-ball.png")
+    background-size: contain
+    background-repeat: no-repeat
+    translate: -50% -50%
+    left: 50%
+    top: -200px
+    z-index: 0
+    @media(max-width: 998px)
+      display: none
+  .block-afisha-content
+    width: 370px
+    height: 425px
+    border-radius: 20px
+    border: 1px solid #DCD3D3
+    @media(max-width: 768px)
+      width: 340px
+      height: 380px
+.block-tickets-title
+  text-align: center
+  margin-bottom: 70px
+  position: relative
+  svg
+    width: clamp(301px, calc(301px + (578 - 301) * ((100vw - 375px) / (1440 - 375))), 578px)
+    height: clamp(93px, calc(93px + (180 - 93) * ((100vw - 375px) / (1440 - 375))), 180px)
+  &:after
+    content: ''
+    width: 50px
+    height: 85px
+    position: absolute
+    background-image: url("../img/svg/bck-decor-10.svg")
+    background-size: contain
+    background-repeat: no-repeat
+    right: 25%
+    top: -25%
+    @media(max-width: 768px)
+      display: none
+.block--info
+  font-family: Oswald
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 50px
+  max-width: 225px
+  margin: auto
+  svg
+    margin: auto
+  &-item
+    text-align: center
+    text-transform: uppercase
+    color: var(--color-pink)
+    font-size: 21px
+
+
+

@@ -5,6 +5,10 @@
   margin-bottom: var(--g-48)
   width: 50%
   position: relative
+  @media(max-width: 998px)
+    width: 80%
+  @media(max-width: 768px)
+    width: 100%
   &_subtitle
     width: fit-content
     &:empty
@@ -17,9 +21,9 @@
       line-height: 1.43
       letter-spacing: 0.01em
       text-transform: uppercase
-      font-weight: 700
+      font-weight: 500
       color: var(--c-text-white)
-      background-color: #8DD300
+      background-color: var(--color-purple)
       &:empty
         display: none
 
@@ -70,3 +74,6 @@
     position: absolute
     right: 0
     bottom: 0
+    @media(max-width: 998px)
+      position: static
+      margin-top: 10px

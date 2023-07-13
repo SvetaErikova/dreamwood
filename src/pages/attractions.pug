@@ -2,17 +2,19 @@ extends ../layouts/breadcrumbs
 
 block variables
   - var title = "Аттракционы"
-  - var pageClass = 'page--attractions'
+  - var pageClass = 'page--attractions_events'
   - var activePage = 'index'
 
-  section.block.block_list.content_attractions
+
+block content
+  section.block.block_list.content_attractions.js-filtered_block
     .block--wrapper
       +block--head('','аттракционы','и услуги','')
       include ../components/filters/filters
       .block--elements
-        a.card(href='/')
+        a.card(href='/' data-height='1' data-age='1' data-price='all free' )
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--label.maintenance
             p На техническом обслуживание
           .card--content
@@ -27,9 +29,9 @@ block variables
               .button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-        a.card(href='/')
+        a.card(href='/' data-height='2' data-age='2' data-price='all free' )
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--label.actions
             p Акция
           .card--content
@@ -44,9 +46,9 @@ block variables
               .button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-        a.card(href='/')
+        a.card(href='/' data-height='3' data-age='3' data-price='all paid' )
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--label.close
             p Закрыто
           .card--content
@@ -61,9 +63,9 @@ block variables
               .button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-        a.card(href='/')
+        a.card(href='/' data-height='4' data-age='4' data-price='all paid' )
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--label.close
             p Закрыто
           .card--content
@@ -78,9 +80,9 @@ block variables
               .button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-        a.card(href='/')
+        a.card(href='/' data-height='5' data-age='5' data-price='all paid' )
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--label.close
             p Закрыто
           .card--content
@@ -95,9 +97,9 @@ block variables
               .button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-        a.card(href='/')
+        a.card(href='/' data-height='6' data-age='5' data-price='all paid' )
           .card--image
-            img(src='/assets/img/card-offer.png')
+            img(src='./assets/img/card-offer.png')
           .card--label.close
             p Закрыто
           .card--content
@@ -112,6 +114,5 @@ block variables
               .button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-
-      a(href='/').button.button-outlined.button-secondary
-        span Больше аттракционов
+      .not-found
+        h3 По заданным фильтрам ничего не найдено :(

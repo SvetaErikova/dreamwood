@@ -13,7 +13,7 @@ mixin card--events(subtitle,title, image_src)
           span.icon.icon-arrow-card
 
 mixin card--restaurant(title, text, image_src)
-  .card(href='')
+  .card
     .card--image
       img(src=image_src alt="")
     .card--content
@@ -40,7 +40,9 @@ mixin card--personage(subtitle,title, image_src)
 mixin card--area(subtitle,title, text, image_src)
   a.card(href='')
     .card--image
-      img(src=image_src alt="")
+      img.card--image_slide(src=image_src alt="")
+      img.card--image_slide(src=image_src alt="")
+      img.card--image_slide(src=image_src alt="")
     .card--content
       .card--subtitle
         p=subtitle

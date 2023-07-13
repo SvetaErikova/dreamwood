@@ -1,0 +1,69 @@
+extends ../layouts/breadcrumbs
+
+block variables
+  - var title = "Купить билет"
+  - var pageClass = 'page--tickets'
+  - var activePage = 'index'
+
+block content
+  section.block.block_html-code.content_tarifs
+    .block--wrapper
+      +block--head('','Купить билет',' ','')
+      .block--tickets-mini
+        .block--title Приобретайте билеты онлайн со скидкой и без очередей
+      .block--tarifs
+        div
+          .block--title тарифы на посещение
+          .block--subtitle Обращаем внимание, что билет на сайте вы покупаете по одному из самых минимальных тарифов. Тариф сменить при покупке нельзя. Выбрать другой тариф вы можете по приезде в парк.
+      .block--content
+        .block-accordion
+          .accordion.js-openAccordion
+            .accordion--button
+              p.accordion--button_text Стандартный билет
+              span.price 1500 ₽ / 1700 ₽
+              span.icon
+            .accordion--content.is_cascade
+              p Действует при покупке билета в кассах парка.
+          .accordion.js-openAccordion
+            .accordion--button
+              p.accordion--button_text Online
+              span.price.sale 1400 ₽ / 1600 ₽
+              span.icon
+            .accordion--content.is_cascade
+              p Действует при покупке билета на сайте Дримвуд.
+          .accordion.js-openAccordion
+            .accordion--button
+              p.accordion--button_text День рождения
+              span.price 1350 ₽ / 1530 ₽
+              span.icon
+            .accordion--content.is_cascade
+              p Действует для именинника и всех его родственников и друзей за 7 дней ДО и ПОСЛЕ дня рождения. В кассе необходимо предъявить подтверждающий документ. При отсутствии подтверждающего документа билет приобретается за полную стоимость
+          .accordion.js-openAccordion
+            .accordion--button
+              p.accordion--button_text Крымчанин
+              span.price 1200 ₽ / 1360 ₽
+              span.icon
+            .accordion--content.is_cascade
+              p Действует при предъявлении паспорта с постоянной регистрацией в Республике Крым или ЮФО. В кассе необходимо предъявить подтверждающий документ. При отсутствии подтверждающего документа билет приобретается за полную стоимость
+          .accordion.js-openAccordion
+            .accordion--button
+              p.accordion--button_text Большая семья
+              span.price 1200 ₽ / 1360 ₽
+              span.icon
+            .accordion--content.is_cascade
+              p Действует для семей с 3-мя и более юными путешественникам. В кассе необходимо предъявить подтверждающий документ. При отсутствии подтверждающего документа билет приобретается за полную стоимость
+        .block--afisha
+          .block-afisha-content
+            img(src="./assets/img/afisha.png")
+
+
+  section.block.block_html-code.content_tickets
+    .block--wrapper
+      .block-tickets-title
+        include ../img/svg/tickets-title.svg
+      .block--info
+        .block--info-item
+          span будни: <br> 10:00 - 16:00
+        .block--info-item
+          span выходные и праздники: <br> 10:00 - 18:00
+

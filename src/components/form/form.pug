@@ -1,41 +1,155 @@
-form.form
-  input(type="hidden" value="" name="fields[form]")
-  input(type="hidden" value="")
-  fieldset
-    label.form__input
-      span Ваше имя*
-      input(type="text" placeholder="Иванов Иван Иванович" name="fields[name]" required autocomplete)
-      .form__input-error Ошибка заполнения
-    label.form__input
-      span Телефон*
-      input(type="tel" placeholder="+7 999 999-99-99" name="fields[phone]" inputmode="numeric" autocomplete="tel" required)
-      .form__input-error Ошибка заполнения
-    label.form__input
-      span Email*
-      input(type="email" placeholder="example@imperial.ru" name="fields[email]"  autocomplete="email" required)
-      .form__input-error Ошибка заполнения
+section.block.content--form#form
+  .block--wrapper
 
-    label.form__input
-      span text
-      textarea(placeholder="Ваше сообщение" rows='5' cols='30')
-      .form__input-error Ошибка заполнения
 
-    //label.form__input
-    //  span Резюме*
-    //  label.form__input-file
-    //    p.js-changeDescriptionText Выберите файл для загрузки
-    //    input.hidden.js-input_file(type="file" required name="" accept=".doc,.docx,.pdf")
-    //    .js-clearFile
-    //  .form__input-error Ошибка заполнения
-    //label.form__input
-    //  span Картинка
-    //  label.form__input-file
-    //    p.js-changeDescriptionText Выберите файл для загрузки
-    //    input.hidden.js-input_file(type="file" required name="" accept=".svg,.png,.jpg,.jpeg,.pdf,.webp")
-    //    .js-clearFile
-    //  .form__input-error Ошибка заполнения
-    //p.form__policy Нажимая кнопку, вы соглашаетесь с
-    //  a(href="") политикой конфиденциальности
-    .form__button
-      button.button.button-outlined.button-primary(type="submit")
-        span Отправить
+    form.form
+      .block--title
+        h2.f-h2 Разработаем индивидуальный сценарий<br> для вашего праздника!
+
+      // step 1
+      fieldset.active
+        .block--subtitle Ответьте на несколько вопросов ниже, чтобы исходя из ваших предпочтений, мы могли предложить вам идеальную программу праздника для вашего ребенка:
+        .form--label
+          span Вопрос 1 из 7
+        .form--questions-title Укажите количество детей на вашем празднике
+        label.form__input
+          input(type="text" value='' placeholder="Иванов Иван Иванович" name="amount" required )
+          .form__input-error Ошибка заполнения
+        .form__button
+          span
+          button.button.button-outlined.button-primary.form_next
+            span Далее
+
+      // step 2
+      fieldset
+        .block--subtitle Ответьте на несколько вопросов ниже, чтобы исходя из ваших предпочтений, мы могли предложить вам идеальную программу праздника для вашего ребенка:
+        .form--label
+          span Вопрос 2 из 7
+        .form--questions-title Выберите повод праздника
+        .form--checkboxs
+          label
+            input(type="radio" name="occasion" data-target="")
+            span.custom-checkbox
+            | День рождения
+          label
+            input(type="radio" name="occasion" data-target="")
+            span.custom-checkbox
+            | Семейный праздник
+          label
+            input(type="radio" name="occasion" data-target="")
+            span.custom-checkbox
+            | Выпускной
+          label
+            input(type="radio" name="occasion" data-target="")
+            span.custom-checkbox
+            | Другое
+        .form__button
+          button.button.button-outlined.button-primary.form_prev
+            span Назад
+          button.button.button-outlined.button-primary.form_next
+            span Далее
+
+      // step 3
+      fieldset
+        .block--subtitle Ответьте на несколько вопросов ниже, чтобы исходя из ваших предпочтений, мы могли предложить вам идеальную программу праздника для вашего ребенка:
+        .form--label
+          span Вопрос 3 из 7
+        .form--questions-title Укажите дату праздника
+        label.form__input
+          input(type="date" placeholder="12.12.2023" name="date" required   )
+          .form__input-error Ошибка заполнения
+        .form__button
+          button.button.button-outlined.button-primary.form_prev
+            span Назад
+          button.button.button-outlined.button-primary.form_next
+            span Далее
+
+      // step 4
+      fieldset
+        .block--subtitle Ответьте на несколько вопросов ниже, чтобы исходя из ваших предпочтений, мы могли предложить вам идеальную программу праздника для вашего ребенка:
+        .form--label
+          span Вопрос 4 из 7
+        .form--questions-title Опишите в нескольких словах идеальный праздник
+        label.form__input
+          input(type="text" placeholder="" name="description" required  )
+          .form__input-error Ошибка заполнения
+        .form__button
+          button.button.button-outlined.button-primary.form_prev
+            span Назад
+          button.button.button-outlined.button-primary.form_next
+            span Далее
+
+      // step 5
+      fieldset
+        .block--subtitle Ответьте на несколько вопросов ниже, чтобы исходя из ваших предпочтений, мы могли предложить вам идеальную программу праздника для вашего ребенка:
+        .form--label
+          span Вопрос 5 из 7
+        .form--questions-title Нужен ли будет кейтеринг/кенди бар?
+        .form--checkboxs
+          label
+            input(type="radio" name="catering" data-target="")
+            span.custom-checkbox
+            | Да
+          label
+            input(type="radio" name="catering" data-target="")
+            span.custom-checkbox
+            | Нет
+        .form__button
+          button.button.button-outlined.button-primary.form_prev
+            span Назад
+          button.button.button-outlined.button-primary.form_next
+            span Далее
+
+
+      // step 6
+      fieldset
+        .block--subtitle Ответьте на несколько вопросов ниже, чтобы исходя из ваших предпочтений, мы могли предложить вам идеальную программу праздника для вашего ребенка:
+        .form--label
+          span Вопрос 6 из 7
+        .form--questions-title Нужны ли будут декорации?
+        .form--checkboxs
+          label
+            input(type="radio" name="decor" data-target="")
+            span.custom-checkbox
+            | Да
+          label
+            input(type="radio" name="decor" data-target="")
+            span.custom-checkbox
+            | Нет
+        .form__button
+          button.button.button-outlined.button-primary.form_prev
+            span Назад
+          button.button.button-outlined.button-primary.form_next
+            span Далее
+
+      // step 7
+      fieldset
+        .block--subtitle Ответьте на несколько вопросов ниже, чтобы исходя из ваших предпочтений, мы могли предложить вам идеальную программу праздника для вашего ребенка:
+        .form--label
+          span Вопрос 7 из 7
+        .form--questions-title Укажите номер телефона для обсуждения деталей
+        label.form__input
+          input(type="tel" placeholder="+7 (999)-999-99-99" name="number" required   )
+          .form__input-error Ошибка заполнения
+        .form__button
+          button.button.button-outlined.button-primary.form_prev
+            span Назад
+          button.button.button-outlined.button-primary.form_next
+            //(type='submit')
+            span Готово
+
+      //finish ok
+      fieldset.form-finish.form-finish-sent
+        .form-finish-text
+          .form--finish-title Благодарим вас <br> за ответы на вопросы
+          .form-finish-subtitle В ближайшее время наш специалист свяжется с вам
+          button.button.button-outlined.button-primary.js-btn-reset(type="reset")
+            span Начать заново
+
+      fieldset.form-finish.form-finish-error
+        .form-finish-text
+          .form--finish-title Что-то пошло не так
+          .form-finish-subtitle Попробуйте позвонить нам или отправить форму позже
+          button.button.button-outlined.button-primary.js-btn-reset(type="reset")
+            span Начать заново
+

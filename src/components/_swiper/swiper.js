@@ -93,52 +93,43 @@ swiper_block.forEach(swiper_item => {
   switch( true ){
     case swiper_item.classList.contains('content_offers'):
       slides_per_view = 4;
-      slides_per_view_pad = 4;
+      slides_per_view_pad = 2.3 ;
+      slides_per_view_mobile = 1.3;
       break;
-    // case swiper_item.classList.contains('content_accommodations'):
-    //   slides_per_view = 2;
-    //   slides_per_view_pad = 1.3;
-    //   break;
     case swiper_item.classList.contains('content_area'):
       slides_per_view = 3;
-      slides_per_view_pad = 3.3;
+      slides_per_view_pad = 2.3 ;
+      slides_per_view_mobile = 1.3;
       break;
     case swiper_item.classList.contains('content_cards'):
       slides_per_view = 4;
-      slides_per_view_pad = 3.3;
+      slides_per_view_pad = 2.3 ;
+      slides_per_view_mobile = 1.3;
       break;
     case swiper_item.classList.contains('content_galleries'):
       slides_per_view = 4;
-      slides_per_view_pad = 3.3;
+      slides_per_view_pad = 2.3 ;
+      slides_per_view_mobile = 1.3;
       break;
     case swiper_item.classList.contains('content_events'):
       slides_per_view = 4 ;
-      slides_per_view_pad = 4 ;
-      break;
-    case swiper_item.classList.contains('content_news'):
-      slides_per_view = 3;
-      slides_per_view_pad = 2.3;
-      break;
-    case swiper_item.classList.contains('content_blog'):
-      slides_per_view = 3;
-      slides_per_view_pad = 2.3;
-      break;
-    case swiper_item.classList.contains('content_articles'):
-      slides_per_view = 3;
-      slides_per_view_pad = 2.3;
+      slides_per_view_pad = 2.3 ;
+      slides_per_view_mobile = 1.3;
       break;
     case swiper_item.classList.contains('content_personage'):
       slides_per_view = 4;
-      slides_per_view_pad = 2.3;
+      slides_per_view_pad = 2.3 ;
+      slides_per_view_mobile = 1.3;
       break;
     case swiper_item.classList.contains('content_restaurant'):
       slides_per_view = 2;
-      slides_per_view_pad = 3.3;
+      slides_per_view_pad = 2 ;
+      slides_per_view_mobile = 1;
       break;
     case swiper_item.classList.contains('content_partners'):
       slides_per_view = 4;
-      slides_per_view_pad = 3.3;
-      slides_per_view_mobile = 2.15
+      slides_per_view_pad = 2.3 ;
+      slides_per_view_mobile = 1.3;
       break;
   }
 
@@ -244,17 +235,6 @@ gallery_swiper.forEach(gallery => {
     //   forceToAxis: true,
     // },
 
-    // effect: 'creative',
-    // creativeEffect: {
-    //   prev: {
-    //     // will set `translateZ(-400px)` on previous slides
-    //     translate: [0, 0, -400],
-    //   },
-    //   next: {
-    //     // will set `translateX(100%)` on next slides
-    //     translate: ['100%', 0, 0],
-    //   },
-    // },
 
     effect: 'slide',
     initialSlide: 1,
@@ -264,13 +244,17 @@ gallery_swiper.forEach(gallery => {
       prevEl: swiper_nav_prev,
     },
 
-    // setWrapperSize: true,
+    setWrapperSize: true,
+
     breakpoints: {
       320: {
-        spaceBetween: 0
+        spaceBetween: 20,
+        slidesPerView: 1.3
       },
-      993: {
+      820: {
         spaceBetween: 40,
+        slidesPerView: 'auto'
+
       }
     },
   });
@@ -286,3 +270,33 @@ gallery_swiper.forEach(gallery => {
 })
 
 
+let slider_cards_image =  document.querySelectorAll('.block_list:not(.block_list-slider) .card--image')
+
+
+slider_cards_image.forEach( el => {
+  if (el.children.length > 1){
+
+    const swiper = new Swiper(el, {
+      createElements: true,
+      slideClass: 'card--image_slide',
+      loop: true,
+      slidesPerView: 1,
+      grabCursor: true,
+      simulateTouch: true,
+      allowTouchMove: true,
+      uniqueNavElements: true,
+
+      mousewheel: {
+        forceToAxis: true,
+      },
+      pagination: true,
+      navigation: true
+      // {
+      //     nextEl: swiper_nav_next,
+      //     prevEl: swiper_nav_prev,
+      //   },
+
+
+    });
+  }
+})

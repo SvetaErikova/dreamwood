@@ -1,0 +1,104 @@
+.content_ticket
+  &:not(.block_list-slider)
+    @media(max-width: 475px)
+      overflow: hidden
+    .block--head
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: -50px
+        background-image: url("../img/svg/bck-decor-12.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        width: 300px
+        height: 120px
+        z-index: -1
+        @media(max-width: 768px)
+          right: 0
+      @media(max-width: 380px)
+        max-width: 50%
+    .block--wrapper
+      position: relative
+      max-width: 1240px
+    .block--image
+      position: relative
+      width: 110%
+      left: -5%
+      @media(max-width: 1440px)
+        width: 100%
+        left: 0
+      @media(max-width: 500px)
+        width: 110%
+        left: -5%
+      @media(max-width: 450px)
+        width: 130%
+        left: -15%
+      @media(max-width: 400px)
+        width: 140%
+        left: -20%
+      img
+        height: auto
+      &:after
+        content: ''
+        position: absolute
+        top: -35%
+        right: 0
+        width: clamp(140px, calc(140px + (277 - 140) * ((100vw - 375px) / (1440 - 375))), 277px)
+        height: clamp(221px, calc(221px + (438 - 221) * ((100vw - 375px) / (1440 - 375))), 438px)
+        background-image: url("../img/drimmi-with-ball.png")
+        background-repeat: no-repeat
+        background-size: contain
+        aspect-ratio: 277 / 438
+        @media(max-width: 860px)
+          top: -15%
+          right: 30%
+        @media(max-width: 550px)
+          right: 10%
+          top: -10%
+        @media(max-width: 380px)
+          top:  -20%
+          right: 25%
+
+  .block--content
+    position: absolute
+    top: 62%
+    right: -13%
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: var(--g-28)
+    max-width: 52%
+    translate: -50% -50%
+    @media(max-width: 860px)
+      right: 0
+      left: 50%
+      top: 50%
+      @media(max-width: 500px)
+        max-width: 300px
+        width: 100%
+    .block--title
+      text-align: center
+
+      svg
+        width: clamp(296px, calc(296px + (514 - 296) * ((100vw - 375px) / (1440 - 375))), 514px)
+        height: clamp(92px, calc(92px + (160 - 92) * ((100vw - 375px) / (1440 - 375))), 160px)
+        margin-bottom: 20px
+  .block--actions
+    display: grid
+    grid-template-columns: 1fr 1fr
+    @media(max-width: 860px)
+      grid-template-columns: 1fr
+    a
+      width: 100%
+      @media(max-width: 520px)
+        padding: 0.78em 1.5em
+
+  .button-reversed
+    --filled-bgc-base: var(--c-surface-accent-hover)
+    --filled-bc-base: var(--c-surface-accent-hover)
+    --filled-c-base: var(--c-text-white)
+    --filled-bgc-hover: var(--c-surface-accent)
+    --filled-bc-hover: var(--c-surface-accent)
+    --filled-c-hover: var(--c-text-white)
+
