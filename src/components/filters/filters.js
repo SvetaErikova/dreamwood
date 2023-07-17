@@ -56,6 +56,20 @@ block_with_filters.forEach(block => {
       // смена состояния инпута
       i.addEventListener('change', (e)=> {
 
+        let loader = block.querySelector('.loader')
+        function loader_active(){
+          loader.style.display='block'
+          for (i = 0; cards_to_show.length >= i; i++){
+            cards_to_show[i].style.opacity = 0
+          }
+        }
+        function  loader_no_active(){
+          loader.style.display='none'
+          for (i = 0; cards_to_show.length >= i; i++){
+            cards_to_show[i].style.opacity = 1
+          }
+        }
+
         let cards_to_show = []
         let active_input_height = block.querySelector('.filters-item [data-height]:checked');
         let active_input_age = block.querySelector('.filters-item [data-age]:checked');
@@ -72,7 +86,6 @@ block_with_filters.forEach(block => {
           else {
             el.classList.add('hidden')
           }
-
           })
 
         if(cards_to_show.length < 1){
@@ -80,21 +93,7 @@ block_with_filters.forEach(block => {
         } else{
           not_found.style.display = 'none'
         }
-
-        let loader = block.querySelector('.loader')
-        function loader_active(){
-          loader.style.display='block'
-          for (i = 0; filter_elements.length >= i; i++){
-            filter_elements[i].style.opacity = 0
-          }
-        }
-        function  loader_no_active(){
-          loader.style.display='none'
-          for (i = 0; filter_elements.length >= i; i++){
-            filter_elements[i].style.opacity = 1
-          }
-        }
-        setTimeout(loader_active )
+        setTimeout(loader_active)
         setTimeout(loader_no_active , 600)
         })
 
@@ -111,98 +110,6 @@ block_with_filters.forEach(block => {
         not_found.style.display = 'none'
       })
     })
-
   })
+})
 
-
-  })
-
-
-
-
-
-
-
-// block_with_filters.forEach(block => {
-//   let filter_block = block.querySelectorAll('.js-filters')
-//   let filter_list = block.querySelector('.block--elements')
-//   let filter_elements = filter_list.querySelectorAll('[data-target-item]');
-//   let reset_button = block.querySelectorAll('button[type=reset]');
-//   let block_inputs = block.querySelectorAll('.filters-item')
-//
-//   filter_block.forEach(b => {
-//     let inputs = b.querySelectorAll('[data-target]');
-//     let data_attr = [];
-//
-//     // первые элементы по умолчанию активны
-//     block_inputs.forEach(bi =>{
-//       bi.querySelector('[data-target]').click()
-//     })
-//
-//
-//
-//     inputs.forEach(i => {
-//       if ( !inputs && !filter_elements ) return;
-//
-//
-//       i.addEventListener('change', (e)=> {
-//         data_attr = []
-//
-//         let active_input = block.querySelectorAll('[data-target]:checked');
-//
-//         // console.log(active_input)
-//
-//         if ( active_input.length < 1 ) {
-//           filter_elements.forEach( el => {
-//             el.classList.remove('hidden')
-//           })
-//         }
-//         active_input.forEach(ai => {
-//           let attr = ai.getAttribute('data-target')
-//           data_attr.push(attr);
-//         })
-//
-//         if ( data_attr.length < 1 ) return;
-//
-//         let cards_to_show = [];
-//
-//         // console.log(data_attr)
-//
-//         filter_elements.forEach(el => {
-//           let data_target_item = el.getAttribute('data-target-item').split(',')
-//           console.log(data_target_item)
-//           console.log('карточка:'+data_target_item)
-//           console.log('кнопка:'+data_attr)
-//
-//           data_attr.forEach(attr => {
-//             // console.log(el.getAttribute('data-target-item'))
-//             if ( el.getAttribute('data-target-item').includes(attr)  ) {
-//
-//               cards_to_show.push(el)
-//               el.classList.remove('hidden')
-//             }
-//             else{
-//               el.classList.add('hidden')
-//             }
-//
-//           })
-//         })
-//
-//       })
-//
-//     })
-//
-//   })
-//
-//
-//   // Reset filters
-//
-//   reset_button.forEach(button => {
-//     button.addEventListener('click', ()=>{
-//       filter_elements.forEach( el => {
-//         el.classList.remove('hidden')
-//       })
-//     })
-//   })
-//
-// })

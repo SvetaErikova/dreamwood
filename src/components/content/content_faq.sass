@@ -1,5 +1,6 @@
 .content_faq
   --accent: var(--color-pink)
+  overflow: hidden
   &:after
     content: ''
     position: absolute
@@ -41,8 +42,8 @@
     &-item
       cursor: pointer
       padding-bottom: var(--g-32)
-      color: #BBBBBB
-      border-bottom: 1px solid #BBBBBB
+      color: var(--c-text-dark)
+      border-bottom: 1px solid var(--c-text-dark)
       width: 100%
       text-align: center
       transition: var(--transition)
@@ -51,8 +52,8 @@
         white-space: nowrap
         padding: 0 15px var(--g-32) 15px
     &-item.is_active
-      color: #2D2D2D
-      border-bottom: 2px solid #2D2D2D
+      color: var(--color-pink)
+      border-bottom: 2px solid var(--color-pink)
 
   .block--list
     position: relative
@@ -65,9 +66,11 @@
       height: clamp(56px, calc(56px + (142 - 56) * ((100vw - 375px) / (1440 - 375))), 142px)
       background: url("../img/svg/bck-decor-9.svg") no-repeat center
       background-size: contain
-      @media(max-width: 540px)
-        top: -20px
-        right: calc(var(--g-40) * -1)
+      @media(max-width: 1024px)
+        top: -65px
+        right: -5%
+      @media(max-width: 768px)
+        top: -30px
     &:before
       content: ''
       position: absolute

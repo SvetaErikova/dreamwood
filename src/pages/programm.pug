@@ -1,0 +1,13 @@
+extends ../layouts/breadcrumbs
+
+block variables
+  - var title = "Расписание активностей "
+  - var pageClass = 'page--programm'
+  - var activePage = 'index'
+
+
+block content
+  section.block.block_list.content_program#programm
+    .block--wrapper
+      +block--head('','расписание','активностей','')
+      include ../components/content/content_program/content_program

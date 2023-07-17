@@ -3,15 +3,21 @@
   &:after
     content: ''
     position: absolute
-    top: -50%
+    top: -200px
     bottom: -40%
     left: 0
     right: 0
+    width: 100%
+    height: clamp(700px, calc(700px + (1300 - 700) * ((100vw - 375px) / (1440 - 375))), 1300px)
     background-image: url("../img/svg/bck-big-decor-3.svg")
     background-repeat: no-repeat
     background-size: contain
     background-position: right
     z-index: -1
+    @media (max-width: 768px)
+      top: 0
+      background-position: top center
+      background-size: cover
 
   .block--head
     @media (max-width: 768px)

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?1noeeq');
-  src:  url('fonts/icomoon.eot?1noeeq#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?1noeeq') format('truetype'),
-    url('fonts/icomoon.woff?1noeeq') format('woff'),
-    url('fonts/icomoon.svg?1noeeq#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?o8vmtf');
+  src:  url('fonts/icomoon.eot?o8vmtf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?o8vmtf') format('truetype'),
+    url('fonts/icomoon.woff?o8vmtf') format('woff'),
+    url('fonts/icomoon.svg?o8vmtf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,9 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-burger:before {
-  content: "\e917";
-}
 .icon-accordion-open:before {
   content: "\e90d";
   color: #cacccd;
@@ -43,6 +40,10 @@
 .icon-card-arrow-prev:before {
   content: "\e90c";
   color: #0281c9;
+}
+.icon-visibility:before {
+  content: "\e912";
+  color: #15466b;
 }
 .icon-time-rest:before {
   content: "\e900";
@@ -103,10 +104,6 @@
 .icon-time:before {
   content: "\e911";
   color: #fff;
-}
-.icon-visibility:before {
-  content: "\e912";
-  color: #15466b;
 }
 .icon-water:before {
   content: "\e913";

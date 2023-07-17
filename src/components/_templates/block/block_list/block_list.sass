@@ -1,17 +1,12 @@
 .block_list
   .block--elements
     display: grid
-    gap: 40px
+    gap: var(--g-40)
     @media (min-width: 768px)
       grid-template-columns: repeat(3, 1fr)
       .block--pagination
         grid-column: span 3
-    @media(max-width: 1441px)
-      gap: 24px
-    @media(max-width: 1024px)
-      gap: 18px
     @media(max-width: 768px)
-      gap: 8px
       grid-template-columns: 2fr
     @media(max-width: 460px)
       grid-template-columns: 1fr
@@ -34,6 +29,7 @@
         margin-left: calc(var(--g-40) * -1)
         margin-right: calc(var(--g-40) * -1)
     .slider_controls
+      pointer-events: none
       position: absolute
       width: 100%
       top: 50%
@@ -47,4 +43,9 @@
         bottom: -10px
         right: -45%
         justify-content: flex-end
-
+      .swiper-button-prev,
+      .swiper-button-next
+        pointer-events: auto
+      .swiper-button-disabled
+        cursor: auto
+        pointer-events: none

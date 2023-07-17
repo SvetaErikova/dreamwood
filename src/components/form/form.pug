@@ -1,4 +1,4 @@
-section.block.content--form
+section.block.content--form#form
   .block--wrapper
 
 
@@ -7,7 +7,7 @@ section.block.content--form
         h2.f-h2 Разработаем индивидуальный сценарий<br> для вашего праздника!
 
       // step 1
-      fieldset
+      fieldset.active
         .block--subtitle Ответьте на несколько вопросов ниже, чтобы исходя из ваших предпочтений, мы могли предложить вам идеальную программу праздника для вашего ребенка:
         .form--label
           span Вопрос 1 из 7
@@ -129,17 +129,16 @@ section.block.content--form
           span Вопрос 7 из 7
         .form--questions-title Укажите номер телефона для обсуждения деталей
         label.form__input
-          input(type="tel" placeholder="+7 (999)-999-99-99" name="number" required   )
+          input(type="tel" placeholder="+7 (999)-999-99-99" name="number" required autocomplete )
           .form__input-error Ошибка заполнения
         .form__button
           button.button.button-outlined.button-primary.form_prev
             span Назад
-          button.button.button-outlined.button-primary.form_next
-            //(type='submit')
+          button.button.button-outlined.button-primary.form_next(type='submit')
             span Готово
 
       //finish ok
-      fieldset.form-finish.form-finish-sent.active
+      fieldset.form-finish.form-finish-sent
         .form-finish-text
           .form--finish-title Благодарим вас <br> за ответы на вопросы
           .form-finish-subtitle В ближайшее время наш специалист свяжется с вам

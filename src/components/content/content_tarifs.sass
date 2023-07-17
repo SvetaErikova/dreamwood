@@ -15,21 +15,24 @@
     z-index: -2
   &:before
     content: ''
-    right: 0
-    left: 0
+    left: 50%
     top: 0
     height: 100%
     width: 100%
+    max-width: 1440px
+    translate: -50% 0
     position: absolute
     background-image: url("../img/svg/tickets-bck-4.svg")
     background-repeat: no-repeat
     background-position: top center
     background-size: contain
     z-index: -2
+    @media(max-width: 768px)
+      display: none
   .block--content
     display: grid
     grid-template-columns: 1fr 1fr
-    justify-items: center
+    gap: var(--g-80)
     @media(max-width: 998px)
       grid-template-columns: 1fr
       gap: 30px
@@ -65,63 +68,66 @@
         @media(max-width: 475px)
           width: 312px
   .block--tarifs
-    display: flex
-    flex-direction: column
-    gap: 25px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: var(--g-80)
+    @media(max-width: 768px)
+      display: block
     .block--title
       font-family: Oswald
       font-size: 21px
-      font-weight: 450
-      letter-spacing: 0.001
       text-transform: uppercase
-      margin-bottom: 50px
+      margin-bottom: 30px
     .block--subtitle
       font-size: var(--fs-18)
-    .accordion
-      &--button
-        display: grid
-        grid-template-columns: repeat( 3 , 1fr)
-        @media(max-width: 425px)
-          grid-template-columns: 1fr auto auto
-        .icon
-          margin-right: 0
-          @media(max-width: 998px)
-            margin-left: auto
-        .price
-          text-align: center
-          font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 768px) / (1440 - 768))), 16px)
-        .sale
-          position: relative
-          rotate: -15deg
-          &:after
-            content: ''
-            width: clamp(117px, calc(117px + (145 - 117) * ((100vw - 375px) / (1440 - 375))), 145px)
-            height: clamp(50px, calc(50px + (61 - 50) * ((100vw - 375px) / (1440 - 375))), 61px)
-            position: absolute
-            background-image: url("../img/svg/ticket-mini.svg")
-            background-size: contain
-            background-repeat: no-repeat
-            translate: -50% -50%
-            left: 50%
-            top: 50%
-            z-index: -1
+      margin-bottom: 30px
+  .accordion
+    &--button
+      display:  grid
+      grid-template-columns: repeat(3 , 1fr)
+      @media(max-width: 425px)
+        grid-template-columns: 1fr auto auto
+      .icon
+        margin-right: 0
+        @media(max-width: 998px)
+          margin-left: auto
+      .price
+        text-align: center
+        font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 768px) / (1440 - 768))), 16px)
+      .sale
+        position: relative
+        rotate: -15deg
+        &:after
+          content: ''
+          width: clamp(117px, calc(117px + (145 - 117) * ((100vw - 375px) / (1440 - 375))), 145px)
+          height: clamp(50px, calc(50px + (61 - 50) * ((100vw - 375px) / (1440 - 375))), 61px)
+          position: absolute
+          background-image: url("../img/svg/ticket-mini.svg")
+          background-size: contain
+          background-repeat: no-repeat
+          translate: -50% -50%
+          left: 50%
+          top: 50%
+          z-index: -1
 
 .block--afisha
   height: 100%
   display: flex
-  align-items: flex-end
+  align-items: flex-start
+  justify-content: center
   position: relative
   &:after
     content: ''
     width: 257px
-    height: 407px
+    max-height: 407px
+    height: 100%
     position: absolute
     background-image: url("../img/drimmi-with-ball.png")
     background-size: contain
     background-repeat: no-repeat
     translate: -50% -50%
     left: 50%
-    top: 0
+    top: -200px
     z-index: 0
     @media(max-width: 998px)
       display: none
@@ -142,13 +148,26 @@
     height: clamp(93px, calc(93px + (180 - 93) * ((100vw - 375px) / (1440 - 375))), 180px)
   &:after
     content: ''
-    width: 50px
-    height: 85px
+    width: clamp(32px, calc(32px + (50 - 32) * ((100vw - 375px) / (1440 - 375))), 50px)
+    height: clamp(54px, calc(54px + (85 - 54) * ((100vw - 375px) / (1440 - 375))), 85px)
     position: absolute
     background-image: url("../img/svg/bck-decor-10.svg")
     background-size: contain
     background-repeat: no-repeat
     right: 25%
+    top: -25%
+    @media(max-width: 768px)
+      right: 10%
+      top: -30%
+  &:before
+    content: ''
+    width: 245px
+    height: 175px
+    position: absolute
+    background-image: url("../img/svg/bck-decor-6.svg")
+    background-size: contain
+    background-repeat: no-repeat
+    left: calc(var(--g-40) * -1)
     top: -25%
     @media(max-width: 768px)
       display: none

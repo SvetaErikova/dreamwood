@@ -12,10 +12,10 @@ block content
       .banner
         .block_nav-page
           .nav
-            a  О мероприятие
-            a  Программа
-            a  Расписание
-            a  Галерея
+            a(href='#about')  О мероприятие
+            a(href='#programm')  Программа
+            a(href='#programm')  Расписание
+            a(href='#gallery')  Галерея
         .block--content
           <svg class="hero_clip_svg">
           <clipPath id="my-clip-path-2" clipPathUnits="objectBoundingBox"><path d="M1,0 V0.857 H1 C0.872,0.857,0.673,0.704,0.503,0.727 C0.47,0.732,0.389,0.753,0.389,0.843 C0.389,0.917,0.418,0.978,0.427,0.996 C0.428,0.998,0.427,1,0.426,1 C0.4,0.991,0.27,0.944,0.186,0.87 C0.106,0.8,0.039,0.73,0,0.597 V0 H1"></path></clipPath>
@@ -23,17 +23,17 @@ block content
           <svg class="hero_clip_svg">
           <clipPath id="my-clip-path-2-mob" clipPathUnits="objectBoundingBox"><path d="M1,0 v0.809 c-0.13,-0.015,-0.262,-0.023,-0.386,-0.017 c-0.073,0.003,-0.253,0.02,-0.253,0.089 c0,0.053,0.055,0.098,0.079,0.115 c0.003,0.002,0,0.006,-0.005,0.005 C0.377,0.993,0.171,0.966,0,0.925 V0 H1"></path></clipPath>
           </svg>
-          img(src="./assets/img/banner-attractions.png")
+          img(src="./assets/img/gallery-4.png")
         +block--head("20-25 июля","название дня" ,"","За фасадами города скрываются настоящие чудеса. Откройте их все!")
 
 
-  section.block.block_image_text.block_image_text-reversed.mask-fire
+  section.block.block_image_text.block_image_text-reversed.mask-fire#about
     .block--wrapper
       .block--image
         <svg class="svg">
         <clipPath id="mask-fire" clipPathUnits="objectBoundingBox"><path d="M0.694,0.974 L0.816,0.897 L0.921,0.808 L0.992,0.694 L1,0.567 L0.981,0.441 L0.951,0.316 L0.88,0.205 L0.805,0.092 L0.702,0 L0.629,0.099 L0.554,0.206 L0.449,0.113 L0.337,0.023 L0.297,0.146 L0.265,0.258 L0.146,0.196 L0.004,0.158 L0.001,0.284 L0,0.41 L0.009,0.538 L0.047,0.659 L0.111,0.772 L0.183,0.884 L0.305,0.959 L0.452,0.987 L0.602,1 L0.694,0.974"></path></clipPath>
         </svg>
-        img(src="./assets/img/holidays-img.png" alt="")
+        img(src="./assets/img/gallery-4.png")
       +block--head('','О мероприятии','','')
       .block--content
         p Среди миллиарда ярких звезд, на обратной стороне холодной Луны, живет лунный кролик.В новогоднюю ночь он решает спуститься на Землюс вихрем снежинок, чтобы узнать, как устроен наш мир, ведь он долго наблюдал за нами.Теперь ему предстоит встретиться с опасностями таинственного леса и найти друзей, которые помогут ему вернуться домой.
@@ -64,7 +64,7 @@ block content
             img(src="./assets/img/svg/advantages-icon-5.svg" alt="")
           .advantages-text Тесла-шоу
 
-  section.block.block_list.content_program
+  section.block.block_list.content_program#programm
     .block--wrapper
       +block--head('','расписание','активностей дня','')
       include ../components/content/content_program/content_program
@@ -83,11 +83,11 @@ block content
       .block--actions
         a(href="/").button.button-filled.button-accent
           span Подробнее
-        a(href='/').phone-circle
+        a(href="tel:" ).phone-circle
           span.icon-phone-circle
           span 8 800 550 06 79
 
-  section.block.block_element.content_gallery
+  section.block.block_element.content_gallery#gallery
     .block--wrapper
       +block--head('','ВОЛШЕБНЫЕ', 'МОМЕНТЫ','')
       .block--content

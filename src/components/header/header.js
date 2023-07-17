@@ -57,14 +57,14 @@ if (opening_menu){
   close_menu.addEventListener('click', (e) => {
     menu.classList.remove('is_open')
   })
-
-
 }
+
 // скрытие меню клику вне меню
 document.addEventListener( 'click', (e) => {
   let menu = document.querySelector('.header_menu.is_open')
   if(menu){
-    if (e.target !== menu && e.target !== opening_menu ) {
+    let burger = document.querySelector('.header__burger-line')
+    if (e.target !== menu && e.target !== opening_menu && e.target !== burger ) {
       menu.classList.remove('is_open')
     }
   }
@@ -76,3 +76,22 @@ document.addEventListener('keydown', function(e) {
     menu.classList.remove('is_open')
   }
 });
+
+// плавный скролл
+
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]')
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener('click', function (e) {
+    e.preventDefault()
+    const id = smoothLink.getAttribute('href')
+
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
+
+

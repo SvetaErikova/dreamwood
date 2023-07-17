@@ -12,11 +12,11 @@ block content
       .banner
         .block_nav-page
           .nav
-            a Персонажи
-            a Площадки
-            a Индивидуальный сценарий
-            a Готовые программы
-            a Галерея
+            a(href='#personage') Персонажи
+            a(href='#area') Площадки
+            a(href='#form') Индивидуальный сценарий
+            a(href='#shows') Готовые программы
+            a(href='#gallery') Галерея
         .block--content
           <svg class="hero_clip_svg">
           <clipPath id="my-clip-path-2" clipPathUnits="objectBoundingBox"><path d="M1,0 V0.857 H1 C0.872,0.857,0.673,0.704,0.503,0.727 C0.47,0.732,0.389,0.753,0.389,0.843 C0.389,0.917,0.418,0.978,0.427,0.996 C0.428,0.998,0.427,1,0.426,1 C0.4,0.991,0.27,0.944,0.186,0.87 C0.106,0.8,0.039,0.73,0,0.597 V0 H1"></path></clipPath>
@@ -24,7 +24,7 @@ block content
           img(src="./assets/img/banner-attractions.png")
         +block--head("","праздник мечты" ,"для вашего ребенка","Сделаем любой праздник незабываемым. Вас ждет: сказочная атмосфера парка, яркие персонажи и интересная программа!")
         .block--actions
-          a(href="/").button.button-filled.button-accent
+          a(href="/").button.button-filled.button-accent.js-btn-open-form
             span Оставить заявку
 
   section.block.block_image_text.block_image_text-reversed.block_image_text-list.mask-heart
@@ -44,7 +44,7 @@ block content
       .block--actions
   .block--actions
 
-  section.block.block_list.block_list-slider.content_personage
+  section.block.block_list.block_list-slider.content_personage#personage
     .block--wrapper
       +block--head('','более 20 персонажей','на выбор','')
       .block--elements
@@ -54,18 +54,20 @@ block content
         +card--personage('','Название персонажа', './assets/img/card-offer.png')
         +card--personage('','Название персонажа', './assets/img/card-offer.png')
 
-  section.block.block_list.content_shows
+  section.block.block_list.content_shows#shows
     .block--wrapper
       +block--head('','готовые программы','и шоу','')
       .block--elements
         a.card(href='/')
           .card--image
-            img(src='./assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/attractions_events/14.jpg')
           .card--content
             .card--title
-              h3 космическое путешествие
+              h3 Космическая вечеринка
               div.icons
-                span.icons--age 0+
+                span.icons--age 5+
+            .card--text
+              p Межгалактическое путешествие с интерактивной программой, неоновым гриммом, серебряное шоу с ростовой куклой, мастер-классом. Для гостей игровая зона и 4D кинотеатр
             .card--link
               .button.button-link.button-card
                 span Подробнее
@@ -75,48 +77,52 @@ block content
             img(src='./assets/img/card-offer.png')
           .card--content
             .card--title
-              h3 dinoLAnd
+              h3 Арт-пати
               div.icons
-                span.icons--age 0+
+                span.icons--age 6+
+            .card--text
+              p Яркое красочное Арт-шоу в лучших традициях больших фестивалей. С помощью красок холли, пены и танцевальных флешмобов, проведите незабываемое время на территории Кита, который будет забронирован лично под вашу вечеринку
             .card--link
               .button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
+        //a.card(href='/' )
+        //  .card--image
+        //    img(src='./assets/img/card-offer.png')
+        //  .card--content
+        //    .card--title
+        //      h3 Экшен-квест
+        //      div.icons
+        //        span.icons--age 12+
+        //    .card--text
+        //      p Экшен-квест по мотивам “Игры в кальмара”это отличная возможность отвлечь детей от компьютерных игр и виртуальной реальности. Проигравших и выбывших не будет, лишь объединившись все участники дойдут до финала и получат свое вознаграждение
+        //    .card--link
+        //      .button.button-link.button-card
+        //        span Подробнее
+        //        span.icon.icon-arrow-card
         a.card(href='/' )
           .card--image
-            img(src='./assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/attractions_events/11.jpg')
           .card--content
             .card--title
-              h3 Бал принцесс
+              h3 Тачка на покраску
               div.icons
-                span.icons--age 0+
-            .card--link
-              .button.button-link.button-card
-                span Подробнее
-                span.icon.icon-arrow-card
-        a.card(href='/' )
-          .card--image
-            img(src='./assets/img/card-offer.png')
-          .card--content
-            .card--title
-              h3 День волшебства
-              div.icons
-                span.icons--age 0+
+                span.icons--age 6+
+            .card--text
+              p Идеальное развлечение для подростков. Где же еще есть возможность самостоятельно разрисовать машину так, как хочется юному гостю?
             .card--link
               .button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
 
 
-  section.block.block_list.content_area
+  section.block.block_list.content_area#area
     .block--wrapper
       +block--head('','Сказочные площадки','для вашего праздника','')
       .block--elements
-        +card--area('','купол дримвуд','Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!', './assets/img/card-offer.png')
-        +card--area('','Метрополис','Проехав по железной дороге, загляните внутрь гор и получите массу эмоций от виражей и изгибов. Добавив шлемы виртуальной реальности вы окунетесь в историю 4-х стихий!', './assets/img/card-offer.png')
-        +card--area('','Корабль','Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!', './assets/img/card-offer.png')
-        +card--area('','Название персонажа','Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!', './assets/img/card-offer.png')
-        +card--area('','Название персонажа','Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!', './assets/img/card-offer.png')
+        +card--area('','купол дримвуд','Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!', '/assets/img/attractions_events/12.png')
+        +card--area('','Метрополис','Проехав по железной дороге, загляните внутрь гор и получите массу эмоций от виражей и изгибов. Добавив шлемы виртуальной реальности вы окунетесь в историю 4-х стихий!', '/assets/img/attractions_events/13.png')
+        +card--area('','Корабль','Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!', '/assets/img/attractions_events/14.png')
 
 
   include ../components/form/form
@@ -145,8 +151,8 @@ block content
           li Разработка декора
           li Фотограф и видеограф
           li Бьюти Бар
-
-  section.block.block_element.content_gallery
+      .block--actions
+  section.block.block_element.content_gallery#gallery
     .block--wrapper
       +block--head('','ВОЛШЕБНЫЕ', 'МОМЕНТЫ','')
       .block--content

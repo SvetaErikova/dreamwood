@@ -33,7 +33,7 @@ PopupManager.register('popup_for_scheme',{
 
 
       title.textContent = params.title.textContent;
-      subtitle.textContent = params.subtitle.textContent;
+      subtitle.append(params.subtitle)
 
 
     },

@@ -179,13 +179,13 @@ swiper_block.forEach(swiper_item => {
         // slidesOffsetAfter: 16,
       },
       1024: {
-        spaceBetween: 24,
+        spaceBetween: 20,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
         slidesPerView: slides_per_view,
       },
       1441:{
-        spaceBetween: 40,
+        spaceBetween: 20,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
       }

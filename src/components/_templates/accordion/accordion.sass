@@ -24,6 +24,9 @@
         font-family: 'icomoon' !important
         content: "\e90d"
         color: #CACCCD
+    & .accordion--button
+      border-bottom: 1px solid rgba(187, 187, 187, 0.3)
+      padding-bottom: var(--g-20)
   &--button
     cursor: pointer
     display: flex
@@ -72,7 +75,6 @@
     font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 1024px) / (1920 - 1024))), 24px)
     border-radius: 12px
     padding: var(--g-24) 0
-    margin-top: var(--g-24)
     &.is_cascade > p:first-child
       margin: 0
 

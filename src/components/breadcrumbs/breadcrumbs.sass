@@ -9,11 +9,13 @@
   margin: 0 auto
   z-index: 45
   max-width: 1440px
+  @media(max-width: 1600px)
+    padding: 20px  var(--g-40)
+    width: 100vw
+    max-width: 100%
   @media(max-width: 768px)
     flex-wrap: nowrap
-    width: 100vw
     overflow-x: auto
-    padding: 20px 16px
     margin: 0
     justify-content: flex-start
   a

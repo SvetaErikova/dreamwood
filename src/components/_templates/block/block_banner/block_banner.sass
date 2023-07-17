@@ -123,7 +123,7 @@
     @media(max-width: 768px)
       padding-top: 25%
       width: 60%
-    @media(max-width: 475px)
+    @media(max-width: 520px)
       width: 100%
     @media(max-width: 380px)
       padding-top: 30%
@@ -143,7 +143,7 @@
 .block_banner.block_banner-index
   padding: 0
   height: 125vh
-  min-height: 1000px
+  min-height: 1050px
   margin: 0
   position: relative
   @media(max-width: 998px)
@@ -157,16 +157,18 @@
     position: absolute
     width: 290px
     height: 250px
-    bottom: 33.2%
+    rotate: 1deg
+    bottom: 33.1%
     left: calc( var(--g-80) + 11.46vw)
     background-image: url("../img/drimmi.png")
     background-repeat: no-repeat
     background-size: contain
     z-index: 10
     @media(max-width: 1440px)
-      bottom: 33.3%
+      bottom: 33.5%
     @media(max-width: 998px)
-      bottom: 33%
+      bottom: 33.5%
+      rotate: -1deg
       left: calc( var(--g-80) + 8.46vw)
     @media(max-width: 850px)
       left: calc( var(--g-80) + 7vw)
@@ -177,31 +179,34 @@
       background-size: contain
       width: 210px
       height: 210px
-      bottom: 24.2%
-      left: calc( var(--g-80) + 3vw)
-      rotate: -6deg
+      bottom: 23.8%
+      left: calc( var(--g-80) + 12vw)
+      rotate: -4deg
     @media(max-width: 700px)
-      bottom: 24.3%
-      rotate: -6deg
+      bottom: 24%
+      rotate: -5deg
+      left: calc( var(--g-80) + 8vw)
     @media(max-width: 610px)
-      bottom: 24.1%
+      left: calc( var(--g-80) + 6vw)
     @media(max-width: 550px)
-      bottom: 23.9%
+      bottom: 23.8%
       rotate: -4deg
     @media(max-width: 500px)
-      bottom: 23.6%
+      bottom: 23.5%
       rotate: -2deg
     @media(max-width: 470px)
       bottom: 23.5%
     @media(max-width: 440px)
       bottom: 23.2%
-      rotate: 1deg
+      rotate: 2deg
     @media(max-width: 400px)
-      bottom: 23.1%
-      rotate: 3deg
+      bottom: 22.9%
+      rotate: 1deg
     @media(max-width: 385px)
       rotate: 3deg
-      bottom: 23%
+      bottom: 22.9%
+    @media(max-width: 375px)
+      bottom: 22.6%
   .block--wrapper
     padding: 0
     max-width: 100%
@@ -209,7 +214,7 @@
   .banner
     width: 100%
     height: 125vh
-    min-height: 1000px
+    min-height: 1050px
     padding: var(--headerHeight,138px) var(--g-80) var(--g-160)
     border-radius: 0
     position: relative
@@ -242,7 +247,7 @@
 
     width: auto
     @media(max-width: 998px)
-      padding-top: 5vh
+      padding-top: 7vh
       width: 100%
   .block--head_title
     font-size: var(--fs-88)
@@ -255,16 +260,26 @@
   .block--actions
     margin-top: var(--fs-48)
     margin-left: auto
+    @media(max-width: 500px)
+      margin-top: 25vh
+    @media(max-width: 400px)
+      margin-top: 180px
 
 
 .block_banner-nav
   .block_nav-page
     position: absolute
-    margin: auto
-    right: var(--g-80)
+    width: 100%
+    max-width: 1440px
+    translate: -50%
+    left: 50%
+    //right: var(--g-80)
     top: calc( var(--headerHeight, 138px) + 20px)
     color: #F9FCFF
     z-index: 3
+    @media(max-width: 1500px)
+      left: calc(50% + var(--g-40) * -1)
+      max-width: 100%
     @media(max-width: 998px)
       display: none
     .nav
@@ -272,7 +287,7 @@
       display: flex
       justify-content: flex-end
       gap: 12px
-      margin-right: auto
+      margin-left: auto
     a
       transition: var(--transition)
       padding: 5px 15px

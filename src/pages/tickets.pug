@@ -11,10 +11,12 @@ block content
       +block--head('','Купить билет',' ','')
       .block--tickets-mini
         .block--title Приобретайте билеты онлайн со скидкой и без очередей
-      .block--content
-        .block--tarifs.block-accordion
+      .block--tarifs
+        div
           .block--title тарифы на посещение
           .block--subtitle Обращаем внимание, что билет на сайте вы покупаете по одному из самых минимальных тарифов. Тариф сменить при покупке нельзя. Выбрать другой тариф вы можете по приезде в парк.
+      .block--content
+        .block-accordion
           .accordion.js-openAccordion
             .accordion--button
               p.accordion--button_text Стандартный билет
@@ -52,6 +54,7 @@ block content
               p Действует для семей с 3-мя и более юными путешественникам. В кассе необходимо предъявить подтверждающий документ. При отсутствии подтверждающего документа билет приобретается за полную стоимость
         .block--afisha
           .block-afisha-content
+            img(src="./assets/img/afisha.png")
 
 
   section.block.block_html-code.content_tickets

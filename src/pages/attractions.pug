@@ -12,106 +12,112 @@ block content
       +block--head('','аттракционы','и услуги','')
       include ../components/filters/filters
       .block--elements
-        a.card(href='/' data-height='1' data-age='1' data-price='all free' )
+        .card(href='/' data-height='1' data-age='1' data-price='all free' )
           .card--image
-            img(src='./assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/attractions_events/5.jpg')
+            img.card--image_slide(src='/assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/card-offer.png')
           .card--label.maintenance
             p На техническом обслуживание
           .card--content
             .card--title
-              h3 Плющ
+              h3 Веревочный лагерь
               div.icons
                 span.icons--age 0+
                 span.icons--height 100см+
             .card--text
-              p Аттракцион свободного падения Плющ поднимет вас на 11 метров ввысь и закружит в воздухе. С высоты можно рассмотреть весь Парк и покорить стихию ветра!
+              p Веревочный парк – это самое настоящее приключение, которое тренирует смелость, ловкость и находчивость!
             .card--link
-              .button.button-link.button-card
+              a(href='/').button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-        a.card(href='/' data-height='2' data-age='2' data-price='all free' )
+        .card(href='/' data-height='2' data-age='2' data-price='all free' )
           .card--image
-            img(src='./assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/attractions_events/9.jpg')
+            img.card--image_slide(src='/assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/card-offer.png')
           .card--label.actions
             p Акция
           .card--content
             .card--title
-              h3 шахта 1771
+              h3 Дан Де Лион
               div.icons
                 span.icons--age 0+
                 span.icons--height 100см+
             .card--text
-              p Проехав по железной дороге, загляните внутрь гор и получите массу эмоций от виражей и изгибов. Добавив шлемы виртуальной реальности вы окунетесь в историю 4-х стихий!
+              p Одно из красивейших достопримечательностей Крыма – воздушная дорога «Дан Де Лион». Именно здесь можно забыть о силе земного притяжения, проплывая в уютной кабинке <над Парком развлечений ДРИМВУД
             .card--link
-              .button.button-link.button-card
+              a(href='/').button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-        a.card(href='/' data-height='3' data-age='3' data-price='all paid' )
+        .card(href='/' data-height='3' data-age='3' data-price='all free' )
           .card--image
-            img(src='./assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/attractions_events/6.jpg')
+            img.card--image_slide(src='/assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/card-offer.png')
           .card--label.close
             p Закрыто
           .card--content
             .card--title
-              h3 джип-райд
+              h3 Визги & брызги
               div.icons
                 span.icons--age 0+
                 span.icons--height 100см+
             .card--text
-              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
+              p Брызги искрятся на солнце, вокруг стоит визг и гам! “Брызги & визги” – это веселый детский аттракцион для тех, кто не боится намокнуть! Настоящий маленький аквапарк в самом сердце Крыма.
             .card--link
-              .button.button-link.button-card
+              a(href='/').button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
-        a.card(href='/' data-height='4' data-age='4' data-price='all paid' )
+        .card(href='/' data-height='4' data-age='4' data-price='all paid' )
           .card--image
-            img(src='./assets/img/card-offer.png')
+            img.card--image_slide(src='/assets/img/attractions_events/7.jpg')
+          .card--label.maintenance
+            p На техническом обслуживание
+          .card--content
+            .card--title
+              h3 Кит
+              div.icons
+                span.icons--age 0+
+                span.icons--height 100см+
+            .card--text
+              p Кит является самым большим современным животным. Приручив и подружившись с ним, мы решили познакомить его с вами! Поэтому если вы задаетесь вопросом, куда поехать на выходные, то самое время познакомиться с представителем морских глубин в Парке аттракционов.
+            .card--link
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        .card(href='/' data-height='5' data-age='4' data-price='all paid' )
+          .card--image
+            img.card--image_slide(src='/assets/img/attractions_events/8.jpg')
+          .card--label.actions
+            p Акция
+          .card--content
+            .card--title
+              h3 Кон-Тики
+              div.icons
+                span.icons--age 0+
+                span.icons--height 100см+
+            .card--text
+              p Увлекательное путешествие ждет маленьких исследователей, ветер – главное препятствие на пути. Высота вихрей может достигать до 6 метров.
+            .card--link
+              a(href='/').button.button-link.button-card
+                span Подробнее
+                span.icon.icon-arrow-card
+        .card(href='/' data-height='6' data-age='5' data-price='all paid' )
+          .card--image
+            img.card--image_slide(src='/assets/img/attractions_events/10.jpg')
           .card--label.close
             p Закрыто
           .card--content
             .card--title
-              h3 джип-райд
+              h3 Шахта 1771
               div.icons
                 span.icons--age 0+
                 span.icons--height 100см+
             .card--text
-              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
+              p Шахта – место, где идет добыча полезных ископаемых. И кажется, она совсем не похожа на место, где можно хорошо отдохнуть с ребенком? А вот и нет, ведь на нашей Шахте 1771 добываются ископаемые, которые затем «намываются» на «Золотоискателях», где каждый может найти свой самородок!
             .card--link
-              .button.button-link.button-card
-                span Подробнее
-                span.icon.icon-arrow-card
-        a.card(href='/' data-height='5' data-age='5' data-price='all paid' )
-          .card--image
-            img(src='./assets/img/card-offer.png')
-          .card--label.close
-            p Закрыто
-          .card--content
-            .card--title
-              h3 джип-райд
-              div.icons
-                span.icons--age 0+
-                span.icons--height 100см+
-            .card--text
-              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
-            .card--link
-              .button.button-link.button-card
-                span Подробнее
-                span.icon.icon-arrow-card
-        a.card(href='/' data-height='6' data-age='5' data-price='all paid' )
-          .card--image
-            img(src='./assets/img/card-offer.png')
-          .card--label.close
-            p Закрыто
-          .card--content
-            .card--title
-              h3 джип-райд
-              div.icons
-                span.icons--age 0+
-                span.icons--height 100см+
-            .card--text
-              p Возможность прокатиться на джипах по таинственной пещере, а с помощью очков виртуальной реальности, оказаться в условиях дикого сафари!
-            .card--link
-              .button.button-link.button-card
+              a(href='/').button.button-link.button-card
                 span Подробнее
                 span.icon.icon-arrow-card
       .not-found

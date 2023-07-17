@@ -1,4 +1,6 @@
 .content_ticket
+  @media(max-width: 480px)
+    overflow: hidden
   &:not(.block_list-slider)
     @media(max-width: 475px)
       overflow: hidden
@@ -16,7 +18,7 @@
         z-index: -1
         @media(max-width: 768px)
           right: 0
-      @media(max-width: 380px)
+      @media(max-width: 480px)
         max-width: 50%
     .block--wrapper
       position: relative
@@ -28,14 +30,16 @@
       @media(max-width: 1440px)
         width: 100%
         left: 0
-      @media(max-width: 475px)
-        width: 130%
-        left: -15%
-      @media(max-width: 400px)
-        width: 140%
-        left: -20%
+
       img
         height: auto
+        @media(max-width: 500px)
+          position: relative
+          width: 108%
+          left: -4%
+        @media(max-width: 480px)
+          width: 140%
+          left: -20%
       &:after
         content: ''
         position: absolute
@@ -52,10 +56,10 @@
           right: 30%
         @media(max-width: 550px)
           right: 10%
-          top: -10%
-        @media(max-width: 380px)
+          top: -15%
+        @media(max-width: 390px)
           top:  -20%
-          right: 25%
+          right: 20%
 
   .block--content
     position: absolute
@@ -71,7 +75,7 @@
       right: 0
       left: 50%
       top: 50%
-      @media(max-width: 475px)
+      @media(max-width: 500px)
         max-width: 300px
         width: 100%
     .block--title
@@ -88,7 +92,7 @@
       grid-template-columns: 1fr
     a
       width: 100%
-      @media(max-width: 475px)
+      @media(max-width: 520px)
         padding: 0.78em 1.5em
 
   .button-reversed

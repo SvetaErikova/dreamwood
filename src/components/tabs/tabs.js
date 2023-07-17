@@ -23,7 +23,6 @@ block_tabs.forEach(block => {
                 p.dataset.content === data_attr ? p.classList.add('is_active')  : p.classList.remove('is_active')
               })
 
-
               el === el.getElementsByTagName('p')
               placeMark.forEach( p =>{
                 p.dataset.placemark === data_attr ? p.classList.add('is_active')  : p.classList.remove('is_active')
