@@ -1,304 +1,65 @@
-//extends ../../layouts/main
-//
-//block variables
-//  - var title = "Заготовки"
-//  - var pageClass = ''
-//  - var activePage = 'index'
-//
-//block content
-//  <!-- Карточки Корпуса -->
-//  section.block.block_html_code.content_corpus
-//    .block--wrapper
-//      +block--head("","наши корпуса","")
-//      .block--elements
-//        a.card.card-yellow(href="")
-//          .card--image
-//            img(src="/assets/img/1.jpg" alt="")
-//          .card--content
-//            .card--title
-//              h3 Корпус <br/>
-//                span “СОЛНЕЧНЫЙ”
-//            .card--text
-//              p Программа "Город Солнца" - это тематические мероприятия, квесты и соревнования, которые познакомят детей с принципами самоуправления.
-//            .card--link
-//              .button.button-link.button-primary
-//                span Узнать больше
-//                span.icon-ic24-arrow-right
-//        a.card.card-pink(href="")
-//          .card--image
-//            img(src="/assets/img/1.jpg" alt="")
-//          .card--content
-//            .card--title
-//              h3 Корпус <br/>
-//                span “Космос”
-//            .card--text
-//              p Программа "Город Солнца" - это тематические мероприятия, квесты и соревнования, которые познакомят детей с принципами самоуправления.
-//            .card--link
-//              .button.button-link.button-primary
-//                span Узнать больше
-//                span.icon-ic24-arrow-right
-//        a.card.card-green(href="")
-//          .card--image
-//            img(src="/assets/img/1.jpg" alt="")
-//          .card--content
-//            .card--title
-//              h3 Корпус <br/>
-//                span “Сокол”
-//            .card--text
-//              p Программа "Город Солнца" - это тематические мероприятия, квесты и соревнования, которые познакомят детей с принципами самоуправления.
-//            .card--link
-//              .button.button-link.button-primary
-//                span Узнать больше
-//                span.icon-ic24-arrow-right
-//        a.card.card-blue(href="")
-//          .card--image
-//            img(src="/assets/img/1.jpg" alt="")
-//          .card--content
-//            .card--title
-//              h3 Корпус <br/>
-//                span “Приморский”
-//            .card--text
-//              p Программа "Город Солнца" - это тематические мероприятия, квесты и соревнования, которые познакомят детей с принципами самоуправления.
-//            .card--link
-//              .button.button-link.button-primary
-//                span Узнать больше
-//                span.icon-ic24-arrow-right
-//
-//  section.block.block_html_code.content_advantages_entertainment
-//    .block--wrapper
-//      .block--head
-//        .block--head_title
-//          h2 Лечение и <br/><span>развлечения</span>
-//        .block--head_caption
-//          p Мы предлагаем современный терапевтический и подход в сочетании с уникальным климатом и командой квалифицированного персонала.
-//          p Наша цель - обеспечить комфортный и запоминающийся опыт для детей, уделяя особое внимание их здоровью и благополучию.
-//      .block--content.is_cascade
-//        .content_advantages_entertainment--item
-//          .content_advantages_entertainment--item_number 50
-//          .content_advantages_entertainment--item_text ГЕКТАРОВ УНИКАЛЬНОГО ДЕНДРОПАРКА
-//        .content_advantages_entertainment--item
-//          .content_advantages_entertainment--item_number 18
-//          .content_advantages_entertainment--item_text методов лечения
-//        .content_advantages_entertainment--item
-//          .content_advantages_entertainment--item_number 14
-//          .content_advantages_entertainment--item_text врачебных специализаций
-//        .content_advantages_entertainment--item
-//          .content_advantages_entertainment--item_number 8
-//          .content_advantages_entertainment--item_text оздоровительных  программ
-//
-//  section.block.block_html_code.content_program
-//    .block--wrapper
-//      .block--head
-//        .block--head_subtitle
-//        .block--head_title
-//          a(href="/")
-//            h2.f-h2 Тематические <span>программы</span>
-//      .block--content.program
-//        .program--wrapper
-//          .program--item(data-corpus_item="pink").is_active
-//            .program--item_image
-//              picture
-//                source(media="(max-width:768px)" srcset="/assets/img/program_1_mob.png")
-//                source(media="(min-width:769px)" srcset="/assets/img/program_1.png")
-//                img(src="/assets/img/program_1.png" alt="" )
-//            .program--item_content
-//              .program--item_title Время первых 1
-//              .program--item_labels
-//                .program--item_labels_item Космос
-//                .program--item_labels_item Наука
-//                .program--item_labels_item История
-//              .program--item_text Программа "Время первых: Покорение космоса" - это захватывающая трехэтапная образовательная программа, призванная научить детей исследованию космоса, командной работе и личностному росту во время поиска пропавшего экипажа и формулирования секрета освоения космоса.
-//          .program--item(data-corpus_item="yellow")
-//            .program--item_image
-//              picture
-//                source(media="(max-width:768px)" srcset="/assets/img/program_1_mob.png")
-//                source(media="(min-width:769px)" srcset="/assets/img/program_1.png")
-//                img(src="/assets/img/program_1.png" alt="" )
-//            .program--item_content
-//              .program--item_title Время первых 2
-//              .program--item_labels
-//                .program--item_labels_item Космос
-//                .program--item_labels_item Наука
-//                .program--item_labels_item История
-//              .program--item_text Программа "Время первых: Покорение космоса" - это захватывающая трехэтапная образовательная программа, призванная научить детей исследованию космоса, командной работе и личностному росту во время поиска пропавшего экипажа и формулирования секрета освоения космоса.
-//          .program--item(data-corpus_item="green")
-//            .program--item_image
-//              picture
-//                source(media="(max-width:768px)" srcset="/assets/img/program_1_mob.png")
-//                source(media="(min-width:769px)" srcset="/assets/img/program_1.png")
-//                img(src="/assets/img/program_1.png" alt="" )
-//            .program--item_content
-//              .program--item_title Время первых 3
-//              .program--item_labels
-//                .program--item_labels_item Космос
-//                .program--item_labels_item Наука
-//                .program--item_labels_item История
-//              .program--item_text Программа "Время первых: Покорение космоса" - это захватывающая трехэтапная образовательная программа, призванная научить детей исследованию космоса, командной работе и личностному росту во время поиска пропавшего экипажа и формулирования секрета освоения космоса.
-//          .program--item(data-corpus_item="blue")
-//            .program--item_image
-//              picture
-//                source(media="(max-width:768px)" srcset="/assets/img/program_1_mob.png")
-//                source(media="(min-width:769px)" srcset="/assets/img/program_1.png")
-//                img(src="/assets/img/program_1.png" alt="" )
-//            .program--item_content
-//              .program--item_title Время первых 4
-//              .program--item_labels
-//                .program--item_labels_item Космос
-//                .program--item_labels_item Наука
-//                .program--item_labels_item История
-//              .program--item_text Программа "Время первых: Покорение космоса" - это захватывающая трехэтапная образовательная программа, призванная научить детей исследованию космоса, командной работе и личностному росту во время поиска пропавшего экипажа и формулирования секрета освоения космоса.
-//
-//        .program--filters
-//          .program--filters_item.is_active(data-corpus="pink") Время первых
-//          .program--filters_item(data-corpus="yellow") Город солнца
-//          .program--filters_item(data-corpus="green") Мы &mdash; дети России!
-//          .program--filters_item(data-corpus="blue") Только смелым покоряются моря
-//
-//  section.block.block_html_code.content_image_text
-//    .block--wrapper
-//      .content_image_text--row.content_image_text--row-education
-//        .content_image_text--image
-//          picture
-//            source(media="(max-width:768px)" srcset="/assets/img/content_image_text_1_mob.png")
-//            source(media="(min-width:769px)" srcset="/assets/img/content_image_text_1.png")
-//            img(src="/assets/img/content_image_text_1.png" alt="" )
-//        .content_image_text--text.is_cascade
-//          h3 Уникальный <br/> опыт обучения
-//          p Наша образовательная программа предусматривает интерактивные семинары, лекции и занятия на свежем воздухе, которые выходят за рамки традиционного учебного процесса и помогают детям учиться и развиваться в увлекательной форме.
-//      .content_image_text--row.content_image_text--row-health
-//        .content_image_text--text.is_cascade
-//          h3 Оздоровительные <br/>программы
-//          p Наша команда опытных врачей предлагает ряд высококачественных медицинских процедур, включая физиотерапию, массаж, ингаляции и диетотерапию. Более 50 специалистов 14 специальностей обеспечивают индивидуальный подход к здоровью и благополучию вашего ребенка.
-//          a.button.button-link.button-primary(href="")
-//            span Cмотреть программы
-//            span.icon-ic24-arrow-right
-//        .content_image_text--image
-//          picture
-//            source(media="(max-width:768px)" srcset="/assets/img/content_image_text_2_mob.png")
-//            source(media="(min-width:769px)" srcset="/assets/img/content_image_text_2.png")
-//            img(src="/assets/img/content_image_text_2.png" alt="" )
-//      .content_image_text--row.content_image_text--row-adventure
-//        .content_image_text--image
-//          picture
-//            source(media="(max-width:768px)" srcset="/assets/img/content_image_text_3_mob.png")
-//            source(media="(min-width:769px)" srcset="/assets/img/content_image_text_3.png")
-//            img(src="/assets/img/content_image_text_3.png" alt="" )
-//        .content_image_text--text.is_cascade
-//          h3 Впереди веселье <br/> и приключения
-//          p Наш санаторий предлагает разнообразные мероприятия для детей, включая плавание и знакомство с близлежащими парками. Благодаря хорошо оборудованным игровым площадкам, спортивным сооружениям и развлекательным центрам скука не страшна.
-//
-//  include ../../components/content/content_map_around/content_map_around
-//  include ../../components/scheme/scheme
-//
-//
-//  section.block.block_html_code.content_special_offer.content_special_offer-feed
-//    .block--wrapper
-//      .special_offer(style="background-image:url(/assets/img/special_offer/special_offer_bg_1.png)")
-//        .special_offer--content
-//          .block--head
-//            .block--head_title
-//                h2.f-h2 Как&nbsp;собрать <br/>ребенка в&nbsp;лагерь <br/> и&nbsp;<span>ничего не&nbsp;упустить</span>
-//            .block--head_caption
-//              p Узнайте из нашей подборки!
-//          .block--actions
-//            a.button.button-filled.button-accent(href="/")
-//             span Смотреть подборку
-//        .special_offer--image
-//          img(src="/assets/img/special_offer/special_offer_1.png" alt="")
-//
-//  section.block.block_html_code.content_special_offer.content_special_offer-miracleon
-//    .block--wrapper
-//      .special_offer(style="background-image:url(/assets/img/special_offer/special_offer_bg_2.png)")
-//        .special_offer--content
-//          .block--head
-//            .block--head_title
-//              h2.f-h2 Восторг для&nbsp;детей<br/> <span>безмятежность <br> для&nbsp;родителей</span>
-//            .block--head_caption
-//              p Узнайте о&nbsp;предложениях<br> курорта Miracleon
-//          .block--actions
-//            a.button.button-filled.button-accent(href="/")
-//              span Узнать больше
-//        .special_offer--image
-//          img(src="/assets/img/special_offer/special_offer_2.png" alt="")
-//
-//  section.block.block_html_code.content_special_offer.content_special_offer-presentation
-//    .block--wrapper
-//      .special_offer
-//        .special_offer--content
-//          .block--head
-//            .block--head_title
-//              h2.f-h2 Хотите знать<br/> <span>всё и сразу?</span>
-//            .block--head_caption
-//              p Оставьте свои данный, и мы пришлем<br> вам нашу презентацию
-//          .block--actions
-//            label.form__input
-//              input(type="email" placeholder="example@imperial.ru" name="fields[email]"  autocomplete="email" required)
-//              .form__input-error Ошибка заполнения
-//            a.button.button-filled.button-accent(href="/")
-//              span Отправить заявку
-//        .special_offer--image
-//          img(src="/assets/img/special_offer/special_offer_3.png" alt="")
-//
-//  section.block.block_html_code.content_special_offer.content_special_offer-qr_codes
-//    .block--wrapper
-//      .special_offer(style="background-image:url(/assets/img/special_offer/special_offer_bg_4.png)")
-//        .special_offer--content
-//          .block--head
-//            .block--head_title
-//              h2.f-h2 Ваш ребенок<br/> <span>всегда на связи</span>
-//            .block--head_caption
-//              p Наблюдайте за жизнью корпусов<br> в наших телеграм каналах
-//        .special_offer--codes
-//          .special_offer--image
-//            img.special_offer--image-decor(src="/assets/img/special_offer/special_offer_4.png" alt="")
-//          .qr_codes
-//            a.qr_codes--item(href='/')
-//              picture.qr_codes--item_image
-//                source(srcset="/assets/img/corpus_yellow.svg" media="(max-width: 768px)")
-//                img(src="/assets/img/QR_Code_0.png")
-//            a.qr_codes--item(href='/')
-//              picture.qr_codes--item_image
-//                source(srcset="/assets/img/corpus_pink.svg" media="(max-width: 768px)")
-//                img(src="/assets/img/QR_Code_1.png")
-//            a.qr_codes--item(href='/')
-//              picture.qr_codes--item_image
-//                source(srcset="/assets/img/corpus_green.svg" media="(max-width: 768px)")
-//                img(src="/assets/img/QR_Code_2.png")
-//            a.qr_codes--item(href='/')
-//              picture.qr_codes--item_image
-//                source(srcset="/assets/img/corpus_blue.svg" media="(max-width: 768px)")
-//                img(src="/assets/img/QR_Code_3.png")
-//
-//  section.block.block_html_code.content_special_offer.content_special_offer-personel
-//    .block--wrapper
-//      .special_offer(style="background-image:url(/assets/img/special_offer/special_offer_bg_5.png)")
-//        .special_offer--content
-//          .block--head
-//            .block--head_title
-//              h2.f-h2 Узнайте больше о нашем <br/> <span>высоко&shy;классном персонале</span>
-//          .block--actions
-//            a.button.button-filled.button-accent(href="/")
-//              span Смотреть подборку
-//        .special_offer--image
-//          img(src="/assets/img/special_offer/special_offer_5.png" alt="")
-//
-//  section.block.block_html_code.content_special_offer.content_special_offer-restricted
-//    .block--wrapper
-//      .special_offer
-//        .special_offer--content
-//          .block--head
-//            .block--head_title
-//              h2.f-h2 Запрещено <br> брать с собой
-//            .block--head_caption
-//              ul
-//                li Наркотики;
-//                li Спиртные и слабоалкогольные напитки;
-//                li Табачные изделия;
-//                li Ножи, рогатки и подобные предметы;
-//                li Любая пиротехника (петарды, хлопушки);
-//
-//              p Если мы найдём запрещенные предметы, придётся досрочно отчислить ребёнка из лагеря, стоимости путёвки не возмещается.
-//        .special_offer--image
-//          picture
-//            source(srcset="/assets/img/special_offer/special_offer_6-s.png" media="(max-width: 768px)")
-//            img(src="/assets/img/special_offer/special_offer_6.png" alt="")
+extends ../../layouts/main
+
+block variables
+  - var title = "Заготовки"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+  section.block.block_html_code.content_advantages
+    .block--wrapper
+      +block--head('','что вас ждет','','')
+      .block--content
+        .advantages-item
+          .advantages-icon
+            img(src="./assets/img/svg/advantages-icon-1.svg" alt="")
+          .advantages-text Анимационная программа для детей
+        .advantages-item
+          .advantages-icon
+            img(src="./assets/img/svg/advantages-icon-2.svg" alt="")
+          .advantages-text Интерактивная программа для взрослых
+        .advantages-item
+          .advantages-icon
+            img(src="./assets/img/svg/advantages-icon-3.svg" alt="")
+          .advantages-text Тематические мастер-классы
+        .advantages-item
+          .advantages-icon
+            img(src="./assets/img/svg/advantages-icon-4.svg" alt="")
+          .advantages-text Танцевально-акробатические номера от артистов оригинального жанра
+        .advantages-item
+          .advantages-icon
+            img(src="./assets/img/svg/advantages-icon-5.svg" alt="")
+          .advantages-text Тесла-шоу
+
+  // Билеты
+  section.block.block_html_code.content_ticket
+    .block--wrapper
+      +block--head('','Купить билет', '','')
+      .block--image
+        picture
+          source(srcset="./assets/img/svg/tickets-bck-s.svg" media="(max-width: 860px)")
+          img(src="./assets/img/svg/tickets-bck.svg" alt="")
+      .block--content
+        .block--title
+          include ../../img/svg/tickets-title.svg
+          .block--subtitle Вы можете посмотреть расписание активностей или приобрести билеты онлайн со скидкой и без очереди.
+        .block--actions
+          a(href='programm.html').button.button-filled.button-secondary.button-reversed
+            span  Расписание активностей
+          a(href='/').button.button-filled.button-secondary
+            span  Купить билет
+
+  section.block.block_html_code.content_feedback
+    .block--wrapper
+      .block--image
+        picture
+          source(srcset="./assets/img/svg/feedback-bck-s.svg" media="(max-width: 768px)")
+          img(src="./assets/img/svg/feedback-bck.svg" alt="")
+
+      .block--content
+        +block--head('','хотите организовать праздник','или остались вопросы?','Оставьте свои контактные данные и мы свяжемся с вами в ближайшее время!')
+        .block--actions
+          a(href='/').button.button-filled.button-secondary.js-btn-open-form
+            span  Заказать звонок
+          a(href='/').button.button-filled.button-secondary.button-reversed.js-btn-open-form
+            span  Оставить заявку

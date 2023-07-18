@@ -33,10 +33,17 @@
     position: absolute
     width: 27px
     height: 27px
-    &:hover,
-    &:focus
+    padding: 10px
+    &:after
+      border: none
+      font-weight: bold
+      font-size: 25px
+      padding: 2px
+    &:hover:after,
+    &:active:after
       color: #E6F2FB
       background-color: #0281C9
+      border: none
   .swiper-button-next:after
     content: '\e909'
   .swiper-button-prev:after

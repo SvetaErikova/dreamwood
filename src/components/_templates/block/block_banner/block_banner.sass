@@ -7,9 +7,18 @@
   .block--head
     position: relative
     z-index: 2
+    margin: auto
+    margin-top: 0
+    margin-bottom: 0
+    max-width: 1440px
   .block--actions
     position: relative
     z-index: 2
+    margin: auto
+    margin-top: 0
+    margin-bottom: 0
+    max-width: 1440px
+    width: 100%
   .block--content
     position: absolute
     top: 0
@@ -38,7 +47,6 @@
       background: linear-gradient(180deg, rgba(31, 31, 31, .89) 7.43%, rgba(31, 31, 31, .4) 38.42%, rgba(31, 31, 31, .59) 100%)
       background-blend-mode: multiply
   .block--head
-    max-width: 1160px
     width: 100%
     color: var(--c-text-white)
     z-index: 2
@@ -48,12 +56,13 @@
       color: var(--c-text-white)
   .block--head_subtitle
     color: inherit
+  .block--head_caption
+    width: 50%
   .banner
     display: flex
     flex: 0 0 100%
     flex-direction: column
     align-items: flex-start
-    justify-content: flex-end
     padding: var(--headerHeight,138px) var(--g-80) var(--g-80)
     height: auto
     overflow: hidden
@@ -115,22 +124,21 @@
     @media(max-width: 768px)
       height: 90vh
       min-height: 650px
-
   .block--head
     padding-top: 7%
     position: relative
     justify-content: flex-start
-    @media(max-width: 768px)
-      padding-top: 25%
-      width: 60%
     @media(max-width: 520px)
       width: 100%
     @media(max-width: 380px)
-      padding-top: 30%
+      padding-top: 22%
   .block--head_title
     font-size: var(--fs-88)
   .block--head_caption
     font-size: var(--fs-28)
+    @media(max-width: 768px)
+      width: 100%
+
 
 .block_banner.block_banner-index + .block
   margin-top: -400px
@@ -199,7 +207,7 @@
     @media(max-width: 440px)
       bottom: 23.2%
       rotate: 2deg
-    @media(max-width: 400px)
+    @media(max-width: 410px)
       bottom: 22.9%
       rotate: 1deg
     @media(max-width: 385px)
@@ -241,13 +249,10 @@
       background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%)
 
   .block--head
-    height: calc(100vh - var(--headerHeight))
+    //height: calc(100vh - var(--headerHeight))
     position: relative
-    align-items: center
-
-    width: auto
+    padding-top: 10%
     @media(max-width: 998px)
-      padding-top: 7vh
       width: 100%
   .block--head_title
     font-size: var(--fs-88)
@@ -259,11 +264,13 @@
       height: clamp(83px, calc(83px + (167  - 83) * ((100vw - 768px) / (1440 - 768))), 167px)
   .block--actions
     margin-top: var(--fs-48)
-    margin-left: auto
+    margin: auto
+    width: auto
     @media(max-width: 500px)
-      margin-top: 25vh
-    @media(max-width: 400px)
-      margin-top: 180px
+      margin-top: 20vh
+      width: 100%
+      justify-content: flex-end
+
 
 
 .block_banner-nav

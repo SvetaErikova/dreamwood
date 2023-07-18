@@ -12,29 +12,34 @@
 .swiper-button-prev
   width: clamp(32px, calc(32px + (40 - 32) * ((100vw - 1024px) / (1920 - 1024))), 40px)
   height: clamp(32px, calc(32px + (40 - 32) * ((100vw - 1024px) / (1920 - 1024))), 40px)
-  border-radius: 50%
   cursor:  pointer
-  background-color: #fff
   color: var(--c-text-dark)
   transition: .18s ease-in-out
   position: static
   flex: 0 0 auto
   pointer-events: all
-  padding: 10px
+  padding: 15px
+  background-color: #fff
+  border-radius: 50%
   margin-top: 0
-  border: 2px solid currentColor
   &:after
     font-family: 'icomoon' !important
     font-size: 19px
+    padding: 5px
+    background: #fff
+    border-radius: 50%
+    transition: var(--transition)
+    border: 2px solid currentColor
+  &:hover:after,
+  &:active:after
+    border-color: var(--accent)
+    background: var(--accent)
+    color: #fff
+
   &.swiper-button-disabled
     opacity: 0.8
     pointer-events: none
-  &:hover,
-  &:active
-    border-color: var(--accent)
-    background: var(--accent)
-    &:after
-      color: #fff
+
 
 .swiper-button-prev
   //translate: -50%

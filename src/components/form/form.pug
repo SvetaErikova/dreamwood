@@ -1,4 +1,4 @@
-section.block.content--form#form
+section.block.content_form#form
   .block--wrapper
 
 
@@ -17,7 +17,7 @@ section.block.content--form#form
           .form__input-error Ошибка заполнения
         .form__button
           span
-          button.button.button-outlined.button-primary.form_next
+          button.button.button-outlined.button-primary.form_next(type='button')
             span Далее
 
       // step 2
@@ -44,9 +44,9 @@ section.block.content--form#form
             span.custom-checkbox
             | Другое
         .form__button
-          button.button.button-outlined.button-primary.form_prev
+          button.button.button-outlined.button-primary.form_prev(type='button')
             span Назад
-          button.button.button-outlined.button-primary.form_next
+          button.button.button-outlined.button-primary.form_next(type='button')
             span Далее
 
       // step 3
@@ -59,9 +59,9 @@ section.block.content--form#form
           input(type="date" placeholder="12.12.2023" name="date" required   )
           .form__input-error Ошибка заполнения
         .form__button
-          button.button.button-outlined.button-primary.form_prev
+          button.button.button-outlined.button-primary.form_prev(type='button')
             span Назад
-          button.button.button-outlined.button-primary.form_next
+          button.button.button-outlined.button-primary.form_next(type='button')
             span Далее
 
       // step 4
@@ -74,9 +74,9 @@ section.block.content--form#form
           input(type="text" placeholder="" name="description" required  )
           .form__input-error Ошибка заполнения
         .form__button
-          button.button.button-outlined.button-primary.form_prev
+          button.button.button-outlined.button-primary.form_prev(type='button')
             span Назад
-          button.button.button-outlined.button-primary.form_next
+          button.button.button-outlined.button-primary.form_next(type='button')
             span Далее
 
       // step 5
@@ -95,9 +95,9 @@ section.block.content--form#form
             span.custom-checkbox
             | Нет
         .form__button
-          button.button.button-outlined.button-primary.form_prev
+          button.button.button-outlined.button-primary.form_prev(type='button')
             span Назад
-          button.button.button-outlined.button-primary.form_next
+          button.button.button-outlined.button-primary.form_next(type='button')
             span Далее
 
 
@@ -117,9 +117,9 @@ section.block.content--form#form
             span.custom-checkbox
             | Нет
         .form__button
-          button.button.button-outlined.button-primary.form_prev
+          button.button.button-outlined.button-primary.form_prev(type='button')
             span Назад
-          button.button.button-outlined.button-primary.form_next
+          button.button.button-outlined.button-primary.form_next(type='button')
             span Далее
 
       // step 7
@@ -132,7 +132,7 @@ section.block.content--form#form
           input(type="tel" placeholder="+7 (999)-999-99-99" name="number" required autocomplete )
           .form__input-error Ошибка заполнения
         .form__button
-          button.button.button-outlined.button-primary.form_prev
+          button.button.button-outlined.button-primary.form_prev(type='button')
             span Назад
           button.button.button-outlined.button-primary.form_next(type='submit')
             span Готово

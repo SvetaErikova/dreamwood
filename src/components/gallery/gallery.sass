@@ -9,7 +9,8 @@
     position: absolute
     pointer-events: none
     z-index: 5
-    width: 100%
+    width: 102%
+    left: -1%
     top: 50%
     display: flex
     transform: translate(0, -50%)
@@ -22,6 +23,8 @@
     .swiper-button-prev,
     .swiper-button-next
       pointer-events: auto
+      &:after
+        padding: 5px
     .swiper-button-disabled
       cursor: auto
       pointer-events: none
@@ -64,18 +67,19 @@
       height: 100%
       object-fit: cover
       position: relative
-    .video
-      position: relative
-      &:after
-        content: "\e90f"
-        position: absolute
-        top: 50%
-        right: 50%
-        background-repeat: no-repeat
-        background-size: contain
-        width:  50px
-        height: 50px
-        translate: -50% -50%
+  .video
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      background-repeat: no-repeat
+      background-size: contain
+      width:  50px
+      height: 50px
+      translate: -50% -50%
+      background-image: url("../img/svg/play.svg")
     &:nth-child(3n+1)
       grid-column: span 2
       grid-row: span 2

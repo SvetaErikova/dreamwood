@@ -1,4 +1,4 @@
-let block_tabs = document.querySelectorAll('.block_tabs')
+let block_tabs = document.querySelectorAll('.js-tabs')
 
 block_tabs.forEach(block => {
   let placeMark = block.querySelectorAll('[data-placemark]'),
@@ -94,7 +94,7 @@ block_tabs.forEach(block => {
       })
     })
   })
-    if ( window.matchMedia('(min-width: 992px)').matches ){
+    if ( window.matchMedia('(min-width: 993px)').matches ){
       filters[0].click()
   }
 

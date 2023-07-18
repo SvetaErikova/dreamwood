@@ -17,16 +17,13 @@
         grid-template-columns: repeat(3, 1fr)
         .block--pagination
           grid-column: span 4
-  & >
-  .button
-    margin: auto
 
   .block_list:not(.block_list-slider)
-    .card:nth-child(-n+3)
+    .card:nth-child(-n+4)
       display: flex
-    .card:nth-child(n+3)
+    .card:nth-child(n+4)
       display: none
   .block_list:not(.block_list-slider)
     .block--elements.active
-      .card:nth-child(n+3)
+      .card:nth-child(n+4)
         display: flex

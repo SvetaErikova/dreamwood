@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?o8vmtf');
-  src:  url('fonts/icomoon.eot?o8vmtf#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?o8vmtf') format('truetype'),
-    url('fonts/icomoon.woff?o8vmtf') format('woff'),
-    url('fonts/icomoon.svg?o8vmtf#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?s9lhi9');
+  src:  url('fonts/icomoon.eot?s9lhi9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?s9lhi9') format('truetype'),
+    url('fonts/icomoon.woff?s9lhi9') format('woff'),
+    url('fonts/icomoon.svg?s9lhi9#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-accordion-open:before {
-  content: "\e90d";
-  color: #cacccd;
-}
-.icon-accordion-closed:before {
-  content: "\e916";
-  color: #15466b;
-}
 .icon-card-arrow-next:before {
   content: "\e909";
   color: #0281c9;
@@ -40,6 +32,14 @@
 .icon-card-arrow-prev:before {
   content: "\e90c";
   color: #0281c9;
+}
+.icon-accordion-open:before {
+  content: "\e90d";
+  color: #cacccd;
+}
+.icon-accordion-closed:before {
+  content: "\e916";
+  color: #15466b;
 }
 .icon-visibility:before {
   content: "\e912";

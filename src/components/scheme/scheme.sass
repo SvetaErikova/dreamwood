@@ -26,8 +26,11 @@
         grid-template-columns: 0.7fr 1fr
         grid-template-areas: 'head head' 'filters image' 'text image' 'subtitle image'
         grid-template-rows: auto
+        grid-template-rows: 0.5fr auto 1fr auto
         place-content: start
-        gap: 0 var(--g-40)
+        gap: var(--g-40)
+    .block--head
+      margin-bottom: 0
     .block--sections
       grid-area: filters
       gap: var(--g-40)
@@ -37,8 +40,14 @@
       grid-area: text
     .block--content-subtitle
       grid-area: subtitle
+      grid-column: 1
     .block--image
       grid-area: image
+      height: 100%
+      grid-row: 1 / span 4
+      width: 100%
+      @media (max-width: 1140px)
+        grid-row: auto
       @media (max-width: 475px)
         overflow: hidden
         margin-left: calc(var(--g-40) * -1)

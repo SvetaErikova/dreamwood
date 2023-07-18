@@ -11,7 +11,7 @@ Inputmask({
 /* form */
 
 
-let form_block = document.querySelector('.content--form');
+let form_block = document.querySelector('.content_form');
 
 if ( form_block ) {
   let reset_button = form_block.querySelector('button[type=reset]');
